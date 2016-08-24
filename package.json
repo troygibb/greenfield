@@ -1,0 +1,9 @@
+{
+  "name": "HackStr33tBoys",
+  "version": "0.0.1",
+  "author": "HackStr33tBoys",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
