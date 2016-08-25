@@ -9,10 +9,7 @@ app.use(express.static(__dirname + '/'));
 
 app.get('/', function(req, res){
   console.log('Serving /');
-  //Demonstrating that we can call an https api with
-  //the request module. Works! Console should show
-  //stuff about a potentially habitable planet
-  callNasaAPI();
+  getMeetUpEvents();
   res.sendFile(__dirname + '/client/index.html');
 });
 
@@ -20,21 +17,16 @@ const ip = "127.0.0.1";
 const server = app.listen(app.get('port'));
 console.log('Listening on port ', port);
 
-function callNasaAPI() {
-  const options = {
-    url: 'https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo',
-    headers: {
-      'User-Agent': 'request'
-    },
-  };
-
-  function callback(error, response, body) {
-    if (!error && response.statusCode == 200) {
-      const info = JSON.parse(body);
-      console.log(info.title);
-      console.log(info.explanation);
-    }
-  }
-
-  request(options, callback);
-};
+//call via route /getMeetupEvents 
+//next steps, call via user zip code
+  //after that, geo location
+function getMeetUpEvents() {
+  let body = '';
+  request.get('https://api.meetup.com/2/open_events?zip=94105&and_text=False&offset=0&format=json&limited_events=False&photo-host=public&page=20&radius=25.0&desc=False&status=upcoming&sig_id=182898232&sig=9081c2e1b4eb4501e5ce797e09a06ed18f4b236c')
+  .on('data', function(data) {
+    body += data;
+  })
+  .on('end', function() {
+    console.log(JSON.parse(body));
+  });
+}
