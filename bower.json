@@ -1,0 +1,14 @@
+{
+  "name": "HackStr33tBoys",
+  "description": "",
+  "main": "",
+  "authors": [
+    "HackStr33tBoys"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/troygibb/greenfield",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
