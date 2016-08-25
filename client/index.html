@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html ng-app="greenfield">
-  <script src="client/lib/angular/angular.js"></script>
-  <script src="client/lib/angular-route/angular-route.js"></script>
-  <script src="client/services.js"></script>
-  <script src="client/app.js"></script>
-  <head>
-  	<title></title>
-  </head>
-  <body ng-controller="MainController">
-  	<h1>{{hello}}</h1>
-  </body>
+<head>
+	<title></title>
+	<script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="lib/angular-meetup/dist/angular-meetup.js"></script>
+  <script src="config.js"></script>
+  <script src="services.js"></script>
+  <script src="app.js"></script>
+
+
+</head>
+<body ng-controller="MainController">
+	<h1>{{hello}}</h1>
+	<rm-meetup-oauth>
+	    Connect in Meetup.com API
+	</rm-meetup-oauth>
+
+</body>
+
 </html>
