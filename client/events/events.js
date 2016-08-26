@@ -1,17 +1,12 @@
 angular.module('greenfield.events', [])
-.controller('EventsController', ['$scope', 'Events', function($scope, Events) {
-  $scope.data;
+.controller('EventsController', ['$scope', 'Events', '$location', function($scope, Events, $location) {
   $scope.getEvents = function() {
-    console.log($scope.zip)
-    Events.getAll($scope.zip)
+    Events.saveAll($scope.zip)
       .then(function(events){
-    console.log('in controller', events)
-
-        $scope.data = events;
+        $location.path('/meetupEvents');
       })
       .catch(function(err){
         console.error(err);
       });
-
   };
-}])
+}]);

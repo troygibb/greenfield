@@ -1,22 +1,21 @@
 angular.module('greenfield.services', [])
-.factory('MeetUp', ['$http', function($http) {
-  var MeetUpMethods = {};
-  
-
-  return MeetUpMethods; 
-}])
 .factory('Events', function($http){
-  var getAll = function(zipcode) {
-  console.log('in factory', zipcode)
+  var savedEvents;
+  var saveAll = function(zipcode) {
     return $http({
       method: 'GET',
-      url: '/meetupEvents?zip=' + zipcode,
+      // url: '/fakedata'
+      url: '/meetupEvents?zip=' + zipcode
     }).then(function(resp){
-      console.log('in response')
-      return resp.data;
+      savedEvents = resp.data;
     });
   };
+  var getAll = function() {
+    return savedEvents;
+  }
   return {
     getAll,
+    saveAll
   }
-})
+});
+

@@ -1,18 +1,18 @@
 angular.module('greenfield', [
   'greenfield.services', 
-  'greenfield.location',
+  'greenfield.eventList',
   'greenfield.events',
   'ngRoute'
 ])
 .config(function($routeProvider){
   $routeProvider
   .when('/', {
-    templateUrl: 'client/location/location.html',
-    controller: 'LocationController'
-  })
-  .when('/meetupEvents', {
     templateUrl: 'client/events/events.html',
     controller: 'EventsController'
+  })
+  .when('/meetupEvents', {
+    templateUrl: 'client/eventList/eventList.html',
+    controller: 'EventListController'
   })
 })
 .controller('MainController', ['$scope', function($scope) {
