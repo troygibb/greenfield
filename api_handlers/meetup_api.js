@@ -36,7 +36,7 @@ exports.getMeetUpEvents = function(zip, cb) {
   //TODO: Need error handling here. 
   //TODO: Need to factor in sig_id (i.e. user id here)
   let body = '';
-  request.get(`https://api.meetup.com/2/open_events?key=${API_KEY}&sign=true&photo-host=public&zip=${zip}&page=20`)
+  request.get(`https://api.meetup.com/2/open_events?key=${MEETUP_API_KEY}&sign=true&photo-host=public&zip=${zip}&page=20`)
   .on('data', function(data) {
     body += data;
   })
