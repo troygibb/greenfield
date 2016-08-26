@@ -1,7 +1,7 @@
 angular.module('greenfield.services', [])
 .factory('Events', function($http){
-  var savedEvents;
-  var saveAll = function(zipcode) {
+  let savedEvents;
+  let saveAll = function(zipcode) {
     return $http({
       method: 'GET',
       // url: '/fakedata'
@@ -10,12 +10,12 @@ angular.module('greenfield.services', [])
       savedEvents = resp.data;
     });
   };
-  var getAll = function() {
+  let getAll = function() {
     return savedEvents;
-  }
+  };
   return {
     getAll,
-    saveAll
+    saveAll,
   }
 });
 
