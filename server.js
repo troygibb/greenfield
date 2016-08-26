@@ -10,7 +10,7 @@ app.set('port', port);
 app.use(express.static(__dirname + '/'));
 
 app.get('/', function(req, res){
-  console.log(MEMBER_ID, SIG_ID)
+  // console.log(MEMBER_ID, SIG_ID)
   console.log('Serving /');
   res.sendFile(__dirname + '/client/index.html');
 });

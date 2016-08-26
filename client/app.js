@@ -10,9 +10,9 @@ angular.module('greenfield', [
     templateUrl: 'client/location/location.html',
     controller: 'LocationController'
   })
-  .when('/events', {
+  .when('/meetupEvents', {
     templateUrl: 'client/events/events.html',
-    controller: ' '
+    controller: 'EventsController'
   })
 })
 .controller('MainController', ['$scope', function($scope) {
