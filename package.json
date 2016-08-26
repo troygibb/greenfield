@@ -2,6 +2,9 @@
   "name": "HackStr33tBoys",
   "version": "0.0.1",
   "author": "HackStr33tBoys",
+  "engines": {
+    "node": "6.4.0"
+  },
   "devDependencies": {},
   "dependencies": {
     "bower": "^1.7.9",
