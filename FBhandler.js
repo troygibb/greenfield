@@ -1,4 +1,5 @@
 // Internal modules
+const app = require('server.js').app;
 
 // NPM modules
 var express = require("express");

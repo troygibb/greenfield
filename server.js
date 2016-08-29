@@ -1,8 +1,10 @@
 'use strict';
 const express = require('express');
 const api_handlers = require('./api_handlers/apiPackage');
+const config = require('./config.js');
 const app = express();
 const port = process.env.PORT || 8080;
+module.exports = {};
 
 app.set('port', port);
 app.use(express.static(__dirname + '/'));
@@ -26,10 +28,8 @@ app.get('/test*', function(req, res) {
     res.send(JSONresponse);
     res.end();
   });
-})
+});
 
 const ip = "127.0.0.1";
 const server = app.listen(app.get('port'));
 console.log('Listening on port ', port);
-
-
