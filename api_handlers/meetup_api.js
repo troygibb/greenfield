@@ -1,8 +1,7 @@
 const request = require('request');
 const utils = require('./utils');
 const { MEETUP_API_KEY } = require('../config');
-
-var exports = module.exports = {};
+module.exports = {};
 
 const handleUndefined = utils.handleUndefined;
 
@@ -32,7 +31,7 @@ function formatMeetupResponse(parsedJSON, cb) {
 //call via route /getMeetupEvents 
 //next steps, call via user zip code
   //after that, geo location
-exports.getMeetUpEvents = function(zip, cb) {
+module.exports.getMeetUpEvents = function(zip, cb) {
   //TODO: Need error handling here. 
   //TODO: Need to factor in sig_id (i.e. user id here)
   let body = '';

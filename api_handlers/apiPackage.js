@@ -19,6 +19,7 @@ e_sourceImage JPG/PNG?
 
 const url = require('url');
 const meetup_api = require('./meetup_api');
+const fb_api = require('./fb_api.js');
 
 var exports = module.exports = {};
 
@@ -27,7 +28,12 @@ exports.getEvents = function(req, res, cb) {
 	const urlObject = url.parse(req.url);
 	//FIXME: Substring method for zip won't account for other queries. 
 	const zip = urlObject.query.substring(4);
+
+  //Get facebook events OR meetup events. Comment one or
+  //the other to see results:
+  
 	meetup_api.getMeetUpEvents(zip, cb);
+  //fb_api.getFbEvents(zip, cb);
 }
 
 //For testing newly created APIs. 

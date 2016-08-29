@@ -26,10 +26,8 @@ app.get('/test*', function(req, res) {
     res.send(JSONresponse);
     res.end();
   });
-})
+});
 
 const ip = "127.0.0.1";
 const server = app.listen(app.get('port'));
 console.log('Listening on port ', port);
-
-
