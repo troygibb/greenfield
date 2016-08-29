@@ -13,7 +13,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/client/index.html');
 });
 
-app.get('/meetupEvents?*', function(req, res){
+app.get('/getEvents?*', function(req, res){
   console.log('Serving ', req.url);
   api_handlers.getEvents(req, res, function(JSONresponse){
     res.send(JSONresponse);

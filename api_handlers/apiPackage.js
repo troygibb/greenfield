@@ -20,6 +20,7 @@ e_sourceImage JPG/PNG?
 const url = require('url');
 const meetup_api = require('./meetup_api');
 const fb_api = require('./fb_api.js');
+const utils = require('./utils');
 
 var exports = module.exports = {};
 
@@ -31,8 +32,15 @@ exports.getEvents = function(req, res, cb) {
 
   //Get facebook events OR meetup events. Comment one or
   //the other to see results:
+
+  //Index of all of the api calls to be handled. 
+  let apiCalls = [meetup_api.getMeetUpEvents, fb_api.getFbEvents];
+
+  utils.asyncMap(apiCalls, function(JSONarray){
+    cb(utils.flatten(JSONarray));
+  }, zip);
   
-	meetup_api.getMeetUpEvents(zip, cb);
+	//meetup_api.getMeetUpEvents(zip, cb);
   //fb_api.getFbEvents(zip, cb);
 }
 

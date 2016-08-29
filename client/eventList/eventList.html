@@ -39,7 +39,9 @@
         <div class="row">
           <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="event in allEvents">
             <div class="thumbnail">
-              <img src="http://placehold.it/320x150" alt="">
+            <!-- img below for null values? -->
+            <!-- "http://placehold.it/320x150" -->
+              <img ng-src={{event.e_sourceImage}} alt="">
               <div class="caption">
                 <h4 class="pull-right" >{{event.e_time | date: "EEEE ' at ' h:mm a"}}</h4>
                 <h4><a href={{event.e_url}}>{{event.e_title}}</a>
@@ -50,7 +52,7 @@
               <div class="ratings">
                 <p class="pull-right">{{event.e_categories}}Categories</p>
                 <p>
-                  <img src="/client/assets/meetupimg.png">
+                  <img class="sourceImage" ng-src="{{ getSourceImage(event.e_source) }}"/>
                    
                 </p>
               </div>
