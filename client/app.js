@@ -16,6 +16,6 @@ angular.module('greenfield', [
   })
 })
 .controller('MainController', ['$scope', function($scope) {
-	$scope.hello = "Hello world!";	
+		
 }]);
 

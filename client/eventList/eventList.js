@@ -4,6 +4,6 @@ angular.module('greenfield.eventList', [])
   $scope.allEvents = Events.getAll();
   $scope.dance = function(){
   	console.log($scope.allEvents);
-  }
+  };
   $scope.dance();
 }]);
