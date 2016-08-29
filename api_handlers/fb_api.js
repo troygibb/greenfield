@@ -11,26 +11,28 @@ module.exports = {};
 
 const handleUndefined = utils.handleUndefined;
 
-function formatFbResponse(parsedJSON, cb) {
-  //TODO: Do we want RSVP count?
-  const responseJSON = parsedJSON.results.map((event) => {
+function formatFbResponse(events, cb) {
+  const responseJSON = events.map((event) => {
     return {
       e_title: event.name,
-      e_time: event.time,
-      e_url: event.event_url,
+      e_time: event.startTime,
+      e_url: `https://www.facebook.com/events/${event.id}/`,
       e_location: {
-        geolocation: [handleUndefined(event, 'venue', 'lon'), handleUndefined(event, 'venue', 'lat')],
-        country: handleUndefined(event, 'venue', 'country'),
-        city: handleUndefined(event, 'venue', 'city'),
-        address: handleUndefined(event, 'venue', 'address_1'),
-        venue_name: handleUndefined(event, 'venue', 'name')
+        geolocation: [handleUndefined(event, 'venue', 'location', 'lon'), handleUndefined(event, 'venue', 'location', 'lat')],
+        country: handleUndefined(event, 'venue', 'location', 'country'),
+        city: handleUndefined(event, 'venue', 'location', 'city'),
+        address: handleUndefined(event, 'venue', 'location', 'street'),
+        venue_name: handleUndefined(event, 'venue', 'name'),
       },
       e_description: event.description,
       e_categories: null,
-      e_source: 'MeetUp',
-      e_sourceImage: null
+      e_source: 'Facebook Events',
+      e_sourceImage: event.coverPicture,
     };
   });
+
+  console.log(responseJSON);
+
   cb(responseJSON);
 };
 
@@ -55,9 +57,16 @@ module.exports.getFbEvents = function(zip, cb) {
 
     es.search().then(function (events) {
       console.log('\nFacebook events:\n');
-      events.events.forEach(event => console.log(event.name));
+      console.log(events.events[0]);
+      //events.events.forEach(event => console.log(event.name));
 
       //Format the events here
+      formatFbResponse(events.events, function(eventsObj) {
+        cb(eventsObj);
+      });
+
+
+
     }).catch(function (error) {
       console.error('Oops... ', JSON.stringify(error));
     });

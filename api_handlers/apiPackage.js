@@ -28,7 +28,11 @@ exports.getEvents = function(req, res, cb) {
 	const urlObject = url.parse(req.url);
 	//FIXME: Substring method for zip won't account for other queries. 
 	const zip = urlObject.query.substring(4);
-	meetup_api.getMeetUpEvents(zip, cb);
+
+  //Get facebook events OR meetup events. Comment one or
+  //the other to see results.
+  
+	//meetup_api.getMeetUpEvents(zip, cb);
   fb_api.getFbEvents(zip, cb);
 }
 
