@@ -41,8 +41,8 @@
             <div class="thumbnail">
               <img src="http://placehold.it/320x150" alt="">
               <div class="caption">
-                <h4 class="pull-right" >{{event.e_time | date: "EEEE ' at ' h:mma"}}</h4>
-                <h4><a href="{{event.e_url}}">{{event.e_title}}</a>
+                <h4 class="pull-right" >{{event.e_time | date: "EEEE ' at ' h:mm a"}}</h4>
+                <h4><a href={{event.e_url}}>{{event.e_title}}</a>
                 </h4>
                 <p>{{(event.e_location.address) || "Find location on their page"}}{{event.e_location.name}}</p><br/>
                 <p>Description<br/><a href="{{event.e_url}}">Link to page</a>.</p>

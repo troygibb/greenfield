@@ -4,7 +4,6 @@ angular.module('greenfield.services', [])
   let saveAll = function(zipcode) {
     return $http({
       method: 'GET',
-      // url: '/fakedata'
       url: '/meetupEvents?zip=' + zipcode
     }).then(function(resp){
       savedEvents = resp.data;
