@@ -31,8 +31,6 @@ function formatFbResponse(events, cb) {
     };
   });
 
-  console.log(responseJSON);
-
   cb(responseJSON);
 };
 
@@ -42,6 +40,7 @@ module.exports.getFbEvents = function(zip, cb) {
   request.get(`http://api.geonames.org/postalCodeSearchJSON?postalcode=${zip}&maxRows=10&username=${GEONAMES_USERNAME}`)
   .on('data', function(data) {
     const distance = 10000;
+
     //information on zip codes is delivered in JSON. One zip code can refer to
     //several places across the world so we filter by country code to get
     //only the US result.
@@ -58,20 +57,8 @@ module.exports.getFbEvents = function(zip, cb) {
     es.search().then(function (events) {
       console.log('\nFacebook events:\n');
       console.log(events.events[0]);
-      //events.events.forEach(event => console.log(event.name));
-
-      //Format the events here
-      formatFbResponse(events.events, function(eventsObj) {
-        cb(eventsObj);
-      });
-
-
-
-    }).catch(function (error) {
-      console.error('Oops... ', JSON.stringify(error));
-    });
-
-    console.log('\nZip code test:\n', loc);
+      formatFbResponse(events.events, eventsObj => cb(eventsObj));
+    }).catch(error => console.error('Oops... ', JSON.stringify(error)));
   })
   .on('end', function() {
 

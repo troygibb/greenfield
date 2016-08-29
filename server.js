@@ -1,10 +1,8 @@
 'use strict';
 const express = require('express');
 const api_handlers = require('./api_handlers/apiPackage');
-const config = require('./config.js');
 const app = express();
 const port = process.env.PORT || 8080;
-module.exports = {};
 
 app.set('port', port);
 app.use(express.static(__dirname + '/'));

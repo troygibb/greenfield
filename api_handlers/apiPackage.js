@@ -30,10 +30,10 @@ exports.getEvents = function(req, res, cb) {
 	const zip = urlObject.query.substring(4);
 
   //Get facebook events OR meetup events. Comment one or
-  //the other to see results.
+  //the other to see results:
   
-	//meetup_api.getMeetUpEvents(zip, cb);
-  fb_api.getFbEvents(zip, cb);
+	meetup_api.getMeetUpEvents(zip, cb);
+  //fb_api.getFbEvents(zip, cb);
 }
 
 //For testing newly created APIs. 
