@@ -20,6 +20,7 @@ e_sourceImage JPG/PNG?
 const url = require('url');
 const meetup_api = require('./meetup_api');
 const fb_api = require('./fb_api.js');
+const eventbrite_api = require('./eventbrite_api.js');
 const utils = require('./utils');
 
 var exports = module.exports = {};
@@ -30,18 +31,14 @@ exports.getEvents = function(req, res, cb) {
 	//FIXME: Substring method for zip won't account for other queries. 
 	const zip = urlObject.query.substring(4);
 
-  //Get facebook events OR meetup events. Comment one or
-  //the other to see results:
-
   //Index of all of the api calls to be handled. 
-  let apiCalls = [meetup_api.getMeetUpEvents, fb_api.getFbEvents];
+  const apiCalls = [
+    meetup_api.getMeetUpEvents,
+    fb_api.getFbEvents
+    //,eventbrite_api.getEventbriteEvents
+  ];
 
-  utils.asyncMap(apiCalls, function(JSONarray){
-    cb(utils.flatten(JSONarray));
-  }, zip);
-  
-	//meetup_api.getMeetUpEvents(zip, cb);
-  //fb_api.getFbEvents(zip, cb);
+  utils.asyncMap(apiCalls, JSONarray => cb(JSONarray), zip);
 }
 
 //For testing newly created APIs. 
