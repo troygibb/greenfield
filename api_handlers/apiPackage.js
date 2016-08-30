@@ -20,6 +20,7 @@ e_sourceImage JPG/PNG?
 const url = require('url');
 const meetup_api = require('./meetup_api');
 const fb_api = require('./fb_api.js');
+const eventbrite_api = require('./eventbrite_api.js');
 const utils = require('./utils');
 
 var exports = module.exports = {};
@@ -34,6 +35,7 @@ exports.getEvents = function(req, res, cb) {
   const apiCalls = [
     meetup_api.getMeetUpEvents,
     fb_api.getFbEvents
+    //,eventbrite_api.getEventbriteEvents
   ];
 
   utils.asyncMap(apiCalls, function(JSONarray){

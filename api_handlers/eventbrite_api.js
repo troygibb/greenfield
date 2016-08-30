@@ -1,6 +1,6 @@
 const request = require('request');
 const utils = require('./utils');
-const { EVENTBRITE_API_KEY} = require('../config')
+const { EVENTBRITE_API_KEY } = require('../config')
 
 // The code is hard to read but I will try to refactor later. 
 ///////////////////////////////////////////////////////////////////////////
@@ -45,7 +45,7 @@ const dataFilter = (parsedJSON) => {
 
 const getEventbriteAddr = (venueArr, filteredData, cb) => { 
   let body = '';
-  let urlPath = `https://www.eventbriteapi.com/v3/batch/?token=${EVENTBRITE_API_KEY}`;
+  const urlPath = `https://www.eventbriteapi.com/v3/batch/?token=${EVENTBRITE_API_KEY}`;
 
   request.post(
     urlPath)
@@ -76,14 +76,17 @@ exports.getEventbriteEvents = (address, cb) => {
 
     getEventbriteAddr(address, filteredData, (address, filteredData) => { //I'll try to refactor
       filteredData.forEach((eventObj, idx) => { //For the address received, need to combine with the array of events. This is where this gets done.
-        let currAddr = JSON.parse(address[idx].body);
-        if (eventObj.e_venue_id===currAddr.id) {
+        const currAddr = JSON.parse(address[idx].body);
+        if (eventObj.e_venue_id === currAddr.id) {
           eventObj.e_location = {
-            geolocation: [handleUndefined(currAddr, 'address', 'longitude'), handleUndefined(currAddr, 'address', 'latitude')],
+            geolocation: [
+              handleUndefined(currAddr, 'address', 'longitude'),
+              handleUndefined(currAddr, 'address', 'latitude')
+            ],
             country: handleUndefined(currAddr, 'address', 'country'),
             city: handleUndefined(currAddr, 'address', 'city'),
             address: handleUndefined(currAddr, 'address', 'address_1'),
-            venue_name: handleUndefined(address[idx], 'body', 'name')
+            venue_name: handleUndefined(address[idx], 'body', 'name'),
           }
         }
       })
