@@ -69,12 +69,11 @@ module.exports.getFbEvents = function(zip, cb) {
 
     //information on zip codes is delivered in JSON. One zip code can refer to
     //several places across the world so we filter by country code to get
-    //only the US result.
-    const loc = JSON.parse('' + data).postalCodes
+    //only the US result. We access only the latitude/longitude.
+    const {lat, lng} = JSON.parse('' + data).postalCodes
       .filter(loc => loc.countryCode === 'US')[0];
-    const {lat, lng} = loc;
 
-    //https://github.com/tobilg/facebook-events-by-location-core
+    //call the API: https://github.com/tobilg/facebook-events-by-location-core
     const es = new EventSearch({
       lat,
       lng,
@@ -84,7 +83,7 @@ module.exports.getFbEvents = function(zip, cb) {
 
     es.search().then(function (events) {
       formatFbResponse(events.events, eventsObj => cb(eventsObj));
-    }).catch(error => console.error('Oops... ', JSON.stringify(error)));
+    }).catch(err => console.error('Oops... ', JSON.stringify(err)));
   })
   .on('end', function() {
 

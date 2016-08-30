@@ -15,7 +15,7 @@ exports.handleUndefined = function(...properties) {
 
 //For handling multiple asynchronous calls. 
 exports.asyncMap = function(asyncTasks, callback, ...args) {
-	let result = [];
+	const result = [];
 	let taskCount = 0; 
 	for (let i = 0; i < asyncTasks.length; i++) {
 		(function(i){
