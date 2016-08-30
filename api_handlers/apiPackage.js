@@ -39,7 +39,7 @@ exports.getEvents = function(req, res, cb) {
   ];
 
   utils.asyncMap(apiCalls, function(JSONarray){
-    cb(utils.flatten(JSONarray));
+    cb(utils.shallowFlatten(JSONarray));
   }, zip);
 }
 

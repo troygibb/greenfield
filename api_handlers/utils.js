@@ -31,12 +31,4 @@ exports.asyncMap = function(asyncTasks, callback, ...args) {
 };
 
 //For flattening resulting JSON objects out of asyncMap. 
-exports.flatten = function(array) {
-	let result = [];
-	array.forEach(function(JSONarray){
-		JSONarray.forEach(function(JSONobject){
-			result.push(JSONobject);
-		})
-	});
-	return result; 
-};
+exports.shallowFlatten = arr => [].concat(...arr);
