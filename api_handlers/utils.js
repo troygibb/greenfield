@@ -1,5 +1,7 @@
 var exports = module.exports = {};
 
+const shallowFlatten = arr => [].concat(...arr);
+
 //For error handling, as JSON response may have undefined properties.
 exports.handleUndefined = function(...properties) {
   let currentProperty = properties[0];
@@ -23,12 +25,9 @@ exports.asyncMap = function(asyncTasks, callback, ...args) {
 				taskCount++;
 				result[i] = value;
 				if (taskCount === asyncTasks.length){
-					callback(result);
+					callback(shallowFlatten(result));
 				}
 			});
 		})(i);
 	}
 };
-
-//For flattening resulting JSON objects out of asyncMap. 
-exports.shallowFlatten = arr => [].concat(...arr);

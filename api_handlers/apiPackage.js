@@ -38,9 +38,7 @@ exports.getEvents = function(req, res, cb) {
     //,eventbrite_api.getEventbriteEvents
   ];
 
-  utils.asyncMap(apiCalls, function(JSONarray){
-    cb(utils.shallowFlatten(JSONarray));
-  }, zip);
+  utils.asyncMap(apiCalls, JSONarray => cb(JSONarray), zip);
 }
 
 //For testing newly created APIs. 
