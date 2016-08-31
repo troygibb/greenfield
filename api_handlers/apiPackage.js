@@ -21,6 +21,7 @@ const url = require('url');
 const meetup_api = require('./meetup_api');
 const fb_api = require('./fb_api.js');
 const eventbrite_api = require('./eventbrite_api.js');
+const funcheapSF_api = require('./funcheapSF_api/funcheapSF_handler');
 const utils = require('./utils');
 
 var exports = module.exports = {};
@@ -34,7 +35,8 @@ exports.getEvents = function(req, res, cb) {
   //Index of all of the api calls to be handled. 
   const apiCalls = [
     meetup_api.getMeetUpEvents,
-    fb_api.getFbEvents
+    fb_api.getFbEvents,
+    funcheapSF_api.getSfEvents
     //,eventbrite_api.getEventbriteEvents
   ];
 
@@ -42,6 +44,6 @@ exports.getEvents = function(req, res, cb) {
 }
 
 //For testing newly created APIs. 
-exports.testApiCall = function(requestUrl, cb) {
-
+exports.testApiCall = function(req, res, cb) {
+  funcheapSF_api.getSfEvents(null, cb);
 }

@@ -8,9 +8,10 @@
   "devDependencies": {},
   "dependencies": {
     "bower": "^1.7.9",
+    "cheerio": "^0.22.0",
     "express": "^4.14.0",
-    "request": "^2.74.0",
-    "facebook-events-by-location-core": "^0.1.4"
+    "facebook-events-by-location-core": "^0.1.4",
+    "request": "^2.74.0"
   },
   "scripts": {
     "postinstall": "bower install"

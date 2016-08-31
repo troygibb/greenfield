@@ -1,7 +1,11 @@
 angular.module('greenfield.services', [])
 .factory('Events', function($http){
   let eventsObject = {};
-  let eventSourceImages = {'Facebook Events': '/client/assets/F_icon.svg.png', 'MeetUp': '/client/assets/meetupimg.png'};
+  const eventSourceImages = {
+    'Facebook Events': '/client/assets/F_icon.svg.png', 
+    'MeetUp': '/client/assets/meetupimg.png',
+    'FunCheapSF': '/client/assets/funcheaplogo_C_only.png'
+  };
   let savedEvents;
   eventsObject.saveAll = function(zipcode) {
     return $http({

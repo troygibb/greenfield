@@ -1,0 +1,973 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+
+<head profile="http://gmpg.org/xfn/11">
+<script src="//cdn.optimizely.com/js/195632799.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(e,n){return function(){o(e,[(new Date).getTime()].concat(a(arguments)),null,n)}}var o=e("handle"),i=e(2),a=e(3);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var c=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],u=["addPageAction"],f="api-";i(c,function(e,n){newrelic[n]=r(f+n,"api")}),i(u,function(e,n){newrelic[n]=r(f+n)}),n.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),o("err",[e,(new Date).getTime()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?c(e,a,i):i()}function t(t,r,o){e&&e(t,r,o);for(var i=n(o),a=l(t),c=a.length,u=0;c>u;u++)a[u].apply(i,r);var s=f[m[t]];return s&&s.push([w,t,r,i]),i}function p(e,n){g[e]=l(e).concat(n)}function l(e){return g[e]||[]}function d(e){return s[e]=s[e]||o(t)}function v(e,n){u(e,function(e,t){n=n||"feature",m[t]=n,n in f||(f[n]=[])})}var g={},m={},w={on:p,emit:t,get:d,listeners:l,context:n,buffer:v};return w}function i(){return new r}var a="nr@context",c=e("gos"),u=e(2),f={},s={},p=n.exports=o();p.backlog=f},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!b++){var e=y.info=NREUM.info,n=s.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){u(m,function(n,t){e[n]||(e[n]=t)});var t="https"===g.split(":")[0]||e.sslForHttp;y.proto=t?"https://":"http://",c("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+e.agent,n.parentNode.insertBefore(r,n)}}}function o(){"complete"===s.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=e("handle"),u=e(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},e(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-952.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=n.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader"]);</script>
+
+
+<title>Events for September 04, 2016 Archives - FunCheapSF.com</title>
+
+<meta name="generator" content="WordPress"> <!-- leave this for stats -->
+
+<link rel="stylesheet" href="http://cdn.funcheap.com/wp-content/themes/arthemia-premium/style.css?v=1.6" type="text/css" media="screen">
+<link rel="stylesheet" href="http://cdn.funcheap.com/wp-content/themes/arthemia-premium/madmenu.css?v=1.1" type="text/css" media="screen">
+<!--[if IE 6]>
+    <style type="text/css">
+    body {
+        behavior:url("http://cdn.funcheap.com/wp-content/themes/arthemia-premium/scripts/csshover2.htc");
+    }
+    </style>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://sf.funcheap.com/feed/">
+<link rel="alternate" type="text/xml" title="RSS .92" href="http://sf.funcheap.com/feed/rss/">
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://sf.funcheap.com/feed/atom/">
+
+<link rel="pingback" href="http://sf.funcheap.com/xmlrpc.php">
+
+<meta name="google-site-verification" content="zh8rr_pd9WSkAHltEH9iyehX-16B4nRxilUSS0PNiUA">
+<link rel="icon" href="http://sf.funcheap.com/wp-content/themes/arthemia-premium/images/icons/favicon_fc.ico">
+<link rel="shortcut icon" href="http://sf.funcheap.com/wp-content/themes/arthemia-premium/images/icons/favicon_fc.ico">
+	
+
+<style type="text/css">
+
+
+</style>
+
+
+
+<!-- This site is optimized with the Yoast SEO plugin v3.3.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://sf.funcheap.com/2016/09/04/">
+<link rel="next" href="http://sf.funcheap.com/2016/09/04/page/2/">
+<link rel="publisher" href="https://plus.google.com/111584757520812378310">
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/sf.funcheap.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.3"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="fbComments_hideWpComments-css" href="http://cdn.funcheap.com/wp-content/plugins/facebook-comments-for-wordpress/css/facebook-comments-hidewpcomments.css?ver=3.1" type="text/css" media="all">
+<link rel="stylesheet" id="fbc_rc_widgets-style-css" href="http://cdn.funcheap.com/wp-content/plugins/facebook-comments-for-wordpress/css/facebook-comments-widgets.css?ver=4.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="media-credit-css" href="http://cdn.funcheap.com/wp-content/plugins/media-credit/public/css/media-credit.css?ver=3.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="wp-email-css" href="http://cdn.funcheap.com/wp-content/plugins/wp-email/email-css.css?ver=2.50" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="http://cdn.funcheap.com/wp-content/themes/arthemia-premium/pagenavi-css.css?ver=2.70" type="text/css" media="all">
+<!-- This site uses the Google Analytics by MonsterInsights plugin v5.5 - Universal enabled - https://www.monsterinsights.com/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-172642-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<script type="text/javascript" src="http://cdn.funcheap.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="http://cdn.funcheap.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var toplytics = {"json_url":"http:\/\/sf.funcheap.com\/toplytics.json"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://cdn.funcheap.com/wp-content/plugins/toplytics/js/toplytics.js?ver=4.5.3"></script>
+<link rel="https://api.w.org/" href="http://sf.funcheap.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://sf.funcheap.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cdn.funcheap.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.5.3">
+	<script type="text/javascript">
+		(function () {
+			var xauth = document.createElement('script');
+			xauth.type = 'text/javascript';
+			xauth.async = true;
+			var host = 'http://sf.funcheap.com';
+			if ('https:' == document.location.protocol) {
+				host = host.replace('http://', 'https://');
+			}
+			xauth.src = host + '/presslabs.js?ts=' + Math.floor((Math.random() * 100000) + 1);
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(xauth, s);
+		})();
+	</script>
+<meta property="og:title" content=""><meta property="og:site_name" content="FunCheapSF.com"><meta property="og:url" content="http://sf.funcheap.com/burning-man-fire-sculpture-unveiling/"><meta property="og:type" content="article"><meta property="fb:app_id" content="149344508436647">
+<script data-cfasync="false" src="//load.sumome.com/" data-sumo-site-id="74d5fb417b94b375ffa7f8b851bbe8b31c23adb8750d43bcfcc5ea1b8a475b48" async></script><style type="text/css">
+/* Edits 12/21/11 */
+.cost_details {
+    font-weight:normal;
+    font-style:italic;
+}
+h3.url {
+    color:#505050;
+}
+
+
+/*---------- bubble tooltip -----------*/
+a.tt{
+    position:relative;
+    z-index:24;
+    color:#369;
+    text-decoration:none;
+}
+a.tt div{ display: none;  }
+
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+a.tt:hover{ z-index:25; color:#369; background:; }
+a.tt:hover div.tooltip{
+    display:block;
+    position:absolute;
+    top:-5px; left:-10px;
+	padding: 15px 0 0 0;
+	width:200px;
+	color:#369;
+    text-align: center;
+	filter: alpha(opacity:90);
+	KHTMLOpacity: 0.90;
+	MozOpacity: 0.90;
+	opacity: 0.90;
+}
+a.tt:hover div.top{
+	display: block;
+	padding: 30px 8px 0;
+    background: url(http://cdn.funcheap.com/wp-content/themes/arthemia-premium/images/bubble.png) no-repeat top;
+}
+a.tt:hover div.middle{ /* different middle bg for stretch */
+	display: block;
+	padding: 0 8px;
+	background: url(http://cdn.funcheap.com/wp-content/themes/arthemia-premium/images/bubble_filler.png) repeat bottom;
+}
+a.tt:hover div.bottom{
+	display: block;
+	padding:3px 8px 10px;
+	color:#369;
+    background: url(http://cdn.funcheap.com/wp-content/themes/arthemia-premium/images/bubble.png) no-repeat bottom;
+}
+.archive-meta {
+     font:100% Arial;
+     font-size:10px;
+     line-height:1.5em;
+     font-weight:bold;
+}
+.home-meta {
+     font:100% Arial;
+     font-size:10px;
+     line-height:1.5em;
+     font-weight:bold;
+}
+
+/* recurring event archive listing */
+#content.archive .recurring .tanbox {
+width: 560px;
+border-bottom:#aaa 1px dotted;
+padding: 10px 1px 1px 7px;
+background: none;
+</style>
+<!-- Ad Manager -->
+<script type="text/javascript">
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script') [0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type="text/javascript">
+googletag.cmd.push(function() {
+googletag.defineSlot('/1063843/Top_Thin_Banner_940x54', [1, 1], 'div-gpt-ad-1387519013799-0').addService(googletag.pubads());
+googletag.defineSlot('/1063843/calendar_listing_inline_300x250', [300, 250], 'div-gpt-ad-1370026159345-0').addService(googletag.pubads());
+googletag.defineSlot('/1063843/FunCheap_Archive_Listing', [300, 250], 'div-gpt-ad-1370026159345-1').addService(googletag.pubads());
+googletag.defineSlot('/1063843/FunCheap_BelowSinglePost', [300, 250], 'div-gpt-ad-1370026159345-2').addService(googletag.pubads());
+googletag.defineSlot('/1063843/FunCheap_Header', [728, 90], 'div-gpt-ad-1370026159345-3').addService(googletag.pubads());
+googletag.defineSlot('/1063843/FunCheap_Sidebar', [300, 250], 'div-gpt-ad-1370026159345-4').addService(googletag.pubads());
+googletag.defineSlot('/1063843/Sidebar_160x600', [160, 600], 'div-gpt-ad-1370026159345-5').addService(googletag.pubads());
+var myChannel = window.myChannel || "";
+googletag.pubads().set("adsense_channel_ids", myChannel);
+googletag.pubads().setTargeting("pagetype","datepage");
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+    function GA_googleFillSlot(){ return; }
+</script>
+<!-- END Ad Manager -->
+
+    <script>
+    var eventDate = "";
+    var eventCost = "";
+    var eventCategories = "";
+    </script>
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43546512-1', 'funcheap.com');
+  ga('send', 'pageview', {
+   'dimension1': eventDate,
+   'dimension2': eventCost,
+   'dimension3': eventCategories
+  });
+
+</script>
+
+<div id="head" class="clearfloat">
+	
+<div class="clearfloat">
+	<div id="logo" class="left">
+
+		<a href="http://sf.funcheap.com">
+	<img src="http://cdn.funcheap.com/wp-content/themes/arthemia-premium/images/logo/funcheap_bannertop_oct09_2.gif" width="930" height="112" alt="FunCheap.com"></a>
+	
+	</div>
+<div class="clearfloat"></div>
+	<div class="headerad" style="width:890px;padding:5px;background-color: #ccc;margin:0 auto 7px auto;text-align:center;">	
+	<!-- FunCheap_Header -->
+<div id="div-gpt-ad-1370026159345-3" style="width:728px; height:90px;margin:0 auto;">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1370026159345-3'); });
+</script>
+</div>
+	<!-- END OF AD SLOT FunCheap_Header -->
+    
+
+	</div>
+
+</div>
+
+</div>
+
+<div id="navbar" class="clearfloat">
+    <div id="madmenu">
+        <ul>
+            <div class="li"><ul id="menu-header-menu" class="menu"><li id="menu-item-22534" class="nav-home-icon nav-no-text menu-item menu-item-type-post_type menu-item-object-page menu-item-22534"><a href="http://sf.funcheap.com/">Home</a></li>
+<li id="menu-item-22546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22546"><a href="http://sf.funcheap.com/events/">Upcoming Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-26315" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26315"><a href="http://sf.funcheap.com/category/event/top-pick/">Top Picks of the Week</a></li>
+	<li id="menu-item-22543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22543"><a href="http://sf.funcheap.com/events/san-francisco/">San Francisco Calendar</a></li>
+	<li id="menu-item-22539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22539"><a href="http://sf.funcheap.com/events/east-bay/">East Bay Calendar</a></li>
+	<li id="menu-item-26316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26316"><a href="http://sf.funcheap.com/events/">Bay Area Calendar</a></li>
+	<li id="menu-item-508751" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-508751"><a href="http://sf.funcheap.com/category/location/san-francisco-bay-area/north-bay/">&#x2013; North Bay Events</a></li>
+	<li id="menu-item-508752" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-508752"><a href="http://sf.funcheap.com/category/location/san-francisco-bay-area/south-bay/">&#x2013; South Bay Events</a></li>
+	<li id="menu-item-508753" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-508753"><a href="http://sf.funcheap.com/category/location/san-francisco-bay-area/peninsula/">&#x2013; Peninsula Events</a></li>
+</ul>
+</li>
+<li id="menu-item-271394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-271394"><a href="http://sf.funcheap.com/free-events/">Free</a></li>
+<li id="menu-item-136494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136494"><a href="http://sf.funcheap.com/today/">Today</a></li>
+<li id="menu-item-136492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136492"><a href="http://sf.funcheap.com/weekend/">Weekend</a></li>
+<li id="menu-item-22545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22545"><a href="http://sf.funcheap.com/subscribe/">Newsletter</a></li>
+<li id="menu-item-329834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329834"><a href="http://sf.funcheap.com/free-stuff/">Win Tix</a></li>
+<li id="menu-item-22544" class="nav-add-icon menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22544"><a href="http://sf.funcheap.com/submit-form/">Add Your Event</a>
+<ul class="sub-menu">
+	<li id="menu-item-167463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167463"><a href="http://sf.funcheap.com/about/advertise/">Advertise</a></li>
+</ul>
+</li>
+</ul></div>        </ul>
+        <form method="get" id="searchform" action="http://sf.funcheap.com/">
+    <div id="search">
+        <input id="searchfield" type="search" placeholder="Search Funcheap..." value="" name="s" class="search-input">
+    </div>
+</form>    </div> <!-- /#madmenu -->
+</div><!-- /#navbar -->
+
+    <!-- Top_Thin_Banner_940x54 -->
+    <div style="text-align:center;background-color:white;width: 950px;min-height:1px;margin: 0px auto;">
+    <div id="div-gpt-ad-1387519013799-0" style="text-align:center;background-color:black;width: 940px;min-height:1px;margin: 0px auto;">
+    <script type="text/javascript">
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1387519013799-0'); });
+    </script>
+    </div>
+    </div>
+	<div id="page" class="clearfloat"> <!-- google_ad_section_start -->
+    <div id="inner" class="clearfloat">	<div id="content" class="archive">
+	 	
+ 	  <span id="map"><a href="http://sf.funcheap.com/">Home</a> &#xBB; Archive by Day</span><h2 class="title">Events for  September 4, 2016</h2>
+
+ 	  
+	<div class="clearfloat">
+
+
+	
+					<span class="left"><a href="/2016/09/03/">&lt; Saturday, September 3</a></span>
+			<span class="right"><a href="/2016/09/05/">Monday, September 5 &gt;</a></span>
+			<div style="clear:both"></div>
+		
+				
+ <div class="archive_date_title" style="background-color:white;margin:0px;margin-bottom:4px;padding:0px;"><h3 style="background-color:black;color:white;margin:0px;padding:3px;font: 16px Arial;font-weight:bold;">Sunday<span style="font-weight:normal;">, September 4</span></h3></div>
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">6:30 am</td><td><span class="title2"><a href="http://sf.funcheap.com/september-sunrise-tour-muir-woods-north-bay/" rel="bookmark" title="September Sunrise Tour of Muir Woods | North Bay">September Sunrise Tour of Muir Woods | North Bay</a></span></td><td style="width:66px">&#xA0;&#xA0;<a class="tt">FREE*<div class="tooltip">
+             <div class="top"></div>
+             <div class="middle">*Free but RSVP is required (415)-388-2596. Admission to the park is free before 9am.</div>
+             <div class="bottom"></div>
+             </div></a></td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/begonia-festival-capitola/" rel="bookmark" title="2016 Begonia Festival &amp; Boat Parade | Capitola">2016 Begonia Festival &amp; Boat Parade | Capitola</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; All Day | 
+
+
+<span class="cost">Cost: FREE</span> | <span>Stockton Avenue (Capitola)</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/begonia-festival-capitola/" rel="bookmark" title="2016 Begonia Festival &amp; Boat Parade | Capitola"><img src="http://cdn.funcheap.com/wp-content/uploads/2010/07/Capitola-Begonia-Festival-01-249x166.jpg" alt="2016 Begonia Festival &amp; Boat Parade | Capitola" class="left"></a></div><p>See some brilliant blooms while boating, baiting and frolicking on the beach over Labor Day weekend at the 64th annual Capitola Begonia Festival. With over 43 acres and 3 million blooms come late summer, the Begonia Festival is a spectacular sight and a fun, family-oriented ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">8:00 am</td><td><span class="title2"><a href="http://sf.funcheap.com/free-ashtanga-vinyasa-morning-yoga-flow-1st-and-3rd-sundays-4/" rel="bookmark" title="Unconfirmed &#x2013; Free Ashtanga Vinyasa Morning Yoga Flow | 1st and 3rd Sundays">Unconfirmed &#x2013; Free Ashtanga Vinyasa Morning Yoga Flow | 1st and 3rd Sundays</a></span></td><td style="width:66px">&#xA0;&#xA0;<a class="tt">FREE*<div class="tooltip">
+             <div class="top"></div>
+             <div class="middle">*Free, but donations are encouraged.</div>
+             <div class="bottom"></div>
+             </div></a></td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/sand-sculpture-contest-drakes-beach/" rel="bookmark" title="35th Annual Sand Sculpture Contest | Point Reyes">35th Annual Sand Sculpture Contest | Point Reyes</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; 9:00 am | 
+
+
+<span class="cost">Cost: FREE</span> | <span>Drakes Beach</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/sand-sculpture-contest-drakes-beach/" rel="bookmark" title="35th Annual Sand Sculpture Contest | Point Reyes"><img src="http://cdn.funcheap.com/wp-content/uploads/2015/09/6C3BF767-1DD8-B71B-0B50D26CE862E9ED1-175x130.jpg" alt="35th Annual Sand Sculpture Contest | Point Reyes" class="left"></a></div>Build your sandy masterpiece at the Point Reyes National Seashore&#x2019;s&#xA0;35th Annual Sand Sculpture Contest at Drakes Beach from 9 am to 3:30 pm on Sunday, September 4, 2016.
+The event is free for both participants and spectators and prizes will be awarded for all age categories.&#xA0;Registration ...</div>
+		<div class="tanbox left" style="background-color:white;padding-bottom:10px;">
+			<p>
+                <!-- FunCheap_Archive_Listing -->
+                <div id="div-gpt-ad-1370026159345-1" style="width:300px; height:250px;">
+                <script type="text/javascript">
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1370026159345-1'); });
+                </script>
+                </div>
+			</p>
+		</div>
+				
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/millbrae-art-wine-festival/" rel="bookmark" title="46th Annual Millbrae Art &amp; Wine Festival: Music, Art, Food &amp; Mardi Gras-Style Fun | Sunday">46th Annual Millbrae Art &amp; Wine Festival: Music, Art, Food &amp; Mardi Gras-Style Fun | Sunday</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; All Day | 
+
+
+<span class="cost">Cost: FREE</span> | <span>Downtown Millbrae</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/millbrae-art-wine-festival/" rel="bookmark" title="46th Annual Millbrae Art &amp; Wine Festival: Music, Art, Food &amp; Mardi Gras-Style Fun | Sunday"><img src="http://cdn.funcheap.com/wp-content/uploads/2010/07/millbrae-175x130.jpg" alt="46th Annual Millbrae Art &amp; Wine Festival: Music, Art, Food &amp; Mardi Gras-Style Fun | Sunday" class="left"></a></div><p>The Bay Area&#x2019;s biggest Labor Day weekend event, the&#xA0;46th Annual Millbrae Art &amp; Wine Festival&#xA0;transforms downtown Millbrae into the &#x201C;Big Easy.&#x201D; 2016 Millbrae Art &amp; Wine Festival September 3-4, 2016 | 10 am to 5 pm Broadway Ave, Downtown Millbrae FREE This free&#xA0;Mardi Gras-style celebration&#xA0;features ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/brazilian-street-party-berkeley/" rel="bookmark" title="2016 Brazilian Day Street Party | Berkeley">2016 Brazilian Day Street Party | Berkeley</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; All Day | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Free, but donations are appreciated.</div>
+                <div class="bottom"></div>
+                </div></a> | <span>Casa de Cultura</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/brazilian-street-party-berkeley/" rel="bookmark" title="2016 Brazilian Day Street Party | Berkeley"><img src="http://cdn.funcheap.com/wp-content/uploads/2015/09/14427078471-175x130.jpg" alt="2016 Brazilian Day Street Party | Berkeley" class="left"></a></div>Casa de Cultura in Berkeley once again throws a&#xA0;day-long party and ritual celebrating Brazilian Independence Day&#xA0;with an annual lavagem (blessing) and procession for world peace, live Brazilian music and DJs, dancing, food, drinks,&#xA0;and lots of folks dressed in white.
+2016 Brazilian Day Party
+Sunday, September 4, 2016 ...</div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/kings-mountain-art-fair-redwoods-sunday-woodside/" rel="bookmark" title="2016 Kings Mountain Art Fair in the Redwoods | Woodside">2016 Kings Mountain Art Fair in the Redwoods | Woodside</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; All Day | 
+
+
+<span class="cost">Cost: FREE</span> | <span>Kings Mountain Fire Station</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/kings-mountain-art-fair-redwoods-sunday-woodside/" rel="bookmark" title="2016 Kings Mountain Art Fair in the Redwoods | Woodside"><img src="http://cdn.funcheap.com/wp-content/uploads/2013/08/Tents-in-the-Redwoods-9-046783731541-175x130.jpg" alt="2016 Kings Mountain Art Fair in the Redwoods | Woodside" class="left"></a></div><p>Why pay a fortune to see the art in Sausalito when you can visit the Kings Mountain Art Fair for free? Known for its stunning location among the redwoods and for its unique and varied artists, the Kings Mountain Art Fair celebrates 50 years of ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/bank-america-free-museum-weekend-15/" rel="bookmark" title="Bank of America Free Museum Weekend">Bank of America Free Museum Weekend</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; All Day | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Free for Bank of America or Merrill Lynch Card Holders. Some venues may be closed on certain days; please confirm directly with participating museums.</div>
+                <div class="bottom"></div>
+                </div></a> | <span>San Francisco Bay Area</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/bank-america-free-museum-weekend-15/" rel="bookmark" title="Bank of America Free Museum Weekend"><img src="http://cdn.funcheap.com/wp-content/uploads/2010/12/bofafreeday-175x130.jpg" alt="Bank of America Free Museum Weekend" class="left"></a></div><p>Holders of Bank of America or Merrill Lynch credit cards and debit cards get free admission to six Bay Area museums and two Sacramento museums for the first weekend each month. Bank of America Free Museum Weekend First weekend of each month FREE but BofA ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/asian-art-museum-free-admission-day-sf-37/" rel="bookmark" title="Asian Art Museum Free Admission Day | SF">Asian Art Museum Free Admission Day | SF</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; 10:00 am | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Special exhibitions may require separate admission surcharge</div>
+                <div class="bottom"></div>
+                </div></a> | <span>Asian Art Museum</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/asian-art-museum-free-admission-day-sf-37/" rel="bookmark" title="Asian Art Museum Free Admission Day | SF"><img src="http://cdn.funcheap.com/wp-content/uploads/2013/07/aasf11-175x130.jpg" alt="Asian Art Museum Free Admission Day | SF" class="left"></a></div><p>The Asian Art Museum of San Francisco is one of the largest museums in the Western world devoted exclusively to Asian Art, with a collection of over 17,000 artworks spanning 6,000 years of history. Normally $12, the museum offers&#xA0;free admission every first Sunday the month.&#xA0;Please ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/free-first-sunday-admission-oakland-museum-of-california-37/" rel="bookmark" title="Free First Sunday Admission | Oakland Museum of California">Free First Sunday Admission | Oakland Museum of California</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; 10:00 am | 
+
+
+<span class="cost">Cost: FREE</span> | <span>Oakland Museum of California</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/free-first-sunday-admission-oakland-museum-of-california-37/" rel="bookmark" title="Free First Sunday Admission | Oakland Museum of California"><img src="http://cdn.funcheap.com/wp-content/uploads/2010/07/readDBImage.jpg" alt="Free First Sunday Admission | Oakland Museum of California" class="left"></a></div><p>The Oakland Museum of California (OMCA) brings together collections of art, history and natural science under one roof to tell the extraordinary stories of California and its people. As the only museum to focus entirely on the art and history of California, the diverse collections ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/san-francisco-zine-fest-golden-gate-park/" rel="bookmark" title="2016 San Francisco Zine Fest | Golden Gate Park">2016 San Francisco Zine Fest | Golden Gate Park</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; All Day | 
+
+
+<span class="cost">Cost: FREE</span> | <span>County Fair Building</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/san-francisco-zine-fest-golden-gate-park/" rel="bookmark" title="2016 San Francisco Zine Fest | Golden Gate Park"><img src="http://cdn.funcheap.com/wp-content/uploads/2012/05/sfzf_floor1-175x130.jpg" alt="2016 San Francisco Zine Fest | Golden Gate Park" class="left"></a></div><p>The San Francisco Zine Fest is a free, annual celebration of small-press publishing from zines and comics to art books and beyond. Over 200&#xA0;small-press and DIY creators will be selling, trading, and otherwise sharing their work at the San Francisco County Fair Building in Golden ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/annual-pan-african-family-reunion/" rel="bookmark" title="2016 Pan African Family Reunion: Games, Live Music &amp; Health Workshops | Oakland">2016 Pan African Family Reunion: Games, Live Music &amp; Health Workshops | Oakland</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; All Day | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Free, but an RSVP is requested but not required. Donations to their IndieGoGo are appreciated.</div>
+                <div class="bottom"></div>
+                </div></a> | <span>Mosswood Park</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/annual-pan-african-family-reunion/" rel="bookmark" title="2016 Pan African Family Reunion: Games, Live Music &amp; Health Workshops | Oakland"><img src="http://cdn.funcheap.com/wp-content/uploads/2015/09/maxresdefault1-1-175x130.jpg" alt="2016 Pan African Family Reunion: Games, Live Music &amp; Health Workshops | Oakland" class="left"></a></div>The Afrocentric Oakland Crew invites&#xA0;all citizens of the African Diaspora to&#xA0;Mosswood Park for&#xA0;the annual Pan African Family Reunion,&#xA0;a free day of sunshine in the park with a great variety of music, arts &amp; crafts, dancing, and games for adults and kids alike.
+Through participation in a ...</div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">11:00 am</td><td><span class="title2"><a href="http://sf.funcheap.com/free-kundalini-yoga-day-in-the-park-dolores-park-32/" rel="bookmark" title="Free Kundalini Yoga Day in the Park | Dolores Park">Free Kundalini Yoga Day in the Park | Dolores Park</a></span></td><td style="width:66px">&#xA0;&#xA0;FREE</td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/off-the-grid-presidio-picnic-food-truck-party-sf-111/" rel="bookmark" title="Off the Grid: Presidio Picnic &amp; Food Truck Party | SF">Off the Grid: Presidio Picnic &amp; Food Truck Party | SF</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; 11:00 am | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Free admission, but bring money for food,  drinks and some entertainment.</div>
+                <div class="bottom"></div>
+                </div></a> | <span>Main Post Lawn</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/off-the-grid-presidio-picnic-food-truck-party-sf-111/" rel="bookmark" title="Off the Grid: Presidio Picnic &amp; Food Truck Party | SF"><img src="http://cdn.funcheap.com/wp-content/uploads/2012/09/10012731_549352745179926_8553541781238197164_o-175x130.jpg" alt="Off the Grid: Presidio Picnic &amp; Food Truck Party | SF" class="left"></a></div><p>Off the Grid hosts a full season of&#xA0;Picnic at the Presidio&#xA0;from 11 am to 4 pm&#xA0;every Sunday through the fall at the Main Parade Ground Lawn. Get ready for yummy offerings available for purchase from&#xA0;San Francisco&#x2019;s favorite eateries and food trucks, a lively atmosphere and ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">11:00 am</td><td><span class="title2"><a href="http://sf.funcheap.com/bike-learn-ride-program-presidio/" rel="bookmark" title="Y Bike Learn to Ride Program | The Presidio">Y Bike Learn to Ride Program | The Presidio</a></span></td><td style="width:66px">&#xA0;&#xA0;FREE</td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">11:00 am</td><td><span class="title2"><a href="http://sf.funcheap.com/gun-disappeared-presidion/" rel="bookmark" title="The Last Gun &amp; How It Disappeared | The Presidion">The Last Gun &amp; How It Disappeared | The Presidion</a></span></td><td style="width:66px">&#xA0;&#xA0;FREE</td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/free-jazz-symphony-park-golden-gate-park/" rel="bookmark" title="Free Jazz Symphony in the Park | Golden Gate Park">Free Jazz Symphony in the Park | Golden Gate Park</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; 1:00 pm | 
+
+
+<span class="cost">Cost: FREE</span> | <span>Spreckels Temple of Music</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/free-jazz-symphony-park-golden-gate-park/" rel="bookmark" title="Free Jazz Symphony in the Park | Golden Gate Park"><img src="http://cdn.funcheap.com/wp-content/uploads/2013/04/NBand-Photo-Cropped-800W1-175x130.jpg" alt="Free Jazz Symphony in the Park | Golden Gate Park" class="left"></a></div><p>The Golden Gate Park Band, under the direction of Michael L. Wirgler, presents the&#xA0;134th season in Golden Gate Park&#x2019;s music concourse. The weekly concerts take place most Sundays at 1 pm and are free and open to the public. All concerts feature music of specific ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">1:30 pm</td><td><span class="title2"><a href="http://sf.funcheap.com/kabuki-on-film-free-screening-kabuki-expert-talk-san-mateo-27/" rel="bookmark" title="Kabuki on Film: Free Screening &amp; Kabuki Expert Talk | San Mateo">Kabuki on Film: Free Screening &amp; Kabuki Expert Talk | San Mateo</a></span></td><td style="width:66px">&#xA0;&#xA0;FREE</td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">2:00 pm</td><td><span class="title2"><a href="http://sf.funcheap.com/tango-square-orquesta-union-square-live/" rel="bookmark" title="Tango In The Square: Orquesta Z | Union Square Live">Tango In The Square: Orquesta Z | Union Square Live</a></span></td><td style="width:66px">&#xA0;&#xA0;FREE</td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">2:00 pm</td><td><span class="title2"><a href="http://sf.funcheap.com/san-francisco-mime-troupes-schooled-closing-weekend-dolores-park/" rel="bookmark" title="San Francisco Mime Troupe&#x2019;s &#x201C;Schooled&#x201D; Closing Weekend | Dolores Park">San Francisco Mime Troupe&#x2019;s &#x201C;Schooled&#x201D; Closing Weekend | Dolores Park</a></span></td><td style="width:66px">&#xA0;&#xA0;<a class="tt">FREE*<div class="tooltip">
+             <div class="top"></div>
+             <div class="middle">*Free, but a donation is requested.</div>
+             <div class="bottom"></div>
+             </div></a></td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/free-shakespeare-park-winters-tale-presidio/" rel="bookmark" title="Free Shakespeare in the Park: The Winter&#x2019;s Tale | The Presidio">Free Shakespeare in the Park: The Winter&#x2019;s Tale | The Presidio</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; 2:00 pm | 
+
+
+<span class="cost">Cost: FREE</span> | <span>Presidio Main Post Lawn</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/free-shakespeare-park-winters-tale-presidio/" rel="bookmark" title="Free Shakespeare in the Park: The Winter&apos;s Tale | The Presidio"><img src="http://cdn.funcheap.com/wp-content/uploads/2013/06/shakespearmclaren-175x130.jpg" alt="Free Shakespeare in the Park: The Winter&apos;s Tale | The Presidio" class="left"></a></div><p>For the 33rd season of Shakespeare in the Park,&#xA0;SF Shakes will present a&#xA0;production of The Winter&#x2019;s Tale.&#xA0;Luminous and heartbreaking, tragic and gloriously funny, The Winter&#x2019;s Tale is the crowning achievement of Shakespeare&#x2019;s late career, a magical tale that swoops across continents, generations, and genres to ...</p></div>
+			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">3:30 pm</td><td><span class="title2"><a href="http://sf.funcheap.com/cuban-rumba-jam-play-sing-dance-enjoy-berkeley-6/" rel="bookmark" title="Cuban Rumba Jam: Play, Sing, Dance &amp; Enjoy | Berkeley">Cuban Rumba Jam: Play, Sing, Dance &amp; Enjoy | Berkeley</a></span></td><td style="width:66px">&#xA0;&#xA0;<a class="tt">FREE*<div class="tooltip">
+             <div class="top"></div>
+             <div class="middle">*Free, but donations are encouraged.</div>
+             <div class="bottom"></div>
+             </div></a></td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;padding:3px 0;"><table width="100%"><tr><td style="width:66px">4:00 pm</td><td><span class="title2"><a href="http://sf.funcheap.com/original-famous-twang-sundays-live-country-music-potrero-hill-129/" rel="bookmark" title="Original Famous Twang Sundays: Live Country Music | Potrero Hill">Original Famous Twang Sundays: Live Country Music | Potrero Hill</a></span></td><td style="width:66px">&#xA0;&#xA0;FREE</td></tr></table></div>			
+ 
+ 	<div class="tanbox left" style="background-color:white;">
+	<span class="title"><a href="http://sf.funcheap.com/william-shakespeares-twelfth-night-acoustic-rock-musical-berkeley-2/" rel="bookmark" title="William Shakespeare&#x2019;s &#x201C;Twelfth Night&#x201D; Acoustic Rock Musical | Berkeley">William Shakespeare&#x2019;s &#x201C;Twelfth Night&#x201D; Acoustic Rock Musical | Berkeley</a></span>
+	<div class="meta archive-meta">Sunday, September 4 &#x2013; 4:00 pm | 
+
+
+<span class="cost">Cost: FREE</span> | <span>John Hinkel Park</span> </div>
+
+<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/william-shakespeares-twelfth-night-acoustic-rock-musical-berkeley-2/" rel="bookmark" title="William Shakespeare&apos;s " twelfth="" night"="" acoustic="" rock="" musical="" |="" berkeley"=""><img src="http://cdn.funcheap.com/wp-content/uploads/2016/08/twelfth_night_20160825_1200577569-175x130.jpg" alt="William Shakespeare&apos;s " twelfth="" night"="" acoustic="" rock="" musical="" |="" berkeley"="" class="left"></a></div><p>Come celebrate the end of summer with Shakespeare&#x2019;s most finely wrought comedy, with some rollicking good tunes to top it off for 3 days, September 3-5, 2016. Love unrequited and requited, twins, mistaken identity, and hilarious pranks are set to an acoustic rock score in ...</p></div>
+	
+	
+		</div>
+    <div class="recurring clearfloat" style="text-align:left;background-color:lightgrey;">		<div class="archive_date_title" style="background-color:white;margin:0px;margin-bottom:4px;padding:0px;"><h3 style="background-color:black;color:white;margin:0px;padding:3px;line-height:14px;">Every Sunday</h3></div>
+
+
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/heart-city-farmers-market-civic-center/" rel="bookmark" title="&#x201C;Heart of the City&#x201D; Sunday Farmers Market | UN Plaza">&#x201C;Heart of the City&#x201D; Sunday Farmers Market | UN Plaza</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; All Day | 
+
+
+<span class="cost">Cost: FREE</span> | <span>United Nations Plaza (about Civic Center BART)</span> </div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/heart-city-farmers-market-civic-center/" rel="bookmark" title="" heart="" of="" the="" city"="" sunday="" farmers="" market="" |="" un="" plaza"=""><img src="http://cdn.funcheap.com/wp-content/uploads/2012/08/Market-Landscape-Small-175x130.jpg" alt="" heart="" of="" the="" city"="" sunday="" farmers="" market="" |="" un="" plaza"="" class="left"></a></div>
+		<p>Heart of the City Farmers Market is a uniquely independent, farmer-operated, nonprofit farmers market located year round on Sundays and Wednesdays in San Francisco&#x2019;s United Nations Plaza, rain or shine.&#xA0;Nearly 30 local farmers and artisan food vendors provide a wide selection of fresh local produce, &#x2026;</p>
+	</div>
+	
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/free-sunday-boot-camp-cardio-stretching-emeryville/" rel="bookmark" title="Free Sunday Boot Camp: From Cardio Exercise to Stretching | Emeryville">Free Sunday Boot Camp: From Cardio Exercise to Stretching | Emeryville</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; 10:00 am | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Attendees are required to bring a mat, water and towel, and must be at least 16 years old.</div>
+                <div class="bottom"></div>
+                </div></a> | <span>Bay Street Emeryville</span> </div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/free-sunday-boot-camp-cardio-stretching-emeryville/" rel="bookmark" title="Free Sunday Boot Camp: From Cardio Exercise to Stretching | Emeryville"><img src="http://cdn.funcheap.com/wp-content/uploads/2016/08/c700x4201-175x130.jpg" alt="Free Sunday Boot Camp: From Cardio Exercise to Stretching | Emeryville" class="left"></a></div>
+		<p>Free Sunday Boot Camp classes return to Bay Street in August and September.&#xA0;From cardio exercises to stretching sessions, all fitness levels are invited to workup a sweat with a variety of workouts.<br>
+An Athleta Certified Fitness Trainer will lead these hour-long classes outdoors on Bay Street&#x2019;s &#x2026;</p>
+	</div>
+	
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/lindy-park-free-outdoor-swing-dance-golden-gate-park/" rel="bookmark" title="Lindy in the Park: Free Outdoor Swing Dance | Golden Gate Park">Lindy in the Park: Free Outdoor Swing Dance | Golden Gate Park</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; 11:00 am | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Weather permitting (rain cancels)</div>
+                <div class="bottom"></div>
+                </div></a> | <span>Golden Gate Park</span> </div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/lindy-park-free-outdoor-swing-dance-golden-gate-park/" rel="bookmark" title="Lindy in the Park: Free Outdoor Swing Dance | Golden Gate Park"><img src="http://cdn.funcheap.com/wp-content/uploads/2012/04/swing450x2431-175x130.jpg" alt="Lindy in the Park: Free Outdoor Swing Dance | Golden Gate Park" class="left"></a></div>
+		<p>Get ready to swing in Golden Gate Park every sunny Sunday at &#x201C;Lindy in the Park,&#x201D;&#xA0;a weekly free event near the de Young Museum, when the streets of Golden Gate Park are closed to traffic and the dancers take over.<br>
+Lindy in the Park |&#xA0;Free Outdoor &#x2026;</p>
+	</div>
+	
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/golden-gate-park-sunday-roller-disco-party-sf/" rel="bookmark" title="Golden Gate Park Sunday Roller Disco Party | SF">Golden Gate Park Sunday Roller Disco Party | SF</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; 1:00 pm | 
+
+
+<span class="cost">Cost: FREE</span> | <span>Golden Gate Park</span> </div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/golden-gate-park-sunday-roller-disco-party-sf/" rel="bookmark" title="Golden Gate Park Sunday Roller Disco Party | SF"><img src="http://cdn.funcheap.com/wp-content/uploads/2012/07/img_5749-copy1-175x130.jpg" alt="Golden Gate Park Sunday Roller Disco Party | SF" class="left"></a></div>
+		<p>There is a place in San Francisco&#x2019;s Golden Gate Park that is heaven for Bay Area inline skaters and roller skaters who like to boogie to the funky beat on wheels.<br>
+The Godfather of Skate brings his mobile DJ unit and plays groovy tunes for you &#x2026;</p>
+	</div>
+	
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/victorian-walking-tour-pacific-heights/" rel="bookmark" title="Victorian Walking Tour | Pacific Heights">Victorian Walking Tour | Pacific Heights</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; 2:00 pm | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Free, but donations are accepted.</div>
+                <div class="bottom"></div>
+                </div></a> | <span>Meet at 1801 Bush</span> </div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/victorian-walking-tour-pacific-heights/" rel="bookmark" title="Victorian Walking Tour | Pacific Heights"><img src="http://cdn.funcheap.com/wp-content/uploads/2012/04/tour83_1-175x130.jpg" alt="Victorian Walking Tour | Pacific Heights" class="left"></a></div>
+		<p>See and learn about the Victorian era architecture of the city&#x2019;s first suburb on a guided walk from SF City Guides.<br>
+On a walk through the neighborhood of Lafayette Square, you&#x2019;ll learn about Victorian lifestyles and San Francisco&#x2019;s illustrious history. You&#x2019;ll see some steep streets and &#x2026;</p>
+	</div>
+	
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/free-dive-bar-bbq-benders-bar-grill/" rel="bookmark" title="Free Dive Bar BBQ | Bender&#x2019;s Bar &amp; Grill">Free Dive Bar BBQ | Bender&#x2019;s Bar &amp; Grill</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; 2:00 pm | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Free, but you&apos;ll have to buy your drinks.</div>
+                <div class="bottom"></div>
+                </div></a></div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/free-dive-bar-bbq-benders-bar-grill/" rel="bookmark" title="Free Dive Bar BBQ | Bender&apos;s Bar &amp; Grill"><img src="http://cdn.funcheap.com/wp-content/uploads/2012/09/benders-250x1871-175x130.jpg" alt="Free Dive Bar BBQ | Bender&apos;s Bar &amp; Grill" class="left"></a></div>
+		<p>Since Sundays are the only day of the week that their kitchen&#x2019;s closed, consider this Bender&#x2019;s gift to you. Every Sunday from 2-7 pm, they&#x2019;ll treat the public to a free BBQ with burgers, veggie options, or whatever else the bar&#x2019;s in the mood for &#x2026;</p>
+	</div>
+	
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/weekly-bluegrass-jam-sunday-4pm-7pm/" rel="bookmark" title="Sunday Afternoon Bluegrass Jam | Bernal Heights">Sunday Afternoon Bluegrass Jam | Bernal Heights</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; 4:00 pm | 
+
+
+<span class="cost">Cost: FREE</span> | <span>The Lucky Horseshoe</span> </div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/weekly-bluegrass-jam-sunday-4pm-7pm/" rel="bookmark" title="Sunday Afternoon Bluegrass Jam | Bernal Heights"><img src="http://cdn.funcheap.com/wp-content/uploads/2013/07/luckybluegrass-175x130.jpg" alt="Sunday Afternoon Bluegrass Jam | Bernal Heights" class="left"></a></div>
+		<p>Grab that banjo, mandolin, guitar, fiddle, harmonica and autoharp, and head over to The Lucky Horseshoe in Bernal Heights to join in San Francisco&#x2019;s only Bluegrass Jam on a Sunday afternoon.<br>
+Jamming happens from&#xA0;4-7 pm every Sunday at 453 Corland Avenue.<br>
+Yodelai-hee-hoooooo&#x2026;<br>
+Photo credit: Bernalwood</p>
+	</div>
+	
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/weekly-series-sunday-concert-series-starry-plough/" rel="bookmark" title="The Starry Plough Sunday Matinee Concerts | Berkeley">The Starry Plough Sunday Matinee Concerts | Berkeley</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; 4:00 pm | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Free, but donations are welcome.</div>
+                <div class="bottom"></div>
+                </div></a></div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/weekly-series-sunday-concert-series-starry-plough/" rel="bookmark" title="The Starry Plough Sunday Matinee Concerts | Berkeley"><img src="http://cdn.funcheap.com/wp-content/uploads/2014/01/starry-plough-175x130.jpg" alt="The Starry Plough Sunday Matinee Concerts | Berkeley" class="left"></a></div>
+		<p>The Starry Plough in Berkeley hosts a weekly all-ages matinee concert series from 4-7 pm every Sunday.<br>
+The show is free, but donations are welcome. The pub opens at 2 pm. There is a large selection of beers and full kitchen with satisfying pub staples like &#x2026;</p>
+	</div>
+	
+	<div class="tanbox left">
+		<span class="title"><a href="http://sf.funcheap.com/event-series/weekly-free-juggling-club-circus-center/" rel="bookmark" title="Free Juggling Club at Circus Center | SF">Free Juggling Club at Circus Center | SF</a></span>
+		<div class="meta archive-meta">Every Sunday &#x2013; 5:00 pm | 
+
+
+<span class="cost">Cost:</span> <a class="tt">FREE* 
+		<div class="tooltip">
+                <div class="top"></div>
+                <div class="middle">*Free, but an RSVP is required.</div>
+                <div class="bottom"></div>
+                </div></a> | <span>Circus Center</span> </div>
+
+	<div class="thumbnail-wrapper"><a href="http://sf.funcheap.com/event-series/weekly-free-juggling-club-circus-center/" rel="bookmark" title="Free Juggling Club at Circus Center | SF"><img src="http://cdn.funcheap.com/wp-content/uploads/2014/10/CSJ-Ring-Toss-500K-175x130.jpg" alt="Free Juggling Club at Circus Center | SF" class="left"></a></div>
+		<p>Experienced juggler or a newbie looking to learn? Come hang out at Juggling Club from 5 pm to 8 pm&#xA0;and collaborate in a fun, low-pressure environment with an experienced Circus Center instructor.&#xA0;All levels are welcome&#xA0;in this free club.<br>
+Free, but an RSVP is required.<br>
+Bring your friends &#x2026;</p>
+	</div>
+	
+	</div>
+
+				<span class="left"><a href="/2016/09/03/">&lt; Saturday, September 3</a></span>
+			<span class="right"><a href="/2016/09/05/">Monday, September 5 &gt;</a></span>
+			<div style="clear:both"></div>
+	
+	</div>
+
+
+<div id="sidebar">
+<!-- google_ad_section_start(weight=ignore) -->
+
+
+
+	
+		
+
+
+  
+<div id="sidebar-top"> 
+			<div class="textwidget">	<div id="sidebar-ads2" style="margin-top:10px;">
+<!-- FunCheap_Sidebar -->
+<div id="div-gpt-ad-1370026159345-4" style="width:300px; height:250px;">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1370026159345-4'); });
+</script>
+</div>
+	</div></div>
+		<h3>Sign Up For Funcheap Emails</h3>			<div class="textwidget"><!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:480px;}
+#mc_embed_signup .button {clear:both; background-color: #0099FF; border: 0 none; border-radius:4px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: bold; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding:0; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
+#mc_embed_signup .button:hover {background-color:#777;}
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="http://funcheapSF.us1.list-manage.com/subscribe/post?u=f5339395efdcfe92ceca94fbe&amp;id=4a404fc7a1&amp;SOURCE=Sidebar" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+	<label for="mce-EMAIL">Join the Funcheap SF Email List</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+	<div class="clear"><input type="submit" value="Sign Up Now" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+
+</form>
+</div>
+Join the <b>95,000+</b> San Franciscans and get our picks for the best  Bay Area<b> free &amp; cheap events</b> and deals each week.
+
+
+<!--End mc_embed_signup-->
+</div>
+		<h3>Most Popular Upcoming Events</h3>			<script type="text/javascript">
+				toplytics_args = {
+					period       : '2days',
+					numberposts  : 10,
+					showviews    : 0,
+					widget_id    : 'toplytics-widget-3'
+				}
+			</script>
+		<div id="toplytics-widget-3"></div><ol>		<li>
+		<a href="http://sf.funcheap.com/annual-aloha-poly-fest-san-francisco-california/" title="2016 Aloha Poly Fest: Polynesian Music, Dance &amp; Food | Golden Gate Park">2016 Aloha Poly Fest: Polynesian Music, Dance &amp; Food | Golden Gate Park</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/barrel-coffee-birthday-bash/" title="Four Barrel&#x2019;s 8th Birthday: $1 Coffee Day &amp; Petting Zoo | SF">Four Barrel&#x2019;s 8th Birthday: $1 Coffee Day &amp; Petting Zoo | SF</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/bank-america-free-museum-weekend-16/" title="Bank of America Free Museum Weekend">Bank of America Free Museum Weekend</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/millbrae-art-wine-festival-2/" title="46th Annual Millbrae Art &amp; Wine Festival: Music, Art, Food &amp; Mardi Gras-Style Fun | Saturday">46th Annual Millbrae Art &amp; Wine Festival: Music, Art, Food &amp; Mardi Gras-Style Fun | Saturday</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/folsom-street-fair/" title="2016 Folsom Street Fair | SoMa">2016 Folsom Street Fair | SoMa</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/brazilian-street-party-berkeley/" title="2016 Brazilian Day Street Party | Berkeley">2016 Brazilian Day Street Party | Berkeley</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/pianofight-presents-harry-potter-hella-magical-super-dope-summer-shindig/" title="Harry Potter and the Hella Magical Super Dope Summer Shindig | PianoFight">Harry Potter and the Hella Magical Super Dope Summer Shindig | PianoFight</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/free-fishing-day-fall/" title="Free Fishing Day 2016 | SF">Free Fishing Day 2016 | SF</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/wine-movie-night-hot-top-mark/" title="Wine &amp; Movie Night: &#x201C;Some Like It Hot&#x201D; | Top  of  the Mark">Wine &amp; Movie Night: &#x201C;Some Like It Hot&#x201D; | Top  of  the Mark</a>
+		</li>		<li>
+		<a href="http://sf.funcheap.com/annual-begonia-festival-capitola/" title="2016 Begonia Festival: Sand Sculpture Contest, Flower Mural &amp; Movie at the Beach | Capitola">2016 Begonia Festival: Sand Sculpture Contest, Flower Mural &amp; Movie at the Beach | Capitola</a>
+		</li></ol><h3>Funcheap on Facebook</h3>			<div class="textwidget"><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FFunCheapSF%2F327396872503&amp;width=300&amp;height=220&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true" scrolling="no" frameborder="0" style="border:none;height:220px;overflow:none;" allowtransparency="true"></iframe></div>
+		</div>
+
+
+<div id="sidebar-middle" class="clearfloat"> 
+<div id="sidebar-left">
+			<div class="textwidget"><div style="float:left;"><!-- Sidebar_160x600 --><div id="div-gpt-ad-1370026159345-5" style="width:160px; height:600px;">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1370026159345-5'); });
+</script></div></div></div>
+		 
+
+</div>  
+
+<div id="sidebar-right">
+<h3>Locations</h3>			<div class="textwidget"><ul>	<li class="cat-item cat-item-41"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/location/san-francisco-bay-area/east-bay/" title="View all posts filed under East Bay">East Bay</a></div> 
+</li> 
+	<li class="cat-item cat-item-42"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/location/san-francisco-bay-area/north-bay/" title="View all posts filed under North Bay">North Bay</a></div> 
+</li> 
+	<li class="cat-item cat-item-119"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/location/san-francisco-bay-area/peninsula/" title="View all posts filed under Peninsula">Peninsula</a></div> 
+</li> 
+	<li class="cat-item cat-item-40"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/location/san-francisco-bay-area/san-francisco/" title="View all posts filed under San Francisco">San Francisco</a></div> 
+</li> 
+	<li class="cat-item cat-item-43"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/location/san-francisco-bay-area/south-bay/" title="View all posts filed under South Bay">South Bay</a></div> 
+</li> 
+</ul></div>
+		<h3>Categories</h3>			<div class="textwidget"><ul>	<li class="cat-item cat-item-31"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/art-museums/" title="View all posts filed under Art &amp; Museums">Art &amp; Museums</a></div> 
+</li> 
+	<li class="cat-item cat-item-263"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/charity-volunteering/" title="View all posts filed under Charity &amp; Volunteering">Charity &amp; Volunteering</a></div> 
+</li> 
+	<li class="cat-item cat-item-156"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/club-dj/" title="View all posts filed under Club / DJ">Club / DJ</a></div> 
+</li> 
+	<li class="cat-item cat-item-210"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/comedy-event-types-event/" title="View all posts filed under Comedy">Comedy</a></div> 
+</li> 
+	<li class="cat-item cat-item-94"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/eating-drinking/" title="View all posts filed under Eating &amp; Drinking">Eating &amp; Drinking</a></div> 
+</li> 
+	<li class="cat-item cat-item-9"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/fairs-festivals/" title="View all posts filed under Fairs &amp; Festivals">Fairs &amp; Festivals</a></div> 
+</li> 
+	<li class="cat-item cat-item-27"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/free-stuff/" title="View all posts filed under Free Stuff">Free Stuff</a></div> 
+</li> 
+	<li class="cat-item cat-item-11"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/fun-games/" title="View all posts filed under Fun &amp; Games">Fun &amp; Games</a></div> 
+</li> 
+	<li class="cat-item cat-item-33"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/geek-event/" title="View all posts filed under Geek Event">Geek Event</a></div> 
+</li> 
+	<li class="cat-item cat-item-113"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/kids-families/" title="View all posts filed under Kids &amp; Families">Kids &amp; Families</a></div> 
+</li> 
+	<li class="cat-item cat-item-55"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/lectures-workshops/" title="View all posts filed under Lectures &amp; Workshops">Lectures &amp; Workshops</a></div> 
+</li> 
+	<li class="cat-item cat-item-78"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/literature/" title="View all posts filed under Literature">Literature</a></div> 
+</li> 
+	<li class="cat-item cat-item-10"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/live-music-event/" title="View all posts filed under Live Music">Live Music</a></div> 
+</li> 
+	<li class="cat-item cat-item-12"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/movies/" title="View all posts filed under Movies">Movies</a></div> 
+</li> 
+	<li class="cat-item cat-item-99"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/shopping-fashion/" title="View all posts filed under Shopping &amp; Fashion">Shopping &amp; Fashion</a></div> 
+</li> 
+	<li class="cat-item cat-item-71"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/sports-fitness/" title="View all posts filed under Sports &amp; Fitness">Sports &amp; Fitness</a></div> 
+</li> 
+	<li class="cat-item cat-item-23"><div class="avhec-widget-line"><a href="http://sf.funcheap.com/category/event/event-types/theater-performance/" title="View all posts filed under Theater &amp; Performance">Theater &amp; Performance</a></div> 
+</li> 
+</ul></div>
+		
+</div> 
+
+</div>
+
+<div id="sidebar-bottom"> 
+<!-- Hard-coded blogroll commented out by Johnny Hayes on 7/29/09
+<h3>Tag Cloud</h3>
+<a href='http://sf.funcheap.com/tag/art/' class='tag-link-17 tag-link-position-1' title='538 topics' style='font-size: 14.222222222222pt;'>Art</a>
+<a href='http://sf.funcheap.com/tag/beer/' class='tag-link-48 tag-link-position-2' title='105 topics' style='font-size: 8.1728395061728pt;'>Beer</a>
+<a href='http://sf.funcheap.com/tag/berkeley/' class='tag-link-80 tag-link-position-3' title='125 topics' style='font-size: 8.7777777777778pt;'>Berkeley</a>
+<a href='http://sf.funcheap.com/tag/book-reading/' class='tag-link-86 tag-link-position-4' title='120 topics' style='font-size: 8.6049382716049pt;'>Book Reading</a>
+<a href='http://sf.funcheap.com/tag/comedy/' class='tag-link-70 tag-link-position-5' title='217 topics' style='font-size: 10.851851851852pt;'>Comedy</a>
+<a href='http://sf.funcheap.com/tag/concert/' class='tag-link-6 tag-link-position-6' title='337 topics' style='font-size: 12.493827160494pt;'>Concert</a>
+<a href='http://sf.funcheap.com/tag/dance/' class='tag-link-24 tag-link-position-7' title='173 topics' style='font-size: 9.9876543209877pt;'>Dance</a>
+<a href='http://sf.funcheap.com/tag/deals-discounts/' class='tag-link-581 tag-link-position-8' title='806 topics' style='font-size: 15.777777777778pt;'>Deals &amp; Discounts</a>
+<a href='http://sf.funcheap.com/tag/dj/' class='tag-link-16 tag-link-position-9' title='186 topics' style='font-size: 10.246913580247pt;'>DJ</a>
+<a href='http://sf.funcheap.com/tag/family/' class='tag-link-216 tag-link-position-10' title='140 topics' style='font-size: 9.2098765432099pt;'>family</a>
+<a href='http://sf.funcheap.com/tag/family-friendly/' class='tag-link-18 tag-link-position-11' title='255 topics' style='font-size: 11.456790123457pt;'>Family Friendly</a>
+<a href='http://sf.funcheap.com/tag/festival/' class='tag-link-21 tag-link-position-12' title='126 topics' style='font-size: 8.7777777777778pt;'>Festival</a>
+<a href='http://sf.funcheap.com/tag/film/' class='tag-link-68 tag-link-position-13' title='287 topics' style='font-size: 11.888888888889pt;'>Film</a>
+<a href='http://sf.funcheap.com/tag/food/' class='tag-link-28 tag-link-position-14' title='250 topics' style='font-size: 11.37037037037pt;'>Food</a>
+<a href='http://sf.funcheap.com/tag/free/' class='tag-link-15 tag-link-position-15' title='4,255 topics' style='font-size: 22pt;'>Free</a>
+<a href='http://sf.funcheap.com/tag/free-food/' class='tag-link-13141 tag-link-position-16' title='146 topics' style='font-size: 9.3827160493827pt;'>Free Food</a>
+<a href='http://sf.funcheap.com/tag/free-movie-screening/' class='tag-link-13335 tag-link-position-17' title='234 topics' style='font-size: 11.111111111111pt;'>Free Sneak Preview Movie Screening</a>
+<a href='http://sf.funcheap.com/tag/fun/' class='tag-link-217 tag-link-position-18' title='181 topics' style='font-size: 10.16049382716pt;'>fun</a>
+<a href='http://sf.funcheap.com/tag/gallery/' class='tag-link-251 tag-link-position-19' title='101 topics' style='font-size: 8pt;'>Gallery</a>
+<a href='http://sf.funcheap.com/tag/gofobo/' class='tag-link-11768 tag-link-position-20' title='175 topics' style='font-size: 10.074074074074pt;'>Gofobo</a>
+<a href='http://sf.funcheap.com/tag/golden-gate-park/' class='tag-link-36 tag-link-position-21' title='160 topics' style='font-size: 9.7283950617284pt;'>Golden Gate Park</a>
+<a href='http://sf.funcheap.com/tag/history/' class='tag-link-13162 tag-link-position-22' title='194 topics' style='font-size: 10.41975308642pt;'>History</a>
+<a href='http://sf.funcheap.com/tag/kids/' class='tag-link-201 tag-link-position-23' title='120 topics' style='font-size: 8.6049382716049pt;'>kids</a>
+<a href='http://sf.funcheap.com/tag/lecture/' class='tag-link-34 tag-link-position-24' title='161 topics' style='font-size: 9.7283950617284pt;'>Lecture</a>
+<a href='http://sf.funcheap.com/tag/literature/' class='tag-link-13170 tag-link-position-25' title='126 topics' style='font-size: 8.7777777777778pt;'>Literature</a>
+<a href='http://sf.funcheap.com/tag/live-music/' class='tag-link-5 tag-link-position-26' title='592 topics' style='font-size: 14.567901234568pt;'>Live Music</a>
+<a href='http://sf.funcheap.com/tag/local-artists/' class='tag-link-154 tag-link-position-27' title='141 topics' style='font-size: 9.2098765432099pt;'>Local Artists</a>
+<a href='http://sf.funcheap.com/tag/mission-district/' class='tag-link-91 tag-link-position-28' title='198 topics' style='font-size: 10.506172839506pt;'>Mission District</a>
+<a href='http://sf.funcheap.com/tag/movie/' class='tag-link-62 tag-link-position-29' title='460 topics' style='font-size: 13.617283950617pt;'>Movie</a>
+<a href='http://sf.funcheap.com/tag/museum/' class='tag-link-35 tag-link-position-30' title='107 topics' style='font-size: 8.1728395061728pt;'>Museum</a>
+<a href='http://sf.funcheap.com/tag/music/' class='tag-link-324 tag-link-position-31' title='343 topics' style='font-size: 12.58024691358pt;'>music</a>
+<a href='http://sf.funcheap.com/tag/oakland/' class='tag-link-13147 tag-link-position-32' title='154 topics' style='font-size: 9.5555555555556pt;'>Oakland</a>
+<a href='http://sf.funcheap.com/tag/odd-weird/' class='tag-link-52 tag-link-position-33' title='102 topics' style='font-size: 8pt;'>Odd &amp; Weird</a>
+<a href='http://sf.funcheap.com/tag/outdoors/' class='tag-link-59 tag-link-position-34' title='188 topics' style='font-size: 10.333333333333pt;'>Outdoors</a>
+<a href='http://sf.funcheap.com/tag/party/' class='tag-link-353 tag-link-position-35' title='104 topics' style='font-size: 8.0864197530864pt;'>party</a>
+<a href='http://sf.funcheap.com/tag/perfect-for-a-picnic/' class='tag-link-19 tag-link-position-36' title='109 topics' style='font-size: 8.2592592592593pt;'>Perfect for a Picnic</a>
+<a href='http://sf.funcheap.com/tag/performance/' class='tag-link-130 tag-link-position-37' title='168 topics' style='font-size: 9.9012345679012pt;'>Performance</a>
+<a href='http://sf.funcheap.com/tag/san-francisco/' class='tag-link-13153 tag-link-position-38' title='124 topics' style='font-size: 8.7777777777778pt;'>San Francisco</a>
+<a href='http://sf.funcheap.com/tag/science/' class='tag-link-54 tag-link-position-39' title='126 topics' style='font-size: 8.7777777777778pt;'>Science</a>
+<a href='http://sf.funcheap.com/tag/shopping/' class='tag-link-76 tag-link-position-40' title='132 topics' style='font-size: 8.9506172839506pt;'>Shopping</a>
+<a href='http://sf.funcheap.com/tag/soma/' class='tag-link-7 tag-link-position-41' title='255 topics' style='font-size: 11.456790123457pt;'>SOMA</a>
+<a href='http://sf.funcheap.com/tag/theater/' class='tag-link-45 tag-link-position-42' title='106 topics' style='font-size: 8.1728395061728pt;'>Theater</a>
+<a href='http://sf.funcheap.com/tag/wine/' class='tag-link-279 tag-link-position-43' title='103 topics' style='font-size: 8.0864197530864pt;'>wine</a>
+<a href='http://sf.funcheap.com/tag/workshop/' class='tag-link-95 tag-link-position-44' title='117 topics' style='font-size: 8.5185185185185pt;'>Workshop</a>
+<a href='http://sf.funcheap.com/tag/worth-the-splurge/' class='tag-link-13188 tag-link-position-45' title='123 topics' style='font-size: 8.6913580246914pt;'>Worth the Splurge</a>-->		
+ </div>   
+
+<!-- google_ad_section_end -->
+</div></div><!-- google_ad_section_end -->
+</div>
+
+          
+<div id="front-popular" class="clearfloat">
+
+<div id="recentpost" class="clearfloat">
+			<div class="textwidget"></div>
+		</div> 		
+
+<div id="mostcommented" class="clearfloat">
+			<div class="textwidget"></div>
+		</div>
+
+<div id="recent_comments" class="clearfloat">
+ 		
+</div>
+</div>
+
+<style type="text/css">
+#footermenu ul {list-style-type:none; padding:0px; margin:0px; padding-bottom:7px;}
+#footermenu li { float:left;position:relative;border-right-color:black;border-left-style:solid;border-left-width:1px;margin-left:3px;padding-left:3px;line-height:10px;}
+#footermenu li.footermenustart { float:left;position:relative;border-right-color:black;border-left-style:none;margin-left:0px;padding-left:0px;}
+</style>
+
+<div id="footer" class="clearfloat">
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            /*$('#sidebar-top ul li a').each(function() {
+                $(this).attr('onclick', "javascript:__gaTracker(['send', 'event', 'Link Tracking','Recently Added Events','Sidebar Recently Added']);");
+            });*/
+            $('#sidebar .toplytics-box a').each(function() {
+                $(this).attr('onclick', "javascript:__gaTracker(['send', 'event', 'Link Tracking','Most Popular Events','Sidebar Most Popular Upcoming']);");
+            });
+            $('.related-events a').each(function() {
+                $(this).attr('onclick', "javascript:__gaTracker(['send', 'event', 'Link Tracking','Related Events','Below Post Widget']);");
+            });
+            $('.region-links a').each(function() {
+                $(this).attr('onclick', "javascript:__gaTracker(['send', 'event', 'Link Tracking','Region Links','Event Detail Page']);");
+            });
+            $('#mc-embedded-subscribe').each(function() {
+                $(this).attr('onclick', "javascript:__gaTracker(['send', 'event', 'Link Tracking','Email Newsletter','Subscribe Sidebar']);");
+            });
+            $('#mc-embedded-subscribe-page').each(function() {
+                $(this).attr('onclick', "javascript:__gaTracker(['send', 'event', 'Link Tracking','Email Newsletter','Subscribe Page']);");
+            });
+        });
+    </script><script type="text/javascript">
+/* <![CDATA[ */
+var FcAjaxVenueSearch = {"ajaxurl":"https:\/\/sf.funcheap.com\/wp-admin\/admin-ajax.php","fc_nonce":"684fad753a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://cdn.funcheap.com/wp-content/plugins/fc-venue-search/scripts/jquery.autocomplete.min.js?ver=1"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var emailL10n = {"ajax_url":"http:\/\/sf.funcheap.com\/wp-content\/plugins\/wp-email\/wp-email.php","max_allowed":"5","text_error":"The Following Error Occurs:","text_name_invalid":"- Your Name is empty\/invalid","text_email_invalid":"- Your Email is empty\/invalid","text_remarks_invalid":"- Your Remarks is invalid","text_friend_names_empty":"- Friend Name(s) is empty","text_friend_name_invalid":"- Friend Name is empty\/invalid: ","text_max_friend_names_allowed":"- Maximum 5 Friend Names allowed","text_friend_emails_empty":"- Friend Email(s) is empty","text_friend_email_invalid":"- Friend Email is invalid: ","text_max_friend_emails_allowed":"- Maximum 5 Friend Emails allowed","text_friends_tally":"- Friend Name(s) count does not tally with Friend Email(s) count","text_image_verify_empty":"- Image Verification is empty"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://cdn.funcheap.com/wp-content/plugins/wp-email/email-js.js?ver=2.50"></script>
+<script type="text/javascript" src="http://cdn.funcheap.com/wp-includes/js/wp-embed.min.js?ver=4.5.3"></script>
+ 
+<ul id="footermenu" class="left"><div class="li"><ul id="menu-footer-menu" class="menu"><li id="menu-item-113174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113174"><a href="http://sf.funcheap.com/about/">About Funcheap</a></li>
+<li id="menu-item-22530" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22530"><a href="http://sf.funcheap.com/about/advertise/">Advertise</a></li>
+<li id="menu-item-22532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22532"><a href="http://sf.funcheap.com/about/press/">Press Room</a></li>
+<li id="menu-item-113175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113175"><a href="http://sf.funcheap.com/about/jobs-2/">Jobs &amp; Internships</a></li>
+<li id="menu-item-22533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22533"><a href="http://sf.funcheap.com/terms-service/">Terms of Service</a></li>
+<li id="menu-item-83416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83416"><a href="http://sf.funcheap.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-22531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22531"><a href="http://sf.funcheap.com/about/contact/">Contact Us</a></li>
+</ul></div></ul>
+<br><br><div class="right">Powered by <a href="http://wordpress.org/">WordPress</a> |  <a rel="nofollow" href="https://sf.funcheap.com/wp-login.php">Log in</a> | <a href="http://sf.funcheap.com/feed/">Entries (RSS)</a> | <a href="http://sf.funcheap.com/comments/feed/">Comments (RSS)</a> | <a href="http://colorlabsproject.com/themes/arthemia-premium/" target="_blank">Arthemia Premium</a> theme by <a href="http://colorlabsproject.com" target="_blank">Colorlabs Project</a></div>
+<!-- 104 queries. 0.518 seconds. -->
+</div>
+
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-fbfZk8l6DwKrg"
+};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-fbfZk8l6DwKrg.gif" ;="" style="display: none;" border="0" height="1" width="1" alt="Quantcast">
+</noscript>
+<!-- End Quantcast tag -->
+<!-- Start Quantcast tag BLOGGER COLLECTIVE -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-d2uwISjpvPZhw"
+};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-d2uwISjpvPZhw.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast">
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3d8f7a5082","applicationID":"7065871","transactionName":"ZVRWZktYCEEHUBJfWVwedVFNUAlcSVIUVV5bR1E=","queueTime":0,"applicationTime":521,"atts":"SRNVEANCG08=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
