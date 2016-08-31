@@ -4,6 +4,7 @@
     	<h3>Start discovering events near you</h3>
       <input ng-change="checkZip()" type="text" name="zip" ng-model='zip' placeholder="Enter your zipcode">
       <div ng-show="!validZip">Zip code not valid!</div>
+      <br><img ng-show="loading" src="./client/assets/spiffygif_46x46.gif">
     </section>
   </div>
 </div>
