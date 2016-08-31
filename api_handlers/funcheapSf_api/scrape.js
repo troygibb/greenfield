@@ -86,6 +86,18 @@ function JSONify() {
 	});
 };
 
+function parseCategories(classString) {
+	return classString.split(' ')
+	.filter(function(htmlClass) {
+		return /^category\-*/.test(htmlClass);
+	})
+	.map(function(category) {
+		var category = category.split('-')
+		category.shift();
+		return category.join(' ')
+	});
+};
+
 //JSON FORMATTING
 function parseHTML(sourcePath, destPath) {
 	//To snag current date for JSON response object. 
@@ -114,7 +126,7 @@ function parseHTML(sourcePath, destPath) {
 				  area: $(this).find('.entry-meta').find('.region').find('.region-child').text()
 				},
 				e_description: null,
-				e_categories: null,
+				e_categories: parseCategories($(this).parent().attr('class')),
 				e_source: 'FunCheapSF',
 				e_sourceImage: null,
 				cost: $(this).find('.entry-meta').find('.cost').text(),

@@ -3,6 +3,13 @@ const utils = require('./utils');
 const { MEETUP_API_KEY } = require('../config');
 module.exports = {};
 
+/*
+GET /2/open_events 
+
+Searches for recent and upcoming public events hosted by Meetup groups. Its search window is the past one month through the next three months, and is subject to change. Open Events is optimized to search for current events by location, category, topic, or text, and only lists Meetups that have 3 or more RSVPs. The number or results returned with each request is not guaranteed to be the same as the page size due to secondary filtering. 
+
+*/
+
 const handleUndefined = utils.handleUndefined;
 
 function formatMeetupResponse(parsedJSON, cb) {
@@ -22,10 +29,35 @@ function formatMeetupResponse(parsedJSON, cb) {
       e_description: event.description,
       e_categories: null,
       e_source: 'MeetUp',
-      e_sourceImage: null
+      e_sourceImage: event.photo_url,
+      e_cost: handleUndefined(event, 'fee', 'amount'),
+      yes_rsvp_count: event.yes_rsvp_count,
+      maybe_rsvp_count: event.maybe_rsvp_count,
+      groupUrlName: handleUndefined(event, 'group', 'urlname')
     };
   });
-  cb(responseJSON);
+  findGroupCategories(responseJSON, function(){
+     cb(responseJSON);
+  });
+};
+
+function findGroupCategories(jsonArray, cb) {
+  let copy = jsonArray.slice();
+  if (!copy.length) {
+    cb()
+    return; 
+  }
+  let currentGroup = jsonArray[0];
+  copy.shift();
+  let body = '';
+  request.get(`https://api.meetup.com/${currentGroup.groupUrlName}?key=${MEETUP_API_KEY}`)
+  .on('data', function(data){
+    body += data; 
+  })
+  .on('end', function() {
+    currentGroup.e_categories = handleUndefined(JSON.parse(body), 'category', 'name'); 
+    findGroupCategories(copy, cb);
+  });
 };
 
 //call via route /getMeetupEvents 
