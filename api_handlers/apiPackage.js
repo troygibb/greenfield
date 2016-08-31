@@ -45,5 +45,6 @@ exports.getEvents = function(req, res, cb) {
 
 //For testing newly created APIs. 
 exports.testApiCall = function(req, res, cb) {
-  funcheapSF_api.getSfEvents(null, cb);
+  meetup_api.getMeetUpEvents(94549, cb);
+  //funcheapSF_api.getSfEvents(null, cb);
 }
