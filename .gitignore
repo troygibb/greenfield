@@ -1,3 +1,5 @@
 node_modules/*
 client/lib/*
 config.js
+api_handlers/funcheapSf_api/datesJSON/*
+api_handlers/funcheapSf_api/datesHTML/*
