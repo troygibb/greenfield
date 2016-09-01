@@ -3,7 +3,8 @@ var api_handlers = require('./apiPackage.js')
 
 module.exports = (time) => {
   return (req, res, next) => {
-    let key = req.url;
+    const zip = req.url.substring(req.url.length - 5);
+    let key = zip;
     let cachedBody = memCache.get(key);
       if (cachedBody) {
       res.send(cachedBody);
