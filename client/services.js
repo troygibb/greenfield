@@ -24,5 +24,28 @@ angular.module('greenfield.services', [])
     return eventSourceImages[sourceName];
   };
   return eventsObject;
-});
+})
+.factory('Auth', function($http){
+  let AuthObject = {};
+  AuthObject.signin = user => {
+    return $http({
+      method: 'POST',
+      url: '',
+      data: user
+    })
+    .then(resp => {
+      return resp;
+    });
+  };
+  AuthObject.signup = user => {
+    return $http({
+      method: 'POST',
+      url: '',
+      data: user
+    })
+    .then(resp => {
+      return resp;
+    });
+  };
+})
 
