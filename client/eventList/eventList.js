@@ -2,6 +2,7 @@ angular.module('greenfield.eventList', [])
 .controller('EventListController', ['$scope', 'Events', function($scope,  Events) {
  //$scope.img = `assets/meetup-128.png`
   $scope.allEvents = Events.getAll();
+
   $scope.eventsByDate = '';
 
   $scope.generateTimeSpan = function(numDays) {
@@ -34,13 +35,14 @@ angular.module('greenfield.eventList', [])
 		return true; 	
 	};
 
-  $scope.getSourceImage = function(sourceName) {
-  	return Events.getSourceImage(sourceName);
-  }
+  $scope.getSourceImage = sourceName => Events.getSourceImage(sourceName);
+
   $scope.dance = function(){
   	console.log($scope.eventsByDate);
   };
+
   $scope.generateTimeSpan(7);
+
   $scope.dance();
 
 }]);
