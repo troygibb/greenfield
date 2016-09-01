@@ -19,7 +19,6 @@ angular.module('greenfield.eventList', [])
 			return {
 				date: date,
 				events: $scope.allEvents.filter(function(event) {
-					console.log(event, event.e_time);
 					if (event === undefined) return false; 
 					return $scope.compareDates(date, event.e_time)
 				})

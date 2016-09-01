@@ -8,7 +8,7 @@ angular.module('greenfield.services', [])
     'Eventbrite': '/client/assets/eventbrite__icon_svg.png'
   };
   let savedEvents;
-  eventsObject.saveAll = function(zipcode) {
+  eventsObject.getEvents = function(zipcode) {
     return $http({
       method: 'GET',
       url: '/getEvents?zip=' + zipcode
