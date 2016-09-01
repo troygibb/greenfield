@@ -24,5 +24,8 @@ angular.module('greenfield.services', [])
     return eventSourceImages[sourceName];
   };
   return eventsObject;
-});
+})
+.factory('Login', function($http){
+  
+})
 
