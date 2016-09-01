@@ -37,12 +37,19 @@ angular.module('greenfield.eventList', [])
 
   $scope.getSourceImage = sourceName => Events.getSourceImage(sourceName);
 
-  $scope.dance = function(){
-  	console.log($scope.eventsByDate);
-  };
+  $scope.dance = () => console.log($scope.eventsByDate);
 
   $scope.generateTimeSpan(7);
-
   $scope.dance();
 
+  $scope.distances = [
+    "0.5 miles",
+    "10 miles"
+  ];
+
+  $scope.times = [
+    "day",
+    "week"
+  ];
+  
 }]);
