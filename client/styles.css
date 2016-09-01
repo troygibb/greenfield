@@ -1,4 +1,4 @@
-/*events.html*/
+/*EVENTS.HTML*/
 #mainSearch {
 	margin-top: 10%;
 }
@@ -10,18 +10,72 @@
 	height: 50px;
 }
 
-/*eventList.html*/
-.sourceImage {
-	width: 30px;
-}
+/*EVENTLIST.HTML*/
 
-.container{
-	margin-right: 10%;
-	margin-left: 10%;
+.event-filter{
+	width: 100%;
+	text-align: center;
 }
-
+.event-filter>input{
+	width: 25%;
+	height: 50px;
+	font-size: 20px;
+	text-align: center;
+}
 
 .event-container{
-	width: 80%;
+  margin-top: 10px;
+  /*margin-left: 5%;
+  margin-right: 5%;*/
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 90%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/*EVENT-LEFT*/
+.event-right{
+  text-align: right; 
+  height: 100%;
+}
+.event-image{
+  height: 75px;
+  margin-top: 5px;
+  margin-left: 5px
+}
+.e_venue{
+	margin-bottom: 1px; 
+	font-size: 14px;
+}
+.e_location{
+  font-size: 12px
+}
+
+/*EVENT-MAIN*/
+.event-main{
+	text-align: center; 	
+	height: 100%;
+}
+.e_title{
+  margin: 10px 0 5px 0;
+}
+.categories-list{
+	width: 100%;
+}
+.e_categories{
+  margin: 3px 3px 0 3px;
+}
+.e_description{
+	margin-top: 10px;
+}
+
+/*EVENT-RIGHT*/
+.e_sourceImage{
+  height: 50px;
+  position: absolute;
+  padding:  0 5px 10px 10px;
+  bottom: 0;
+  right: 0;
 }
 
