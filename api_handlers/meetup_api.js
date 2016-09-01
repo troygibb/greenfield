@@ -55,7 +55,7 @@ function findGroupCategories(jsonArray, cb) {
     body += data; 
   })
   .on('end', function() {
-    currentGroup.e_categories = handleUndefined(JSON.parse(body), 'category', 'name'); 
+    currentGroup.e_categories = [handleUndefined(JSON.parse(body), 'category', 'name')]; 
     findGroupCategories(copy, cb);
   });
 };

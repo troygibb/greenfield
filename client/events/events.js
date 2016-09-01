@@ -12,7 +12,7 @@ angular.module('greenfield.events', [])
     $scope.loading = true; 
   	//Server crashes if zip input box is empty.
   	if ($scope.checkZip()) {
-  		Events.saveAll($scope.zip)
+  		Events.getEvents($scope.zip)
   		  .then(function(events){
           $scope.loading = false; 
   		    $location.path('/meetupEvents');

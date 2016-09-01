@@ -1,66 +1,36 @@
+
+
 <div class="container">
-  <div class="row">
-<!-- category list -->
-    <div class="col-md-3">
-      <p class="lead">Pick a Category</p>
-      <div class="list-group">
-        <a href="#" class="list-group-item">Category 1</a>
-        <a href="#" class="list-group-item">Category 2</a>
-        <a href="#" class="list-group-item">Category 3</a>
+  <div class="event-filter">
+    <input ng-model="searchText" placeholder="Filter by...">
+  </div>
+  <div ng-repeat="entry in eventsByDate" class="date row">
+    <h1>{{entry.date | date: "EEEE, MMMM d"}}</h1>
+
+    <div ng-repeat="event in entry.events | filter:searchText" class="event-container center-block row">
+
+      <div class="col-sm-2 event-left">
+        <img class="event-image img-rounded" ng-src={{event.e_sourceImage}}>
+        <p class="e_venue text-primary">{{event.e_location.venue_name}}</p>
+        <p class="e_location text-muted">{{event.e_location.address}}</p>
       </div>
+
+      <div class="col-sm-8 event-main">
+        <h2 class="e_title">{{event.e_title}}</h2>
+        <div class="categories-list">
+          <span ng-repeat="category in event.e_categories track by $index" class="e_categories label label-default">{{category}}</span>
+        </div>
+        <p class="e_description text-info"><a href="{{event.e_url}}">See full event details HERE.</a></p>
+      </div>
+
+      <div class="col-sm-2 event-right">
+        <h5>{{event.e_time | date: "EEEE ' at ' h:mm a"}}<br><small>{{event.e_cost}}</small></h5>
+        <img class="e_sourceImage img-rounded" ng-src="{{ getSourceImage(event.e_source) }}">
+      </div>
+
     </div>
-    <!-- big image/images-->
-     <div class="col-md-9">
-        <div class="row carousel-holder">
-          <div class="col-md-12">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-              <!-- little circle to show how many images -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                <!-- Add multiple images here -->
-                <div class="item active">
-                  <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                </div>
-                    
-                </div>
-                  <!-- move left and right  -->
-                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                  </a>
-            </div>
-          </div>
-        </div>
-        <!-- Start of the Events -->
-        <div class="row">
-          <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="event in allEvents">
-            <div class="thumbnail">
-            <!-- img below for null values? -->
-            <!-- "http://placehold.it/320x150" -->
-              <img ng-src={{event.e_sourceImage}} alt="">
-              <div class="caption">
-                <h4 class="pull-right" >{{event.e_time | date: "EEEE ' at ' h:mm a"}}</h4>
-                <h4><a href={{event.e_url}}>{{event.e_title}}</a>
-                </h4>
-                <p>{{(event.e_location.address) || "Find location on their page"}}{{event.e_location.name}}</p><br/>
-                <p>Description<br/><a href="{{event.e_url}}">Link to page</a>.</p>
-              </div>
-              <div class="ratings">
-                <p class="pull-right">{{event.e_categories}}Categories</p>
-                <p>
-                  <img class="sourceImage" ng-src="{{ getSourceImage(event.e_source) }}"/>
-                   
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
+  </div>
+</div>
 
 <div class="container">
   <hr>
