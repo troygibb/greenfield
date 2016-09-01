@@ -4,7 +4,8 @@ angular.module('greenfield.services', [])
   const eventSourceImages = {
     'Facebook Events': '/client/assets/F_icon.svg.png', 
     'MeetUp': '/client/assets/meetupimg.png',
-    'FunCheapSF': '/client/assets/funcheaplogo_C_only.png'
+    'FunCheapSF': '/client/assets/funcheaplogo_C_only.png',
+    'Eventbrite': '/client/assets/eventbrite__icon_svg.png'
   };
   let savedEvents;
   eventsObject.saveAll = function(zipcode) {
