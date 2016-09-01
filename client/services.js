@@ -25,7 +25,27 @@ angular.module('greenfield.services', [])
   };
   return eventsObject;
 })
-.factory('Login', function($http){
-  
+.factory('Auth', function($http){
+  let AuthObject = {};
+  AuthObject.signin = user => {
+    return $http({
+      method: 'POST',
+      url: '',
+      data: user
+    })
+    .then(resp => {
+      return resp;
+    });
+  };
+  AuthObject.signup = user => {
+    return $http({
+      method: 'POST',
+      url: '',
+      data: user
+    })
+    .then(resp => {
+      return resp;
+    });
+  };
 })
 
