@@ -1,9 +1,6 @@
 <div class="container">
   <div class="event-filter">
     <input ng-model="searchText" placeholder="Filter by...">
-      <div>
-        Showing results within <select ng-model="selectedDistance" ng-init="selectedDistance = distances[1]" ng-options="x for x in distances" ng-change="logTimeDistance()"></select>
-      </div>
   </div>
   <div ng-repeat="entry in eventsByDate" class="date row">
     <h1>{{entry.date | date: "EEEE, MMMM d"}}</h1>
@@ -44,4 +41,3 @@
     </div>
   </footer>
 </div>
-       

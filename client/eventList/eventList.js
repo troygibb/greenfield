@@ -1,6 +1,6 @@
 angular.module('greenfield.eventList', [])
 .controller('EventListController', ['$scope', 'Events', function($scope,  Events) {
- //$scope.img = `assets/meetup-128.png`
+  //$scope.img = `assets/meetup-128.png`
   $scope.allEvents = Events.getAll();
 
   $scope.eventsByDate = '';
@@ -42,14 +42,23 @@ angular.module('greenfield.eventList', [])
   $scope.generateTimeSpan(7);
   $scope.dance();
 
+  //ADDED---------------------------------------------------------------------------------
+
   $scope.distances = [
     "0.5 miles",
     "10 miles"
   ];
 
-  $scope.times = [
-    "day",
-    "week"
-  ];
-  
+  $scope.filteredEvents = [...$scope.allEvents];
+
+  $scope.filter = function(){
+    // $scope.filteredEvents = $scope.allEvents.filter(function(event) {
+
+    // });
+  };
+
+  $scope.logTimeDistance = () => console.log($scope.selectedDistance)
+
+  //ADDED---------------------------------------------------------------------------------
+
 }]);
