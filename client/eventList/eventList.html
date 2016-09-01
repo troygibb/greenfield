@@ -1,66 +1,36 @@
+<div id="mainSearch" class="container vertical-center" ng-keydown="$event.which === 13 && getEvents()">
+  <div class="container">
+    <section class="text-center jumbotron">
+      <h3>Start discovering events near you</h3>
+      <input ng-change="checkZip()" type="text" name="zip" ng-model='zip' placeholder="Enter your zipcode">
+      <div ng-show="!validZip">Zip code not valid!</div>
+      <br><img ng-show="loading" src="./client/assets/spiffygif_46x46.gif">
+    </section>
+  </div>
+</div>
+
 <div class="container">
-  <div class="row">
-<!-- category list -->
-    <div class="col-md-3">
-      <p class="lead">Pick a Category</p>
-      <div class="list-group">
-        <a href="#" class="list-group-item">Category 1</a>
-        <a href="#" class="list-group-item">Category 2</a>
-        <a href="#" class="list-group-item">Category 3</a>
+  <div class="thumbnail event-container" ng-repeat="event in allEvents">
+    <!-- img below for null values? -->
+    <!-- "http://placehold.it/320x150" -->
+      <img ng-src={{event.e_sourceImage}} alt="">
+      <div class="caption">
+        <h4 class="pull-right" >{{event.e_time | date: "EEEE ' at ' h:mm a"}}</h4>
+        <h4><a href={{event.e_url}}>{{event.e_title}}</a>
+        </h4>
+        <p>{{(event.e_location.address) || "Find location on their page"}}{{event.e_location.name}}</p><br/>
+        <p>Description<br/><a href="{{event.e_url}}">Link to page</a>.</p>
       </div>
+      <div class="ratings">
+        <p class="pull-right">{{event.e_categories}}Categories</p>
+        <p>
+          <img class="sourceImage" ng-src="{{ getSourceImage(event.e_source) }}"/>
+           
+        </p>
     </div>
-    <!-- big image/images-->
-     <div class="col-md-9">
-        <div class="row carousel-holder">
-          <div class="col-md-12">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-              <!-- little circle to show how many images -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                <!-- Add multiple images here -->
-                <div class="item active">
-                  <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                </div>
-                    
-                </div>
-                  <!-- move left and right  -->
-                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                  </a>
-            </div>
-          </div>
-        </div>
-        <!-- Start of the Events -->
-        <div class="row">
-          <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="event in allEvents">
-            <div class="thumbnail">
-            <!-- img below for null values? -->
-            <!-- "http://placehold.it/320x150" -->
-              <img ng-src={{event.e_sourceImage}} alt="">
-              <div class="caption">
-                <h4 class="pull-right" >{{event.e_time | date: "EEEE ' at ' h:mm a"}}</h4>
-                <h4><a href={{event.e_url}}>{{event.e_title}}</a>
-                </h4>
-                <p>{{(event.e_location.address) || "Find location on their page"}}{{event.e_location.name}}</p><br/>
-                <p>Description<br/><a href="{{event.e_url}}">Link to page</a>.</p>
-              </div>
-              <div class="ratings">
-                <p class="pull-right">{{event.e_categories}}Categories</p>
-                <p>
-                  <img class="sourceImage" ng-src="{{ getSourceImage(event.e_source) }}"/>
-                   
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
+  </div>
+</div>
+<!-- /.container -->
 
 <div class="container">
   <hr>
@@ -74,3 +44,77 @@
   </footer>
 </div>
        
+
+<!--   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <style>
+    .event-container{
+      margin: 10px auto; 
+      border-radius: 10px;
+      border: 1px solid black;
+      width: 90%;
+      height: 150px;
+      overflow: hidden;
+    }
+    .event-image{
+      height: 75px;
+      margin-top: 5px;
+      margin-left: 5px
+    }
+    .event-title{
+      text-align: center; 
+    }
+    .event-right{
+      text-align: right; 
+    }
+    .e_location{
+      font-size: 12px
+    }
+    .e_categories{
+      margin: 3px 3px 0 3px;
+    }
+    .event-main{
+    }
+    .e_title{
+      margin: 10px 0 5px 0;
+    }
+    .e_description{
+      margin-top: 10px;
+      width: 100%;
+      position: relative;
+    }
+
+    .e_sourceImage{
+      height: 50px;
+      position: absolute;
+      padding:  0 5px 10px 10px;
+      bottom: 0;
+      right: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="event-container row">
+
+      <div class="col-sm-2 event-left">
+        <img class="event-image img-rounded" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/K2,_Mount_Godwin_Austen,_Chogori,_Savage_Mountain.jpg">
+        <p class="e_location">Number 4 Private Drive, London, England 12344</p>
+      </div>
+
+      <div class="col-sm-8 event-main">
+        <div class="event-title">
+          <h1 class="e_title">Event title - The Best Event Ever!</h1>
+          <span class="e_categories label label-default">Category1</span><span class="e_categories label label-default">Category22</span>
+        </div>
+        <p class="e_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="col-sm-2 event-right">
+        <h5>8 pm<br><small>$15</small></h5>
+        <img class="e_sourceImage img-rounded" src="https://www.facebookbrand.com/img/fb-art.jpg">
+      </div>
+
+    </div>
+  </div>
