@@ -67,7 +67,7 @@ module.exports.getFbEvents = function(zip, cb) {
       lat,
       lng,
       accessToken,
-      distance: 16094,  //10 miles in meters
+      distance: 24141,  //15 miles in meters
       until: oneUnixWeek(),
     });
 

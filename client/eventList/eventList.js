@@ -8,10 +8,11 @@ angular.module('greenfield.eventList', [])
   $scope.generateTimeSpan = function(numDays) {
   	const day = 1000 * 60 * 60 * 24;
   	const today = Date.now();
-  	let dateArray = [today];
-  	for (var i = 1; i < numDays; i++) {
+  	const dateArray = [today];
+  	for (let i = 1; i < numDays; i++) {
   		dateArray.push(dateArray[i-1] + day);
   	};
+    
   	$scope.sortEventsByDate(dateArray.map(day => new Date(day)));
 	};
 
@@ -20,8 +21,8 @@ angular.module('greenfield.eventList', [])
 			return {
 				date: date,
 				events: $scope.allEvents.filter(function(event) {
-					if (event === undefined) return false; 
-					return $scope.compareDates(date, event.e_time)
+          return event === undefined ?
+            false : $scope.compareDates(date, event.e_time);
 				})
 			}
 		});
@@ -29,10 +30,7 @@ angular.module('greenfield.eventList', [])
 
 	$scope.compareDates = function(parentDate, childDate) {
 		childDate = new Date(childDate);
-		if (parentDate.getFullYear() !== childDate.getFullYear()) return false; 
-		if (parentDate.getMonth() !== childDate.getMonth()) return false; 
-		if (parentDate.getDate() !== childDate.getDate()) return false; 
-		return true; 	
+    return parentDate.setHours(0, 0, 0, 0) === childDate.setHours(0, 0, 0, 0);
 	};
 
   $scope.getSourceImage = sourceName => Events.getSourceImage(sourceName);
@@ -57,7 +55,7 @@ angular.module('greenfield.eventList', [])
     // });
   };
 
-  $scope.logTimeDistance = () => console.log($scope.selectedDistance)
+  $scope.logDistance = () => console.log($scope.selectedDistance)
 
   //ADDED---------------------------------------------------------------------------------
 
