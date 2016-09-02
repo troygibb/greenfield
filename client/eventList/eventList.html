@@ -1,11 +1,16 @@
-
-
 <div class="container">
   <div class="event-filter">
     <input ng-model="searchText" placeholder="Filter by...">
   </div>
+
+  <!-- ---------------------------- POTENTIALLY REMOVE---------------------------- -->
+      <div>
+        Showing results within <select ng-model="selectedDistance" ng-init="selectedDistance = distances[1]" ng-options="x for x in distances" ng-change="logDistance()"></select>
+      </div>
+  <!-- ------------------------------POTENTIALLY REMOVE------------------------ -->
+
   <div ng-repeat="entry in eventsByDate" class="date row">
-    <h1>{{entry.date | date: "EEEE, MMMM d"}}</h1>
+    <h1 ng-show="entry.events.length">{{entry.date | date: "EEEE, MMMM d"}}</h1>
 
     <div ng-repeat="event in entry.events | filter:searchText" class="event-container center-block row">
 
@@ -38,9 +43,8 @@
   <footer>
     <div class="row">
       <div class="col-lg-12">
-        <p>Copyright &copy; Your Website 2016</p>
+        <p>Copyright &copy; HackStr33tBoys 2016</p>
       </div>
     </div>
   </footer>
 </div>
-       

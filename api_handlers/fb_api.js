@@ -11,7 +11,7 @@ module.exports = {};
 function oneUnixWeek() {
   const now = (new Date()).getTime();
   const oneWeek = now + 1000 * 60 * 60 * 24 * 7;
-  const oneWeekInUnix = Math.round(oneWeek / 1000);
+  const oneWeekInUnix = Math.round(oneWeek / 1000); 
   return oneWeekInUnix;
 } 
 
@@ -47,6 +47,15 @@ module.exports.getFbEvents = function(zip, cb) {
   //converts zip codes to lat/lng:
   request.get(`http://api.geonames.org/postalCodeSearchJSON?postalcode=${ zip }&maxRows=10&username=${ GEONAMES_USERNAME }`)
   .on('data', function(data) {
+    /*
+      BUG: sometimes, the zip code 92122 throws a JSON parse error here.
+      Sometimes it doesn't. Trying the demo page at
+      http://api.geonames.org/postalCodeSearchJSON?postalcode=92122&maxRows=10&username=HackStr33tBoys
+      shows a longer JSON string than the error log in the console,
+      so either it's being truncated, not delivered correctly, or just
+      parsing incorrectly for whatever reason.
+    */
+
     //information on zip codes is delivered in JSON. One zip can refer to
     //several places across the world so we filter by country code to get
     //only the US result. We access only the latitude/longitude.
@@ -58,7 +67,7 @@ module.exports.getFbEvents = function(zip, cb) {
       lat,
       lng,
       accessToken,
-      distance: 16094,  //10 miles in meters
+      distance: 24141,  //15 miles in meters
       until: oneUnixWeek(),
     });
 

@@ -1,16 +1,18 @@
 angular.module('greenfield.eventList', [])
 .controller('EventListController', ['$scope', 'Events', function($scope,  Events) {
- //$scope.img = `assets/meetup-128.png`
+  //$scope.img = `assets/meetup-128.png`
   $scope.allEvents = Events.getAll();
+
   $scope.eventsByDate = '';
 
   $scope.generateTimeSpan = function(numDays) {
   	const day = 1000 * 60 * 60 * 24;
   	const today = Date.now();
-  	let dateArray = [today];
-  	for (var i = 1; i < numDays; i++) {
+  	const dateArray = [today];
+  	for (let i = 1; i < numDays; i++) {
   		dateArray.push(dateArray[i-1] + day);
   	};
+    
   	$scope.sortEventsByDate(dateArray.map(day => new Date(day)));
 	};
 
@@ -19,8 +21,8 @@ angular.module('greenfield.eventList', [])
 			return {
 				date: date,
 				events: $scope.allEvents.filter(function(event) {
-					if (event === undefined) return false; 
-					return $scope.compareDates(date, event.e_time)
+          return event === undefined ?
+            false : $scope.compareDates(date, event.e_time);
 				})
 			}
 		});
@@ -28,19 +30,33 @@ angular.module('greenfield.eventList', [])
 
 	$scope.compareDates = function(parentDate, childDate) {
 		childDate = new Date(childDate);
-		if (parentDate.getFullYear() !== childDate.getFullYear()) return false; 
-		if (parentDate.getMonth() !== childDate.getMonth()) return false; 
-		if (parentDate.getDate() !== childDate.getDate()) return false; 
-		return true; 	
+    return parentDate.setHours(0, 0, 0, 0) === childDate.setHours(0, 0, 0, 0);
 	};
 
-  $scope.getSourceImage = function(sourceName) {
-  	return Events.getSourceImage(sourceName);
-  }
-  $scope.dance = function(){
-  	console.log($scope.eventsByDate);
-  };
+  $scope.getSourceImage = sourceName => Events.getSourceImage(sourceName);
+
+  $scope.dance = () => console.log($scope.eventsByDate);
+
   $scope.generateTimeSpan(7);
   $scope.dance();
+
+  //ADDED---------------------------------------------------------------------------------
+
+  $scope.distances = [
+    "0.5 miles",
+    "10 miles"
+  ];
+
+  $scope.filteredEvents = [...$scope.allEvents];
+
+  $scope.filter = function(){
+    // $scope.filteredEvents = $scope.allEvents.filter(function(event) {
+
+    // });
+  };
+
+  $scope.logDistance = () => console.log($scope.selectedDistance)
+
+  //ADDED---------------------------------------------------------------------------------
 
 }]);
