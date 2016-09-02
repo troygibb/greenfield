@@ -5,6 +5,35 @@ angular.module('greenfield.eventList', [])
 
   $scope.eventsByDate = '';
 
+  $scope.removeDups = function(){
+    const events = $scope.allEvents;
+    events.forEach(function(thisEvent, index) {
+      let cats = thisEvent.e_categories;
+      for(let i = index + 1; i < events.length; i++) {
+        if(thisEvent.e_title === events[i].e_title && cats) {
+          cats = cats.concat(events[i].e_categories);
+        }
+
+        if(cats) {
+          thisEvent.e_categories =
+          cats.filter((cat, index) => index === cats.indexOf(cat));
+        }
+      }
+    });
+
+    const evRev = events.reverse();
+
+    $scope.allEvents = evRev.filter(function(event, index) {
+      for(let i = index + 1; i < events.length; i++) {
+        if(event.e_title === evRev[i].e_title && 
+          event.e_time === evRev[i].e_time) {
+          return false
+        };
+      }
+      return true;
+    }).reverse();
+  }();
+
   $scope.generateTimeSpan = function(numDays) {
   	const day = 1000 * 60 * 60 * 24;
   	const today = Date.now();
@@ -37,8 +66,11 @@ angular.module('greenfield.eventList', [])
 
   $scope.dance = () => console.log($scope.eventsByDate);
 
+  //$scope.removeDups();
   $scope.generateTimeSpan(7);
   $scope.dance();
+
+  console.log($scope.allEvents);
 
   //ADDED---------------------------------------------------------------------------------
 
