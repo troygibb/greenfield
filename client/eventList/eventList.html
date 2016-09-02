@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container event-list">
   <div class="event-filter">
     <input ng-model="searchText" placeholder="Filter by...">
   </div>
@@ -12,7 +12,7 @@
   <div ng-repeat="entry in eventsByDate" class="date row">
     <h1 ng-show="entry.events.length">{{entry.date | date: "EEEE, MMMM d"}}</h1>
 
-    <div ng-repeat="event in entry.events | filter:searchText" class="event-container center-block row">
+    <div ng-repeat="event in entry.events | filter:searchText" class="event-container center-block row animated slideInUp">
 
       <div class="col-sm-2 event-left">
         <img class="event-image img-rounded" ng-src={{event.e_sourceImage}}>
