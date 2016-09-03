@@ -21,7 +21,7 @@ const url = require('url');
 const meetup_api = require('./meetup_api');
 const fb_api = require('./fb_api.js');
 const eventbrite_api = require('./eventbrite_api.js');
-const funcheapSF_api = require('./funcheapSF_api/funcheapSF_handler');
+const funcheapSF_api = require('./funcheapSf_api/funcheapSF_handler');
 const utils = require('./utils');
 
 var exports = module.exports = {};

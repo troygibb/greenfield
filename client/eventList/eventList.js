@@ -1,7 +1,37 @@
 angular.module('greenfield.eventList', [])
 .controller('EventListController', ['$scope', 'Events', function($scope,  Events) {
   //$scope.img = `assets/meetup-128.png`
-  $scope.allEvents = Events.getAll();
+
+  const removeDups = function(events){
+    const eventsCopy = [...events];
+    eventsCopy.forEach(function(thisEvent, index) {
+      let cats = thisEvent.e_categories;
+      for(let i = index + 1; i < eventsCopy.length; i++) {
+        if(thisEvent.e_title === eventsCopy[i].e_title && cats) {
+          cats = cats.concat(eventsCopy[i].e_categories);
+        }
+
+        if(cats) {
+          thisEvent.e_categories =
+          cats.filter((cat, index) => index === cats.indexOf(cat));
+        }
+      }
+    });
+
+    const evRev = eventsCopy.reverse();
+
+    return $scope.allEvents = evRev.filter(function(event, index) {
+      for(let i = index + 1; i < eventsCopy.length; i++) {
+        if(event.e_title === evRev[i].e_title && 
+          event.e_time === evRev[i].e_time) {
+          return false
+        };
+      }
+      return true;
+    }).reverse();
+  };
+
+  $scope.allEvents = removeDups(Events.getAll());
 
   $scope.eventsByDate = '';
 
@@ -40,23 +70,10 @@ angular.module('greenfield.eventList', [])
   $scope.generateTimeSpan(7);
   $scope.dance();
 
-  //ADDED---------------------------------------------------------------------------------
-
   $scope.distances = [
     "0.5 miles",
     "10 miles"
   ];
 
-  $scope.filteredEvents = [...$scope.allEvents];
-
-  $scope.filter = function(){
-    // $scope.filteredEvents = $scope.allEvents.filter(function(event) {
-
-    // });
-  };
-
   $scope.logDistance = () => console.log($scope.selectedDistance)
-
-  //ADDED---------------------------------------------------------------------------------
-
 }]);
