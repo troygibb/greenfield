@@ -1,10 +1,10 @@
 <div id="mainSearch" class="container vertical-center" ng-keydown="$event.which === 13 && getEvents()">
-  <div class="container">
-    <section class="text-center jumbotron">
+  <div id="zip-search" class="container">
+    <section class="text-center">
     	<h3>Discover events near you</h3>
       <input ng-change="checkZip()" type="text" name="zip" ng-model='zip' placeholder="Enter zipcode">
       <div ng-show="!validZip">Enter a valid zip code</div>
-      <br><img ng-show="loading" src="./client/assets/spiffygif_46x46.gif">
+      <br><img id="spiffygif" ng-show="loading" src="./client/assets/spiffygif_46x46.gif">
     </section>
   </div>
 </div>

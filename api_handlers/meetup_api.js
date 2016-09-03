@@ -56,6 +56,7 @@ function findGroupCategories(jsonArray, cb) {
   })
   .on('end', function() {
     currentGroup.e_categories = [handleUndefined(JSON.parse(body), 'category', 'name')]; 
+    currentGroup.e_sourceImage = currentGroup.e_sourceImage || handleUndefined(JSON.parse(body), 'group_photo', 'thumb_link');
     findGroupCategories(copy, cb);
   });
 };

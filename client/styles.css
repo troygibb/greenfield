@@ -1,17 +1,27 @@
 /*INDEX.HTML*/
-body{
+#main{
   background-color: #eee;
 }
 /*EVENTS.HTML*/
 #mainSearch {
 	margin-top: 10%;
 }
-
+#zip-search{
+  background-color: white;
+  border: 1px solid;
+  border-color: #dcdcdc;
+  width: 50%;
+  height: 200px;
+}
 #mainSearch input[type=text] {
 	font-size: 30px;
 	text-align: center; 
 	width: 300px;
 	height: 50px;
+}
+
+#spiffygif{
+  margin-top: 15px;
 }
 
 /*EVENTLIST.HTML*/
@@ -26,7 +36,13 @@ body{
 	font-size: 20px;
 	text-align: center;
 }
-
+.event-filter>div{
+  margin-top: 5px;
+  font-size: 18px;
+}
+.event-filter>div>select{
+  width: 60px;
+}
 .event-container{
   margin-top: 0;
   /*margin-left: 5%;
@@ -45,7 +61,8 @@ body{
   height: 100%;
 }
 .event-image{
-  height: 75px;
+  height: 110px;
+  max-width: 100%;
   margin-top: 5px;
   margin-left: 5px
 }
@@ -68,16 +85,20 @@ body{
 .categories-list{
 	width: 100%;
 }
-.e_categories{
-  margin: 3px 3px 0 3px;
+.label.e_categories{
+  margin: 5px 3px 0 3px;
+  font-size: 12px;
 }
 .e_description{
 	margin-top: 10px;
 }
 
 /*EVENT-RIGHT*/
+.e_time{
+  font-size: 20px;
+}
 .e_sourceImage{
-  height: 50px;
+  height: 60px;
   position: absolute;
   padding:  0 5px 10px 10px;
   bottom: 0;
