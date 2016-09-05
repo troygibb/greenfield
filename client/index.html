@@ -12,50 +12,36 @@
   <script src="client/eventList/eventList.js"></script>
   <script src="client/events/events.js"></script>
   <script src="client/auth/auth.js"></script>
+  <script src="client/userEvents/userEvents.js"></script>
+  <script src="client/directives/eventWidget.js"></script>
 
-  <!--  -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="client/startbootstrap-shop-homepage-gh-pages/css/bootstrap.min.css" rel="stylesheet">
+  <link href="client/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="client/lib/hover/css/hover-min.css" rel="stylesheet">
 </head>
-<body id="main" ng-controller="MainController">
-  <!-- Navication -->
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-    <!-- Grouped for better mobile -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+<body id="main">
+  <div ng-controller="MainController">
+    <nav class="navbar navbar-inverse">
         <a class="navbar-brand" href="#">The Hackstr33t Boys</a>
-      </div>
-      <!-- toggling content -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-         
+            <li class="nav-item active">
+              <a class="nav-link" href="#/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#/getEvents">Searched Events</a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="#/userEvents">Saved Events</a>
+            </li>
         </ul>
-        <form class="navbar-form navbar-left" role="search">
-          <!-- <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div> -->
+        <form class="form-inline" ng-submit="getEvents()">
+           <input class="form-control" ng-change="checkZip()" ng-model='zip' type="text" placeholder="Search new zipcodes!">
+           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-      </div>
-    </div>
-  </nav>
-  <!-- Uncomment the line below to make the view work -->
+    </nav>
+    <!-- <center ng-show="loading"><img id="spiffygif" src="./client/assets/spiffygif_46x46.gif"></center> -->
+  </div>
   <div ng-view></div>
 
-
-<!--   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-  //////////////////////////////////////////  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-  ////////////////////////////////////////// -->
-  <!-- THIS WILL BE IN OTHER VIEWS AND NOT IN THE MAIN HTML BUT FOR NOW IT'S HERE -->
-
-  <!--   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-  //////////////////////////////////////////  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-  ////////////////////////////////////////// -->
 </body>
 </html>

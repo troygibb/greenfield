@@ -1,8 +1,10 @@
 <div class="container event-list">
   <div class="event-filter">
     <input ng-model="searchText" placeholder="Filter by...">
-    <!-- <span ng-repeat="category in currentCategories track by $index" class="e_categories label label-default">{{category}}</span> -->
- 
+    <div id="category-container">
+      <span ng-repeat="category in categories" ng-click="searchCategory(category)" class="hvr-pulse-grow e_categories label label-default">{{category}}</span>
+      <div style="clear: both;"></div>
+    </div>
 
   <!-- ---------------------------- POTENTIALLY REMOVE---------------------------- -->
       <div>
@@ -13,8 +15,8 @@
 
   <div ng-repeat="entry in eventsByDate" class="date row">
     <h1 ng-show="entry.events.length">{{entry.date | date: "EEEE, MMMM d"}}</h1>
-
-    <div ng-repeat="event in entry.events | filter:searchText" class="event-container center-block row animated slideInUp">
+    <event-widget ng-repeat="event in entry.events | filter:searchText" ></event-widget>
+<!--     <div ng-repeat="event in entry.events | filter:searchText" class="event-container center-block row animated slideInUp">
 
       <div class="col-sm-2 event-left">
         <img class="event-image img-rounded" ng-src="{{ checkImage(event.e_sourceImage) }}">
@@ -25,7 +27,7 @@
       <div class="col-sm-8 event-main">
         <a href="{{event.e_url}}"><h2 class="e_title">{{event.e_title}}</h2></a>
         <div class="categories-list">
-          <span ng-repeat="category in event.e_categories track by $index" class="e_categories label label-default">{{category}}</span>
+          <span ng-repeat="category in event.e_categories" ng-click="searchCategory(category)" class="hvr-hang e_categories label label-default">{{category}}</span>
         </div>
         <p class="e_description text-info"><a href="{{event.e_url}}">See full event details HERE.</a></p>
       </div>
@@ -34,8 +36,11 @@
         <h5 class="e_time">{{event.e_time | date: "EEEE ' at ' h:mm a"}}<br><small>{{event.e_cost}}</small></h5>
         <a href="{{event.e_url}}"><img class="e_sourceImage img-rounded" ng-src="{{ getSourceImage(event.e_source)}}"></a>
       </div>
-    </div>
+
+    </div> -->
+
   </div>
+
 </div>
 
 <div class="container">

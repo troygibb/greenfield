@@ -25,7 +25,9 @@
 }
 
 /*EVENTLIST.HTML*/
-
+.event-filter>.e_categories{
+  float: left;
+}
 .event-filter{
 	width: 100%;
 	text-align: center;
@@ -41,7 +43,11 @@
   font-size: 18px;
 }
 .event-filter>div>select{
-  width: 60px;
+  width: 100px;
+}
+#category-container{
+  width: 100%;
+  height: 100%;
 }
 .event-container{
   margin-top: 0;
