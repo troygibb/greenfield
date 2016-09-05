@@ -9,6 +9,10 @@
   "homepage": "https://github.com/troygibb/greenfield",
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular-route": "^1.5.8",
+    "animate.css": "^3.5.2",
+    "angular-animate": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "hover": "Hover#^2.0.2"
   }
 }

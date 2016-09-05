@@ -1,11 +1,33 @@
 angular.module('greenfield.eventList', [])
-.controller('EventListController', ['$scope', 'Events', function($scope,  Events) {
+.controller('EventListController', ['$scope', 'Events', 'EventOrganizer', 'EventCache', function($scope,  Events, EventOrganizer, EventCache) {
   //$scope.img = `assets/meetup-128.png`
 
-  const removeDups = function(events){
+  $scope.categories = [];
+  $scope.allEvents = removeDups(Events.savedEvents);
+  $scope.eventsByDate = '';
+  $scope.searchText = '';
+  $scope.widgetView = false; 
+
+  //For showing 'addToCalendar button'
+  $scope.inCalendar = false; 
+
+  $scope.searchCategory = function(category) {
+    $scope.searchText = category;
+  };
+
+  $scope.addToUserEvents = function(eventObject){
+    EventCache.savedEvents.push(eventObject);
+  };
+
+  //TODO: Try to implement this on the backend?
+  function removeDups(events){
     const eventsCopy = [...events];
     eventsCopy.forEach(function(thisEvent, index) {
       let cats = thisEvent.e_categories;
+      //Adding to categories set (conditional for null type checking): 
+      if (cats) cats.forEach(cat => {
+        $scope.categories.indexOf(cat) == -1 ? $scope.categories.push(cat) : null;
+      });
       for(let i = index + 1; i < eventsCopy.length; i++) {
         if(thisEvent.e_title === eventsCopy[i].e_title && cats) {
           cats = cats.concat(eventsCopy[i].e_categories);
@@ -17,9 +39,7 @@ angular.module('greenfield.eventList', [])
         }
       }
     });
-
     const evRev = eventsCopy.reverse();
-
     return $scope.allEvents = evRev.filter(function(event, index) {
       for(let i = index + 1; i < eventsCopy.length; i++) {
         if(event.e_title === evRev[i].e_title && 
@@ -31,49 +51,21 @@ angular.module('greenfield.eventList', [])
     }).reverse();
   };
 
-  $scope.allEvents = removeDups(Events.getAll());
-
-  $scope.eventsByDate = '';
-
-  $scope.generateTimeSpan = function(numDays) {
-  	const day = 1000 * 60 * 60 * 24;
-  	const today = Date.now();
-  	const dateArray = [today];
-  	for (let i = 1; i < numDays; i++) {
-  		dateArray.push(dateArray[i-1] + day);
-  	};
-    
-  	$scope.sortEventsByDate(dateArray.map(day => new Date(day)));
-	};
-
-	$scope.sortEventsByDate = function(timespanArray) {
-		$scope.eventsByDate = timespanArray.map(function(date){
-			return {
-				date: date,
-				events: $scope.allEvents.filter(function(event) {
-          return event === undefined ?
-            false : $scope.compareDates(date, event.e_time);
-				})
-			}
-		});
-	}
-
-	$scope.compareDates = function(parentDate, childDate) {
-		childDate = new Date(childDate);
-    return parentDate.setHours(0, 0, 0, 0) === childDate.setHours(0, 0, 0, 0);
-	};
-
   $scope.getSourceImage = sourceName => Events.getSourceImage(sourceName);
 
-  $scope.dance = () => console.log($scope.eventsByDate);
+  //Handle undefined image sources. 
+  $scope.checkImage = source => source ? source : './client/assets/default.png'; 
 
-  $scope.generateTimeSpan(7);
-  $scope.dance();
+  $scope.logEvents = () => console.log($scope.eventsByDate);
+
+  $scope.eventsByDate = EventOrganizer.generateTimeSpan($scope.allEvents, 7);
+  $scope.logEvents();
 
   $scope.distances = [
     "0.5 miles",
     "10 miles"
   ];
 
+  $scope.logCats = () => console.log($scope.categories)
   $scope.logDistance = () => console.log($scope.selectedDistance)
 }]);

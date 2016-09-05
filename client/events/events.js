@@ -15,7 +15,7 @@ angular.module('greenfield.events', [])
   		Events.getEvents($scope.zip)
   		  .then(function(events){
           $scope.loading = false; 
-  		    $location.path('/meetupEvents');
+  		    $location.path('/getEvents');
   		  })
   		  .catch(function(err){
   		    console.error(err);

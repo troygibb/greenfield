@@ -1,0 +1,4 @@
+<div ng-repeat="entry in eventsByDate" class="date row">
+    <h1 ng-show="entry.events.length">{{entry.date | date: "EEEE, MMMM d"}}</h1>
+    <event-widget ng-repeat="event in entry.events | filter:searchText" ></event-widget>
+</div>

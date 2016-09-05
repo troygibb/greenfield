@@ -1,8 +1,21 @@
+/*INDEX.HTML*/
+#main{
+  background-color: #eee;
+}
+#newZips{
+  margin-top: 8px;
+}
 /*EVENTS.HTML*/
 #mainSearch {
 	margin-top: 10%;
 }
-
+#zip-search{
+  background-color: white;
+  border: 1px solid;
+  border-color: #dcdcdc;
+  width: 50%;
+  height: 200px;
+}
 #mainSearch input[type=text] {
 	font-size: 30px;
 	text-align: center; 
@@ -10,25 +23,49 @@
 	height: 50px;
 }
 
-/*EVENTLIST.HTML*/
+#spiffygif{
+  margin-top: 15px;
+}
 
+/*EVENTLIST.HTML*/
+.event-filter>.e_categories{
+  float: right;
+}
 .event-filter{
 	width: 100%;
 	text-align: center;
 }
-.event-filter>input{
-	width: 25%;
-	height: 50px;
-	font-size: 20px;
-	text-align: center;
+.input-group{
+  width: 35%;
+  font-size: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+#distance-filter{
+  margin-top: 5px;
+  font-size: 18px;
+}
+.event-filter>div>select{
+  width: 100px;
+}
+/*.viewToggle{
+  font-size: 20px;
+  border: 1px solid;
+  border-color: #dcdcdc;
+}*/
+#category-container{
+  width: 100%;
+  height: 100%;
 }
 
+/*EVENTWIDGET.HTML*/
 .event-container{
-  margin-top: 10px;
+  margin-top: 0;
   /*margin-left: 5%;
   margin-right: 5%;*/
-  border-radius: 10px;
-  border: 1px solid black;
+  background-color: white; 
+  border: 1px solid;
+  border-color: #dcdcdc;
   width: 90%;
   height: 200px;
   overflow: hidden;
@@ -40,7 +77,8 @@
   height: 100%;
 }
 .event-image{
-  height: 75px;
+  height: 110px;
+  max-width: 100%;
   margin-top: 5px;
   margin-left: 5px
 }
@@ -62,20 +100,39 @@
 }
 .categories-list{
 	width: 100%;
+
 }
-.e_categories{
-  margin: 3px 3px 0 3px;
+.label.e_categories{
+  margin: 7px 3px 0 3px;
+  font-size: 12px;
+  float: left;
 }
 .e_description{
 	margin-top: 10px;
 }
 
 /*EVENT-RIGHT*/
+.e_time{
+  font-size: 20px;
+}
 .e_sourceImage{
-  height: 50px;
+  height: 60px;
   position: absolute;
   padding:  0 5px 10px 10px;
   bottom: 0;
   right: 0;
+}
+
+/*EVENT-LIST.HTML*/
+.plus-event{
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+}
+.list-container{
+  font-size: 18px;
+}
+.list-image {
+  height: 25px;
 }
 

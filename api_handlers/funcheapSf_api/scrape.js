@@ -75,6 +75,23 @@ function checkDateDirectory(directoryPath, callback) {
 		callback(datesToBeScraped);
 	});
 };
+
+//FORMATTING TIME
+//Formatting am/pm into miliseconds (e.g. 8:00pm into 72000000)
+function formatTimeFromAmPm(timeString) {
+	const halfDay = 1000 * 60 * 60 * 12;
+	const hour = 1000 * 60 * 60;
+	const minute = 1000 * 60;
+	const extraTime = /am/gi.test(timeString) ? 0 : halfDay;
+	const timeArr = timeString.split(':').map(val => parseInt(val.replace(/\D/g, '')));
+	return timeArr[0] * hour + timeArr[1] * minute + extraTime;
+};
+
+function mergeTime(dateArr, amPm) {
+	const date = new Date(dateArr);
+	return new Date(date.getTime() + formatTimeFromAmPm(amPm));
+}
+//END OF FORMATTING TIME
  
 function JSONify() {
 	checkDateDirectory('/datesJSON', function(datesToJSONify) {
@@ -115,7 +132,8 @@ function parseHTML(sourcePath, destPath) {
 			//TODO: Shorten prop handlers below. 
 			var obj = {
 				e_title: $(this).find('.entry-title').text(),
-				e_time: $(this).find('.entry-meta').find('.date-time').text(), 
+				e_time: mergeTime(currDate, $(this).find('.entry-meta').find('.date-time').text().split('to')[0]), 
+				e_endTime: $(this).find('.entry-meta').find('.date-time').text().split('to')[1],
 				e_url: $(this).find('.entry-title').find('a').attr('href'),
 				e_location: {
 				  geolocation: null,
@@ -131,7 +149,6 @@ function parseHTML(sourcePath, destPath) {
 				e_sourceImage: null,
 				cost: $(this).find('.entry-meta').find('.cost').text(),
 				postId: $(this).parent().attr('id'),
-				endTime: null,
 				date: currDate
 			};
 			resultArr.push(obj);

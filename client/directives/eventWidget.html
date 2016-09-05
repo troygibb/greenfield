@@ -1,0 +1,24 @@
+<div class="event-container center-block row animated slideInUp">
+
+  <div class="col-sm-2 event-left">
+    <img class="event-image img-rounded" ng-src="{{ checkImage(event.e_sourceImage) }}">
+    <p class="e_venue text-primary">{{event.e_location.venue_name}}</p>
+    <p class="e_location text-muted">{{event.e_location.address}}</p>
+  </div>
+
+  <div class="col-sm-8 event-main">
+    <a href="{{event.e_url}}"><h2 class="e_title">{{event.e_title}}</h2></a>
+    <button ng-show="!inCalendar" class="label label-primary" ng-click="addToUserEvents(event)">Add to Calendar</button>
+    <button ng-show="inCalendar" class="label label-primary" ng-click="deleteUserEvent(event)">Remove from Calendar</button>
+    <div class="categories-list">
+      <span ng-repeat="category in event.e_categories" ng-click="searchCategory(category)" class="e_categories label label-default">{{category}}</span>
+    </div>
+    <p class="e_description text-info"><a href="{{event.e_url}}">See full event details HERE.</a></p>
+  </div>
+
+  <div class="col-sm-2 event-right">
+    <h5 class="e_time">{{event.e_time | date: "EEEE ' at ' h:mm a"}}<br><small>{{event.e_cost}}</small></h5>
+    <a href="{{event.e_url}}"><img class="hvr-grow e_sourceImage img-rounded" ng-src="{{ getSourceImage(event.e_source)}}"></a>
+  </div>
+
+</div> 
