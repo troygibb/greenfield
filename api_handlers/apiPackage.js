@@ -34,7 +34,7 @@ exports.getEvents = function(req, res, cb) {
 
   //Index of all of the api calls to be handled. 
   const apiCalls = [
-    meetup_api.getMeetUpEvents,
+    //meetup_api.getMeetUpEvents,
     //fb_api.getFbEvents,
     funcheapSF_api.getSfEvents
     //,eventbrite_api.getEventbriteEvents

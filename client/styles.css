@@ -2,6 +2,9 @@
 #main{
   background-color: #eee;
 }
+#newZips{
+  margin-top: 8px;
+}
 /*EVENTS.HTML*/
 #mainSearch {
 	margin-top: 10%;
@@ -26,29 +29,36 @@
 
 /*EVENTLIST.HTML*/
 .event-filter>.e_categories{
-  float: left;
+  float: right;
 }
 .event-filter{
 	width: 100%;
 	text-align: center;
 }
-.event-filter>input{
-	width: 25%;
-	height: 50px;
-	font-size: 20px;
-	text-align: center;
+.input-group{
+  width: 35%;
+  font-size: 20px;
+  margin: auto;
+  margin-bottom: 10px;
 }
-.event-filter>div{
+#distance-filter{
   margin-top: 5px;
   font-size: 18px;
 }
 .event-filter>div>select{
   width: 100px;
 }
+/*.viewToggle{
+  font-size: 20px;
+  border: 1px solid;
+  border-color: #dcdcdc;
+}*/
 #category-container{
   width: 100%;
   height: 100%;
 }
+
+/*EVENTWIDGET.HTML*/
 .event-container{
   margin-top: 0;
   /*margin-left: 5%;
@@ -90,10 +100,12 @@
 }
 .categories-list{
 	width: 100%;
+
 }
 .label.e_categories{
-  margin: 5px 3px 0 3px;
+  margin: 7px 3px 0 3px;
   font-size: 12px;
+  float: left;
 }
 .e_description{
 	margin-top: 10px;
@@ -109,5 +121,18 @@
   padding:  0 5px 10px 10px;
   bottom: 0;
   right: 0;
+}
+
+/*EVENT-LIST.HTML*/
+.plus-event{
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+}
+.list-container{
+  font-size: 18px;
+}
+.list-image {
+  height: 25px;
 }
 

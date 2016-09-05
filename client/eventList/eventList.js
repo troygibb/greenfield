@@ -6,6 +6,7 @@ angular.module('greenfield.eventList', [])
   $scope.allEvents = removeDups(Events.savedEvents);
   $scope.eventsByDate = '';
   $scope.searchText = '';
+  $scope.widgetView = false; 
 
   //For showing 'addToCalendar button'
   $scope.inCalendar = false; 

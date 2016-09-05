@@ -13,7 +13,7 @@
   <script src="client/events/events.js"></script>
   <script src="client/auth/auth.js"></script>
   <script src="client/userEvents/userEvents.js"></script>
-  <script src="client/directives/eventWidget.js"></script>
+  <script src="client/directives/mainDirectives.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="client/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
                   <a class="nav-link" href="#/userEvents">Saved Events</a>
             </li>
         </ul>
-        <form class="form-inline" ng-submit="getEvents()">
+        <form id="newZips" class="pull-right form-inline" ng-submit="getEvents()">
            <input class="form-control" ng-change="checkZip()" ng-model='zip' type="text" placeholder="Search new zipcodes!">
            <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
