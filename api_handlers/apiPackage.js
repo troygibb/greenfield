@@ -34,10 +34,10 @@ exports.getEvents = function(req, res, cb) {
 
   //Index of all of the api calls to be handled. 
   const apiCalls = [
-    //meetup_api.getMeetUpEvents,
-    //fb_api.getFbEvents,
-    funcheapSF_api.getSfEvents //, <--don't forget the comma
-    //eventbrite_api.getEventbriteEvents
+    meetup_api.getMeetUpEvents,
+    fb_api.getFbEvents,
+    //funcheapSF_api.getSfEvents,
+    eventbrite_api.getEventbriteEvents
   ];
 
   utils.asyncMap(apiCalls, cb, zip);

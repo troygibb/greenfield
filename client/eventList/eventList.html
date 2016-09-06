@@ -18,8 +18,8 @@
       <div id="distance-filter">
         Showing results within <select ng-model="selectedDistance" ng-init="selectedDistance = distances[1]" ng-options="x for x in distances" ng-change="logDistance()"></select>
       </div>
-  </div>
   <!-- ------------------------------POTENTIALLY REMOVE------------------------ -->
+  </div>
 
   <div ng-repeat="entry in eventsByDate" class="date row">
     <h1 ng-show="entry.events.length">{{entry.date | date: "EEEE, MMMM d"}}</h1>
@@ -50,17 +50,11 @@
     </div> -->
 
   </div>
-
 </div>
 
 <div class="container">
   <hr>
-  <!-- Footer -->
   <footer>
-    <div class="row">
-      <div class="col-lg-12">
-        <p>Copyright &copy; HackStr33tBoys 2016</p>
-      </div>
-    </div>
+    <p>&copy; HackStr33tBoys 2016</p>
   </footer>
 </div>
