@@ -12,11 +12,11 @@ module.exports.getSfEvents = function(_, cb) {
 };
 
 function parseDatesJSON(array, cb, result = []) {
+	//Base case. 
 	if (!array.length) {
 		cb(result);
 		return; 
 	}
-
 	let currentFile = array.shift();
 	fs.readFile(__dirname + '/datesJSON/' + currentFile, (err, data) => {
 		if (err) throw err;
