@@ -9,6 +9,22 @@ angular.module('greenfield.services', [])
   };
 
   eventsObject.savedEvents;
+  
+  eventsObject.getCurrentPosition = function (cb) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var coords = {
+        lat: position.coords.latitude,
+        lon: position.coords.longitude
+      }
+      return $http({
+        method: 'GET',
+        url: '/coords/' + coords.lon + '/' + coords.lat
+      })
+      .then(function(resp){
+        cb(resp.data);
+      });
+    });
+  }
 
   eventsObject.getEvents = function(zipcode) {
     return $http({

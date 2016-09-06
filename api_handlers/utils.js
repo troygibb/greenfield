@@ -1,5 +1,8 @@
 var exports = module.exports = {};
 
+const NodeGeocoder = require('node-geocoder');
+const { MAPQUEST_API_KEY } = require('../config')
+
 const shallowFlatten = arr => [].concat(...arr);
 
 //For error handling, as JSON response may have undefined properties.
@@ -17,17 +20,26 @@ exports.handleUndefined = function(...properties) {
 
 //For handling multiple asynchronous calls. 
 exports.asyncMap = function(asyncTasks, callback, ...args) {
-	const result = [];
-	let taskCount = 0; 
-	for (let i = 0; i < asyncTasks.length; i++) {
-		(function(i){
-			asyncTasks[i](...args, function(value){
-				taskCount++;
-				result[i] = value;
-				if (taskCount === asyncTasks.length){
-					callback(shallowFlatten(result));
-				}
-			});
-		})(i);
-	}
+  const result = [];
+  let taskCount = 0; 
+  for (let i = 0; i < asyncTasks.length; i++) {
+    (function(i){
+      asyncTasks[i](...args, function(value){
+        taskCount++;
+        result[i] = value;
+        if (taskCount === asyncTasks.length){
+          callback(shallowFlatten(result));
+        }
+      });
+    })(i);
+  }
 };
+
+const options = {
+  provider: 'mapquest',
+  httpAdapter: 'https', // Default 
+  apiKey: MAPQUEST_API_KEY, 
+  formatter: null    
+};
+
+exports.geocoder = NodeGeocoder(options);
