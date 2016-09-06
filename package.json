@@ -12,6 +12,7 @@
     "express": "^4.14.0",
     "facebook-events-by-location-core": "^0.1.4",
     "memory-cache": "^0.1.6",
+    "moment": "^2.14.1",
     "node-geocoder": "^3.14.0",
     "request": "^2.74.0"
   },

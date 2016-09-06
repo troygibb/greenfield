@@ -19,9 +19,10 @@ e_sourceImage JPG/PNG?
 
 const url = require('url');
 const meetup_api = require('./meetup_api');
-const fb_api = require('./fb_api.js');
-const eventbrite_api = require('./eventbrite_api.js');
+const fb_api = require('./fb_api');
+const eventbrite_api = require('./eventbrite_api');
 const funcheapSF_api = require('./funcheapSf_api/funcheapSF_handler');
+const seatgeek_api = require('./seatgeek_api');
 const utils = require('./utils');
 
 var exports = module.exports = {};
@@ -34,9 +35,10 @@ exports.getEvents = function(req, res, cb) {
 
   //Index of all of the api calls to be handled. 
   const apiCalls = [
-    // meetup_api.getMeetUpEvents,
+    seatgeek_api.getSeatGeekEvents
+    //meetup_api.getMeetUpEvents
     // fb_api.getFbEvents,
-    // eventbrite_api.getEventbriteEvents
+    //eventbrite_api.getEventbriteEvents
   ];
 
   const SFzips = [
@@ -57,6 +59,9 @@ exports.getEvents = function(req, res, cb) {
 
 //For testing newly created APIs. 
 exports.testApiCall = function(req, res, cb) {
-  meetup_api.getMeetUpEvents(94549, cb);
+  seatgeek_api.getSeatGeekEvents(94549, (data) => {
+    data = JSON.stringify(data);
+    res.send(data);
+  });
   //funcheapSF_api.getSfEvents(null, cb);
 }

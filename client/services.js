@@ -5,7 +5,8 @@ angular.module('greenfield.services', [])
     'Facebook Events': '/client/assets/F_icon.svg.png', 
     'MeetUp': '/client/assets/meetupimg.png',
     'FunCheapSF': '/client/assets/funcheaplogo_C_only.png',
-    'Eventbrite': '/client/assets/eventbrite__icon_svg.png'
+    'Eventbrite': '/client/assets/eventbrite__icon_svg.png',
+    'SeatGeek': '/client/assets/seatgeek-squarelogo-1461682850170.png'
   };
 
   eventsObject.savedEvents;
