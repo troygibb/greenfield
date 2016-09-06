@@ -20,7 +20,7 @@ function formatFbResponse(events, cb) {
     return {
       e_title: event.name,
       e_time: event.startTime,
-      e_url: `https://www.facebook.com/events/${event.id}/`,
+      e_url: `https://www.facebook.com/events/${ event.id }/`,
       e_location: {
         geolocation: [
           handleUndefined(event, 'venue', 'location', 'lon'), 
@@ -59,7 +59,7 @@ module.exports.getFbEvents = function(zip, cb) {
     //information on zip codes is delivered in JSON. One zip can refer to
     //several places across the world so we filter by country code to get
     //only the US result. We access only the latitude/longitude.
-    const {lat, lng} = JSON.parse('' + data).postalCodes
+    const { lat, lng } = JSON.parse('' + data).postalCodes
       .filter(loc => loc.countryCode === 'US')[0];
 
     //call the API: https://github.com/tobilg/facebook-events-by-location-core

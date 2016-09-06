@@ -36,11 +36,11 @@ exports.getEvents = function(req, res, cb) {
   const apiCalls = [
     //meetup_api.getMeetUpEvents,
     //fb_api.getFbEvents,
-    funcheapSF_api.getSfEvents
-    //,eventbrite_api.getEventbriteEvents
+    funcheapSF_api.getSfEvents //, <--don't forget the comma
+    //eventbrite_api.getEventbriteEvents
   ];
 
-  utils.asyncMap(apiCalls, JSONarray => cb(JSONarray), zip);
+  utils.asyncMap(apiCalls, cb, zip);
 }
 
 //For testing newly created APIs. 

@@ -26,20 +26,20 @@ const dataFilter = (parsedJSON) => {
         e_description: event.description.text,
         e_categories: null,
         e_source: 'Eventbrite',
-        e_sourceImage: event.logo
+        e_sourceImage: event.logo,
     }
   });
 
   const venueArr = parsedJSON.events.map((event) => {
     return {
       "method": "GET", 
-      "relative_url": "venues/" + event.venue_id
+      "relative_url": "venues/" + event.venue_id,
     }
   }); //Making an array to send as a param in body in POST request for a batch. This is the only way I could get the API request for all the venue addresses.
 
   return {
     eventsObj,
-    venueArr
+    venueArr,
   };
 };
 
@@ -47,8 +47,7 @@ const getEventbriteAddr = (venueArr, filteredData, cb) => {
   let body = '';
   const urlPath = `https://www.eventbriteapi.com/v3/batch/?token=${EVENTBRITE_API_KEY}`;
 
-  request.post(
-    urlPath)
+  request.post(urlPath)
   .form({
       batch: JSON.stringify(venueArr)
   })
@@ -60,11 +59,11 @@ const getEventbriteAddr = (venueArr, filteredData, cb) => {
   }).on('error', (error) => {
     console.log(error);
   });
-} //batch post request for addresses
+}; //batch post request for addresses
 
 exports.getEventbriteEvents = (address, cb) => {
   let body = '';
-  const urlPath = `https://www.eventbriteapi.com/v3/events/search/?location.address=${address}&token=${EVENTBRITE_API_KEY}`;
+  const urlPath = `https://www.eventbriteapi.com/v3/events/search/?location.address=${ address }&token=${ EVENTBRITE_API_KEY }`;
 
   request.get(urlPath) //getting the events here
   .on('data', (data) => {
@@ -74,8 +73,11 @@ exports.getEventbriteEvents = (address, cb) => {
     const address = dataFilter(JSON.parse(body)).venueArr;
     const filteredData = dataFilter(JSON.parse(body)).eventsObj;
 
-    getEventbriteAddr(address, filteredData, (address, filteredData) => { //I'll try to refactor
-      filteredData.forEach((eventObj, idx) => { //For the address received, need to combine with the array of events. This is where this gets done.
+    //I'll try to refactor
+    getEventbriteAddr(address, filteredData, (address, filteredData) => {
+      filteredData.forEach((eventObj, idx) => {
+      //For the address received, need to combine with the 
+      //array of events. This is where this gets done.
         const currAddr = JSON.parse(address[idx].body);
         if (eventObj.e_venue_id === currAddr.id) {
           eventObj.e_location = {
@@ -87,10 +89,10 @@ exports.getEventbriteEvents = (address, cb) => {
             city: handleUndefined(currAddr, 'address', 'city'),
             address: handleUndefined(currAddr, 'address', 'address_1'),
             venue_name: handleUndefined(address[idx], 'body', 'name'),
-          }
+          };
         }
-      })
+      });
       cb(filteredData);
     });
   });
-}
+};
