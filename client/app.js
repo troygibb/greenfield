@@ -27,6 +27,9 @@ angular.module('greenfield', [
   })
 })
 .controller('MainController', ['$scope', 'Events', '$location', function($scope, Events, $location) {
+    Events.getCurrentPosition(function(zip) {
+      $scope.zip = zip;
+    })
     $scope.validZip = true;  
     $scope.loading = false; 
     $scope.checkZip = function() {

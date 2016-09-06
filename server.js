@@ -2,6 +2,7 @@
 const express = require('express');
 const api_handlers = require('./api_handlers/apiPackage');
 const cache = require('./api_handlers/cache');
+const { geocoder } = require('./api_handlers/utils')
 const app = express();
 const port = process.env.PORT || 8080;
 
@@ -12,6 +13,20 @@ app.get('/', function(req, res){
   // console.log(MEMBER_ID, SIG_ID)
   console.log('Serving /');
   res.sendFile(__dirname + '/client/index.html');
+});
+
+app.get('/coords/:lon/:lat', function(req, res) {
+  const lat = req.params.lat;
+  const lon = req.params.lon;
+  geocoder.reverse({lat:lat, lon:lon})
+  .then(function(data) {
+    let zip = data[0].zipcode.slice(0,5);
+    res.send(zip);
+    res.end();
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 });
 
 // cache takes a time parameter which is the duration of time after which the cache will clear. Cache will also clear if server restarts

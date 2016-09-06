@@ -3,6 +3,9 @@ angular.module('greenfield.events', [])
 	//TODO: Use legit Angular/Bootstrap form validation for this step. See: http://blog.yodersolutions.com/bootstrap-form-validation-done-right-in-angularjs/
 	$scope.validZip = true;  
   $scope.loading = false; 
+  Events.getCurrentPosition(function(zip) {
+    $scope.zip = zip;
+  })
 	//Zipcode validation regex. 	
 	$scope.checkZip = function() {
 		$scope.validZip = /^\d{5}$/.test($scope.zip);
