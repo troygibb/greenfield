@@ -48,7 +48,7 @@ module.exports.getFbEvents = function(zip, cb) {
   request.get(`http://api.geonames.org/postalCodeSearchJSON?postalcode=${ zip }&maxRows=10&username=${ GEONAMES_USERNAME }`)
   .on('data', function(data) {
     /*
-      BUG: sometimes, the zip code 92122 throws a JSON parse error here.
+      BUG: sometimes, the zip codes 92122 and 94102 throw a JSON parse error here.
       Sometimes it doesn't. Trying the demo page at
       http://api.geonames.org/postalCodeSearchJSON?postalcode=92122&maxRows=10&username=HackStr33tBoys
       shows a longer JSON string than the error log in the console,

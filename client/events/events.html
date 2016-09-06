@@ -1,8 +1,12 @@
-<div id="mainSearch" class="container vertical-center" ng-keydown="$event.which === 13 && getEvents()">
+<div id="mainSearch" class="container vertical-center" ng-keydown="$event.which === 13 && getEvents(zip)">
   <div id="zip-search" class="container">
     <section class="text-center">
     	<h3>Discover events near you</h3>
       <input ng-change="checkZip()" type="text" name="zip" ng-model='zip' placeholder="Enter zipcode">
+      <div id="submitButtonsDiv" class="row">
+        <button ng-click="currentLocationZip && getEvents(currentLocationZip);" ng-class="currentLocationZip ? active : disabled" class="btn btn-info btn-sm" id="currentLocBtn">Use current location</button>
+        <button ng-click="getEvents(zip);" class="btn btn-info btn-sm" id="submitBtn">Submit</button>
+      </div>
       <div ng-show="!validZip">Enter a valid zip code</div>
       <br><img id="spiffygif" ng-show="loading" src="./client/assets/spiffygif_46x46.gif">
     </section>

@@ -79,9 +79,9 @@ function checkDateDirectory(directoryPath, callback) {
 //FORMATTING TIME
 //Formatting am/pm into miliseconds (e.g. 8:00pm into 72000000)
 function formatTimeFromAmPm(timeString) {
-	const halfDay = 1000 * 60 * 60 * 12;
-	const hour = 1000 * 60 * 60;
 	const minute = 1000 * 60;
+	const hour = minute * 60;
+	const halfDay = hour * 12;
 	const extraTime = /am/gi.test(timeString) ? 0 : halfDay;
 	const timeArr = timeString.split(':').map(val => parseInt(val.replace(/\D/g, '')));
 	return timeArr[0] * hour + timeArr[1] * minute + extraTime;
@@ -98,7 +98,8 @@ function JSONify() {
 		datesToJSONify.forEach(function(date){
 			var newDate = formatDate(date).join('.');
 			console.log('Initiating parse for date ', newDate);
-			parseHTML(__dirname + `/datesHTML/${newDate}.txt`, __dirname + `/datesJSON/${newDate}.txt`);
+			parseHTML(__dirname + `/datesHTML/${ newDate }.txt`,
+				__dirname + `/datesJSON/${ newDate }.txt`);
 		});
 	});
 };
@@ -132,16 +133,20 @@ function parseHTML(sourcePath, destPath) {
 			//TODO: Shorten prop handlers below. 
 			var obj = {
 				e_title: $(this).find('.entry-title').text(),
-				e_time: mergeTime(currDate, $(this).find('.entry-meta').find('.date-time').text().split('to')[0]), 
-				e_endTime: $(this).find('.entry-meta').find('.date-time').text().split('to')[1],
+				e_time: mergeTime(currDate, $(this).find('.entry-meta')
+					.find('.date-time').text().split('to')[0]), 
+				e_endTime: $(this).find('.entry-meta').find('.date-time')
+					.text().split('to')[1],
 				e_url: $(this).find('.entry-title').find('a').attr('href'),
 				e_location: {
 				  geolocation: null,
 				  country: null,
-				  city: $(this).find('.entry-meta').find('.region').find('.region-parent').text(),
+				  city: $(this).find('.entry-meta').find('.region')
+				  	.find('.region-parent').text(),
 				  address: null,
 				  venue_name: null,
-				  area: $(this).find('.entry-meta').find('.region').find('.region-child').text()
+				  area: $(this).find('.entry-meta').find('.region')
+				  	.find('.region-child').text()
 				},
 				e_description: null,
 				e_categories: parseCategories($(this).parent().attr('class')),
@@ -175,19 +180,20 @@ function downloadHTMLArray(files, cb) {
 	})
 };
 
-//Date is in [mm, dd, yy]
+//Date [mm, dd, yy]
 function downloadHTML(date, callback) {
-	let formatted = formatDate(date);
+	const formatted = formatDate(date);
 	//TODO: Fix the monstrocity below for correct date formatting. 
-	let sfDate = [].concat('20' + formatted[2], formatted[0], formatted[1]).join('/');
-	let dirDate = formatDate(date).join('.');
-	const url = `http://sf.funcheap.com/${sfDate}/`;
+	const sfDate =
+		[].concat('20' + formatted[2], formatted[0], formatted[1]).join('/');
+	const dirDate = formatDate(date).join('.');
+	const url = `http://sf.funcheap.com/${ sfDate }/`;
 	console.log('requesting url ', url);
 	request(url, function(error, response, html){
 		if(!error) {
 			var $ = cheerio.load(html);
 			var data = $.html();
-			fs.writeFile(`${__dirname}/datesHTML/${dirDate}.txt`, data, function(err){
+			fs.writeFile(`${ __dirname }/datesHTML/${ dirDate }.txt`, data, function(err){
 		 		if (err) throw err;
 		 		console.log('Saved HTML!');
 		 		callback();
