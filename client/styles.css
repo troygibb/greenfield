@@ -27,6 +27,14 @@
   margin-top: 15px;
 }
 
+#nav-bar-btn{
+  margin-right: 7px;
+}
+
+#submitButtonsDiv{
+  margin-top: 5px;
+}
+
 /*EVENTLIST.HTML*/
 .event-filter>.e_categories{
   float: right;

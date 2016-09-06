@@ -20,7 +20,7 @@ function formatFbResponse(events, cb) {
     return {
       e_title: event.name,
       e_time: event.startTime,
-      e_url: `https://www.facebook.com/events/${event.id}/`,
+      e_url: `https://www.facebook.com/events/${ event.id }/`,
       e_location: {
         geolocation: [
           handleUndefined(event, 'venue', 'location', 'lon'), 
@@ -48,7 +48,7 @@ module.exports.getFbEvents = function(zip, cb) {
   request.get(`http://api.geonames.org/postalCodeSearchJSON?postalcode=${ zip }&maxRows=10&username=${ GEONAMES_USERNAME }`)
   .on('data', function(data) {
     /*
-      BUG: sometimes, the zip code 92122 throws a JSON parse error here.
+      BUG: sometimes, the zip codes 92122 and 94102 throw a JSON parse error here.
       Sometimes it doesn't. Trying the demo page at
       http://api.geonames.org/postalCodeSearchJSON?postalcode=92122&maxRows=10&username=HackStr33tBoys
       shows a longer JSON string than the error log in the console,
@@ -59,7 +59,7 @@ module.exports.getFbEvents = function(zip, cb) {
     //information on zip codes is delivered in JSON. One zip can refer to
     //several places across the world so we filter by country code to get
     //only the US result. We access only the latitude/longitude.
-    const {lat, lng} = JSON.parse('' + data).postalCodes
+    const { lat, lng } = JSON.parse('' + data).postalCodes
       .filter(loc => loc.countryCode === 'US')[0];
 
     //call the API: https://github.com/tobilg/facebook-events-by-location-core

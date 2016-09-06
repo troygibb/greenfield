@@ -1,7 +1,7 @@
 var exports = module.exports = {};
 
 const NodeGeocoder = require('node-geocoder');
-const { MAPQUEST_API_KEY } = require('../config')
+const { MAPQUEST_API_KEY } = require('../config');
 
 const shallowFlatten = arr => [].concat(...arr);
 

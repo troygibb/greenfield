@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html ng-app="greenfield">
-<head>
-	<title></title>
-  <!--  -->
-  <link rel="stylesheet" href="client/lib/animate.css/animate.min.css">
-  <link rel="stylesheet" href="client/styles.css"></link>
-	<script src="client/lib/angular/angular.js"></script>
-  <script src="client/lib/angular-route/angular-route.js"></script>
-  <script src="client/services.js"></script>
-  <script src="client/app.js"></script>
-  <script src="client/eventList/eventList.js"></script>
-  <script src="client/events/events.js"></script>
-  <script src="client/auth/auth.js"></script>
-  <script src="client/userEvents/userEvents.js"></script>
-  <script src="client/directives/mainDirectives.js"></script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="client/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="client/lib/hover/css/hover-min.css" rel="stylesheet">
-</head>
-<body id="main">
-  <div ng-controller="MainController">
-    <nav class="navbar navbar-inverse">
-        <a class="navbar-brand" href="#">The Hackstr33t Boys</a>
-        <ul class="nav navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                  <a class="nav-link" href="#/getEvents">Searched Events</a>
-            </li>
-            <li class="nav-item">
-                  <a class="nav-link" href="#/userEvents">Saved Events</a>
-            </li>
-        </ul>
-        <form id="newZips" class="pull-right form-inline" ng-submit="getEvents()">
-           <input class="form-control" ng-change="checkZip()" ng-model='zip' type="text" placeholder="Search new zipcodes!">
-           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </nav>
-    <!-- <center ng-show="loading"><img id="spiffygif" src="./client/assets/spiffygif_46x46.gif"></center> -->
-  </div>
-  <div ng-view></div>
-
-</body>
+  <head>
+  	<title>Find Events Near You</title>
+    <link rel="stylesheet" href="client/lib/animate.css/animate.min.css">
+    <link rel="stylesheet" href="client/styles.css"></link>
+  	<script src="client/lib/angular/angular.js"></script>
+    <script src="client/lib/angular-route/angular-route.js"></script>
+    <script src="client/services.js"></script>
+    <script src="client/app.js"></script>
+    <script src="client/eventList/eventList.js"></script>
+    <script src="client/events/events.js"></script>
+    <script src="client/auth/auth.js"></script>
+    <script src="client/userEvents/userEvents.js"></script>
+    <script src="client/directives/mainDirectives.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="client/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="client/lib/hover/css/hover-min.css" rel="stylesheet">
+  </head>
+  <body id="main">
+    <div ng-controller="MainController">
+      <nav class="navbar navbar-inverse active">
+          <a class="navbar-brand" href="#/">The Hackstr33t Boys</a>
+          <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#/">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#/getEvents">Searched Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#/userEvents">Saved Events</a>
+              </li>
+          </ul>
+          <form ng-hide="$location.path()" ng-controller="EventsController" id="newZips" class="pull-right form-inline" ng-submit="getEvents(zip)">
+            <button ng-click="currentLocationZip && getEvents(currentLocationZip);" ng-class="currentLocationZip ? active : disabled" class="btn btn-info btn-sm" id="navLocBtn">Use current location</button>
+            <input class="form-control" ng-change="checkZip()" ng-model='zip' type="text" placeholder="Search new zipcodes!">
+            <button class="btn btn-outline-success" id="nav-bar-btn" type="submit">Search</button>
+          </form>
+      </nav>
+      <!-- <center ng-show="loading"><img id="spiffygif" src="./client/assets/spiffygif_46x46.gif"></center> -->
+    </div>
+    <article ng-view></article>
+  </body>
 </html>

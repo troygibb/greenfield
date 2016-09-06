@@ -34,13 +34,25 @@ exports.getEvents = function(req, res, cb) {
 
   //Index of all of the api calls to be handled. 
   const apiCalls = [
-    //meetup_api.getMeetUpEvents,
-    //fb_api.getFbEvents,
-    funcheapSF_api.getSfEvents
-    //,eventbrite_api.getEventbriteEvents
+    // meetup_api.getMeetUpEvents,
+    // fb_api.getFbEvents,
+    // eventbrite_api.getEventbriteEvents
   ];
 
-  utils.asyncMap(apiCalls, JSONarray => cb(JSONarray), zip);
+  const SFzips = [
+    94102, 94103, 94104, 94105, 94107,
+    94108, 94109, 94110, 94111, 94112,
+    94114, 94115, 94116, 94117, 94118,
+    94121, 94122, 94123, 94124, 94127,
+    94129, 94130, 94131, 94132, 94133,
+    94134, 94158
+  ];
+
+  if(SFzips.indexOf(parseInt(zip)) > -1) {
+    apiCalls.push(funcheapSF_api.getSfEvents);
+  }
+
+  utils.asyncMap(apiCalls, cb, zip);
 }
 
 //For testing newly created APIs. 
