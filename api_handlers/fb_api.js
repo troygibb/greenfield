@@ -8,6 +8,7 @@ const {
 
 module.exports = {};
 
+//Return one week from now in Unix time format
 function oneUnixWeek() {
   const now = (new Date()).getTime();
   const oneWeek = now + 1000 * 60 * 60 * 24 * 7;
