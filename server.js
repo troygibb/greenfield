@@ -1,15 +1,15 @@
 'use strict';
 const express = require('express');
-// const mongoose = require('mongoose');
-// mongoose.Promise = require('q').Promise;
+const mongoose = require('mongoose');
+mongoose.Promise = require('q').Promise;
 const api_handlers = require('./api_handlers/apiPackage');
 const cache = require('./api_handlers/cache');
 const { geocoder } = require('./api_handlers/utils')
 const app = express();
-// mongoose.connect('mongodb://localhost/hsb'); // 
+mongoose.connect('mongodb://localhost/hsb'); // 
 
 const port = process.env.PORT || 8080;
-// 
+
 app.set('port', port);
 app.use(express.static(__dirname + '/'));
 require('./server/config/middleware.js')(app, express);
