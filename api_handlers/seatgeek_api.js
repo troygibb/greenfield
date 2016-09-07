@@ -25,7 +25,7 @@ function formatSeatGeekResponse(parsedJSON) {
 			e_description: null,
 			e_categories: event.taxonomies.map(nom => nom.name),
 			e_source: 'SeatGeek',
-			e_sourceImage: handleUndefined(event, 'performers', 'image'),
+			e_sourceImage: handleUndefined(event, 'performers')[0].image,
 			e_cost: null
 		};
 	})
