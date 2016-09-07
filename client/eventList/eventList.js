@@ -7,7 +7,8 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
   function($scope,  Events, EventOrganizer, EventCache, _) {
   //$scope.img = `assets/meetup-128.png`
 
-  $scope.allEvents = removeDuplicateAndExpiredEvents(Events.savedEvents);
+
+  $scope.allEvents = /*removeDuplicateAndExpiredEvents */(Events.savedEvents);
   $scope.categories = addCategories($scope.allEvents);
   $scope.eventsByDate = '';
   $scope.searchText = '';
@@ -51,6 +52,7 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
   //TODO: Try to implement this on the backend?
   function removeDuplicateAndExpiredEvents(events){
     const eventsObj = {};
+    console.log(events);
 
     //turn eventsObj into a dup-free version of events
     events.forEach((thisEvent, index) => {
@@ -59,7 +61,7 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
       const nextWeek = oneWeekMS();
       const evtTime = new Date(thisEvent.e_time).getTime();
       if(evtTime < now || evtTime > nextWeek) {
-        return;
+        //return;
       }
 
       //if categories is not null
@@ -85,6 +87,8 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
         eventsObj[thisEvent.e_title] = thisEvent;
       }
     });
+
+    console.log(eventsObj);
 
     return _.map(eventsObj, event => event);
   };
