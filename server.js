@@ -3,6 +3,7 @@ const express = require('express');
 const api_handlers = require('./api_handlers/apiPackage');
 const cache = require('./api_handlers/cache');
 const { geocoder } = require('./api_handlers/utils');
+
 const app = express();
 
 require('./server/config/mongoConfig');
@@ -22,7 +23,7 @@ app.get('/', function(req, res){
 app.get('/coords/:lon/:lat', function(req, res) {
   const lat = req.params.lat;
   const lon = req.params.lon;
-  geocoder.reverse({lat:lat, lon:lon})
+  geocoder.reverse({ lat, lon })
   .then(function(data) {
     let zip = data[0].zipcode.slice(0,5);
     res.send(zip);

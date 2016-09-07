@@ -50,7 +50,7 @@ exports.getEvents = function(req, res, cb) {
     94134, 94158
   ];
 
-  if(SFzips.indexOf(parseInt(zip)) > -1) {
+  if(SFzips.includes(parseInt(zip))) {
     apiCalls.push(funcheapSF_api.getSfEvents);
   }
 
