@@ -8,6 +8,7 @@ const {
 
 module.exports = {};
 
+//Return one week from now in Unix time format
 function oneUnixWeek() {
   const now = (new Date()).getTime();
   const oneWeek = now + 1000 * 60 * 60 * 24 * 7;
@@ -42,27 +43,22 @@ function formatFbResponse(events, cb) {
 };
 
 module.exports.getFbEvents = function(zip, cb) {
-  //The FB events api requires a latitutde and longitude.
-  //http://www.geonames.org/ is a free api that 
-  //converts zip codes to lat/lng:
-  request.get(`http://api.geonames.org/postalCodeSearchJSON?postalcode=${ zip }&maxRows=10&username=${ GEONAMES_USERNAME }`)
-  .on('data', function(data) {
-    /*
-      BUG: sometimes, the zip codes 92122 and 94102 throw a JSON parse error here.
-      Sometimes it doesn't. Trying the demo page at
-      http://api.geonames.org/postalCodeSearchJSON?postalcode=92122&maxRows=10&username=HackStr33tBoys
-      shows a longer JSON string than the error log in the console,
-      so either it's being truncated, not delivered correctly, or just
-      parsing incorrectly for whatever reason.
-    */
+  let jsonData = '';
 
+  //The FB events api requires a latitutde and longitude.
+  //geonames is a free api that can convert zip codes to lat/lng.
+  //Demo: http://api.geonames.org/postalCodeSearchJSON?postalcode=94107&maxRows=10&username=demo
+  request.get(`http://api.geonames.org/postalCodeSearchJSON?postalcode=${ zip }&maxRows=10&username=${ GEONAMES_USERNAME }`)
+  .on('data', data => jsonData += data)
+  .on('end', function() {
     //information on zip codes is delivered in JSON. One zip can refer to
     //several places across the world so we filter by country code to get
     //only the US result. We access only the latitude/longitude.
-    const { lat, lng } = JSON.parse('' + data).postalCodes
+    const { lat, lng } = JSON.parse(jsonData).postalCodes
       .filter(loc => loc.countryCode === 'US')[0];
 
-    //call the API: https://github.com/tobilg/facebook-events-by-location-core
+    //call the FB search API:
+    //https://github.com/tobilg/facebook-events-by-location-core
     const es = new EventSearch({
       lat,
       lng,
@@ -71,11 +67,7 @@ module.exports.getFbEvents = function(zip, cb) {
       until: oneUnixWeek(),
     });
 
-    es.search().then(function (events) {
-      formatFbResponse(events.events, eventsObj => cb(eventsObj));
-    }).catch(err => console.error('Oops... ', JSON.stringify(err)));
+    es.search().then(fbEvents => formatFbResponse(fbEvents.events, cb))
+    .catch(err => console.error(JSON.stringify(err)));
   })
-  .on('end', function() {
-
-  });
 };

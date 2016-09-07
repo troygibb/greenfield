@@ -39,7 +39,7 @@ const options = {
   provider: 'mapquest',
   httpAdapter: 'https', // Default 
   apiKey: MAPQUEST_API_KEY, 
-  formatter: null    
+  formatter: null,
 };
 
 exports.geocoder = NodeGeocoder(options);
