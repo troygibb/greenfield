@@ -10,11 +10,15 @@ function checkDirectories(path) {
 		return false; 
 	}
 };
-if (checkDirectories('./datesHTML')) {
-	fs.mkdirSync('datesHTML');
+if (!checkDirectories('./datesHTML')) {
+	fs.mkdirSync('./datesHTML');
 }
-if (checkDirectories('./datesJSON')) {
-	fs.mkdirSync('datesJSON');
+if (!checkDirectories('./datesJSON')) {
+	fs.mkdirSync('./datesJSON');
 }
 
-scrape.writeJSON();
+if (checkDirectories('./datesHTML') && checkDirectories('./datesJSON')) {
+	scrape.writeJSON();
+} else {
+	console.log('Error: No datesHTML or datesJSON directories');
+}
