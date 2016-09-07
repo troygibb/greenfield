@@ -66,8 +66,7 @@ module.exports.getFbEvents = function(zip, cb) {
       until: oneUnixWeek(),
     });
 
-    es.search().then((fbEvents) => {
-      formatFbResponse(fbEvents.events, cb);
-    }).catch(err => console.error('Oops... ', JSON.stringify(err)));
+    es.search().then(fbEvents => formatFbResponse(fbEvents.events, cb))
+    .catch(err => console.error(JSON.stringify(err)));
   })
 };
