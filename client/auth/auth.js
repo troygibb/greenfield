@@ -1,11 +1,26 @@
 angular.module('greenfield.auth', [])
-.controller('AuthController', ['$scope', function($scope) {
-  $scope.username= '';
-  $scope.password= '';
-  $scope.signin = function(){
-    let inputInfo = {};
-    let user = $scope.username;
-    inputInfo[user] = $scope.password;
-    console.log(inputInfo);
+.controller('AuthController', function ($scope, $window, $location, Auth) {
+  $scope.user = {};
+
+  $scope.signin = function () {
+    Auth.signin($scope.user)
+      .then(function (token) {
+        $window.localStorage.setItem('com.hsb', token);
+        $location.path('/userEvents');
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
-}]);
+
+  $scope.signup = function () {
+    Auth.signup($scope.user)
+      .then(function (token) {
+        $window.localStorage.setItem('com.hsb', token);
+        $location.path('/userEvents');
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  };
+});
