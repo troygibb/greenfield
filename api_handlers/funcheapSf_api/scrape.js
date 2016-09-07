@@ -183,7 +183,7 @@ function downloadHTMLArray(files, cb) {
 //Date [mm, dd, yy]
 function downloadHTML(date, callback) {
 	const formatted = formatDate(date);
-	//TODO: Fix the monstrocity below for correct date formatting. 
+	//TODO: Fix the monstrosity below for correct date formatting. 
 	const sfDate =
 		[].concat('20' + formatted[2], formatted[0], formatted[1]).join('/');
 	const dirDate = formatDate(date).join('.');
