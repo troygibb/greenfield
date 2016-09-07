@@ -3,7 +3,7 @@ var exports = module.exports = {};
 const NodeGeocoder = require('node-geocoder');
 const { MAPQUEST_API_KEY } = require('../config');
 
-const shallowFlatten = arr => [].concat(...arr).filter(x => x);
+const shallowFlatten = arr => [].concat(...arr);
 
 //For error handling, as JSON response may have undefined properties.
 exports.handleUndefined = function(...properties) {
@@ -28,7 +28,6 @@ exports.asyncMap = function(asyncTasks, callback, ...args) {
         taskCount++;
         result[i] = value;
         if (taskCount === asyncTasks.length){
-          console.log('Result: ', shallowFlatten(result));
           callback(shallowFlatten(result));
         }
       });
@@ -40,7 +39,7 @@ const options = {
   provider: 'mapquest',
   httpAdapter: 'https', // Default 
   apiKey: MAPQUEST_API_KEY, 
-  formatter: null    
+  formatter: null,
 };
 
 exports.geocoder = NodeGeocoder(options);

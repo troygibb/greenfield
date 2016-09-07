@@ -38,7 +38,7 @@ exports.getEvents = function(req, res, cb) {
     seatgeek_api.getSeatGeekEvents,
     //meetup_api.getMeetUpEvents
     fb_api.getFbEvents
-    // eventbrite_api.getEventbriteEvents
+    //eventbrite_api.getEventbriteEvents
   ];
 
   const SFzips = [
@@ -59,9 +59,8 @@ exports.getEvents = function(req, res, cb) {
 
 //For testing newly created APIs. 
 exports.testApiCall = function(req, res, cb) {
-  seatgeek_api.getSeatGeekEvents(94549, (data) => {
-    data = JSON.stringify(data);
-    res.send(data);
-  });
+  seatgeek_api.getSeatGeekEvents(94549, data => 
+    res.send(JSON.stringify(data))
+  );
   //funcheapSF_api.getSfEvents(null, cb);
 }
