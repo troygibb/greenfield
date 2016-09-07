@@ -3,7 +3,7 @@ var exports = module.exports = {};
 const NodeGeocoder = require('node-geocoder');
 const { MAPQUEST_API_KEY } = require('../config');
 
-const shallowFlatten = arr => [].concat(...arr);
+const shallowFlatten = arr => [].concat(...arr).filter(x => x);
 
 //For error handling, as JSON response may have undefined properties.
 exports.handleUndefined = function(...properties) {
@@ -28,6 +28,7 @@ exports.asyncMap = function(asyncTasks, callback, ...args) {
         taskCount++;
         result[i] = value;
         if (taskCount === asyncTasks.length){
+          console.log('Result: ', shallowFlatten(result));
           callback(shallowFlatten(result));
         }
       });
