@@ -10,7 +10,7 @@
     </div>
 
     <div id="category-container">
-      <span ng-repeat="category in categories" ng-click="searchCategory(category)" class="e_categories label label-default">{{category}}</span>
+      <span ng-repeat="category in categories | orderObjectBy : 'frequency' : true" ng-click="searchCategory(category.key)" class="e_categories btn btn-primary btn-xs" style="margin-right: 8px; margin-top: 6px;">{{category.key}} {{category.frequency}}</span>
       <div style="clear: both;"></div>
     </div>
   </div>
