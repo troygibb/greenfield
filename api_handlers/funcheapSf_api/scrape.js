@@ -1,6 +1,9 @@
-var fs = require('fs');
-var cheerio = require('cheerio');
-var request = require('request');
+const fs = require('fs');
+const cheerio = require('cheerio');
+const request = require('request');
+const utils = require('../utils');
+const formatCategories = utils.formatCategories;
+
 
 module.exports = {};
 
@@ -149,7 +152,7 @@ function parseHTML(sourcePath, destPath) {
 				  	.find('.region-child').text()
 				},
 				e_description: null,
-				e_categories: parseCategories($(this).parent().attr('class')),
+				e_categories: formatCategories(parseCategories($(this).parent().attr('class'))),
 				e_source: 'FunCheapSF',
 				e_sourceImage: null,
 				cost: $(this).find('.entry-meta').find('.cost').text(),
