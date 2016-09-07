@@ -44,27 +44,6 @@ angular.module('greenfield.services', [])
 
   return eventsObject;
 }])
-.factory('Auth', function($http){
-  const AuthObject = {};
-
-  AuthObject.signin = user => {
-    return $http({
-      method: 'POST',
-      url: '',
-      data: user
-    })
-    .then(resp => resp);
-  };
-
-  AuthObject.signup = user => {
-    return $http({
-      method: 'POST',
-      url: '',
-      data: user
-    })
-    .then(resp => resp);
-  };
-})
 //Factory for organizing events. Use to be in eventList.js, moved so userEvents.js could have access to the methods.
 .factory('EventOrganizer', function(){
   const EventOrganizerObject = {};
@@ -104,4 +83,44 @@ angular.module('greenfield.services', [])
   const userEventsObject = {};
   userEventsObject.savedEvents = [];
   return userEventsObject;
+})
+.factory('Auth', function ($http, $location, $window) {
+
+  var signin = function (user) {
+    return $http({
+      method: 'POST',
+      url: '/api/users/signin',
+      data: user
+    })
+    .then(function (resp) {
+      return resp.data.token;
+    });
+  };
+
+  var signup = function (user) {
+    return $http({
+      method: 'POST',
+      url: '/api/users/signup',
+      data: user
+    })
+    .then(function (resp) {
+      return resp.data.token;
+    });
+  };
+
+  var isAuth = function () {
+    return !!$window.localStorage.getItem('com.hsb');
+  };
+
+  var signout = function () {
+    $window.localStorage.removeItem('com.hsb');
+    $location.path('/signin');
+  };
+  
+  return {
+    signin: signin,
+    signup: signup,
+    isAuth: isAuth,
+    signout: signout
+  };
 });
