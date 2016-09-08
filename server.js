@@ -6,8 +6,8 @@ const { geocoder } = require('./api_handlers/utils');
 
 const app = express();
 
-// require('./server/config/mongoConfig');
-// require('./server/config/middleware.js')(app, express);
+require('./server/config/mongoConfig');
+require('./server/config/middleware.js')(app, express);
 
 const port = process.env.PORT || 8080;
 app.set('port', port);

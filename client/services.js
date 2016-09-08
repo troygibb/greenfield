@@ -97,7 +97,6 @@ angular.module('greenfield.services', [])
   };
 
   var getEvents = function() {
-    console.log('CHECK SIDFSDFDS');
     return $http({
       method: 'GET',
       url: '/api/events'
