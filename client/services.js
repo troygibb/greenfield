@@ -17,6 +17,7 @@ angular.module('greenfield.services', [])
         lat: position.coords.latitude,
         lon: position.coords.longitude
       }
+      console.log(coords);
       return $http({
         method: 'GET',
         url: '/coords/' + coords.lon + '/' + coords.lat
@@ -79,10 +80,39 @@ angular.module('greenfield.services', [])
 })
 //Factory for saving user saved events per eventList.html.
 //Now both EventListController and UserController can access this value. 
-.factory('EventCache', function(){
-  const userEventsObject = {};
-  userEventsObject.savedEvents = [];
-  return userEventsObject;
+.factory('EventCache', function($http, $window){
+  // const userEventsObject = {};
+  // userEventsObject.savedEvents = [];
+  var savedEvents = [];
+  var saveEvents = function(eventObject) {
+    savedEvents.push(eventObject);
+    return $http({
+      method: 'POST',
+      url: '/api/events',
+      data: eventObject
+    })
+    .then(function (resp) {
+      return resp.data;
+    })
+  };
+
+  var getEvents = function() {
+    console.log('CHECK SIDFSDFDS');
+    return $http({
+      method: 'GET',
+      url: '/api/events'
+    })
+    .then(function (resp) {
+      console.log(resp.data);
+      return resp.data;
+    })
+  }
+
+  return {
+    savedEvents: savedEvents,
+    saveEvents: saveEvents,
+    getEvents: getEvents
+  };
 })
 .factory('Auth', function ($http, $location, $window) {
 

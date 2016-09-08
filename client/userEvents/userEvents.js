@@ -1,6 +1,9 @@
 angular.module('greenfield.userEvents', [])
 .controller('UserEventsController', ['$scope', 'Events', 'EventCache', 'EventOrganizer', function($scope, Events, EventCache, EventOrganizer){
 	$scope.savedEvents = EventCache.savedEvents;
+  EventCache.getEvents().then(function(data){
+    EventCache.savedEvents = data;
+  });
 	$scope.eventsByDate = EventOrganizer.generateTimeSpan($scope.savedEvents, 7);
 	$scope.inCalendar = true; 
 	$scope.getSourceImage = sourceName => Events.getSourceImage(sourceName);

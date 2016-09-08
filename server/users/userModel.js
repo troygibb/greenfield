@@ -15,7 +15,9 @@ var UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  salt: String
+  salt: String,
+
+  events: [mongoose.Schema.Types.ObjectId]
 });
 
 UserSchema.methods.comparePasswords = function (candidatePassword) {
