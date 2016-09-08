@@ -1,5 +1,5 @@
 <div class="list-container center-block row animated slideInUp">
-  <button ng-click="addToUserEvents(event)" class="plus-event hvr-fade">&#43</button>
+  <button ng-click="addToUserEvents(event); addToGoogleCalendar(event);" class="plus-event hvr-fade">&#43</button>
   <a href="{{event.e_url}}"><span class="e_title">{{event.e_title}}</span></a>
   <span>{{event.e_time | date: "EEEE ' at ' h:mm a"}}</span>
   <a href="{{event.e_url}}"><img class="hvr-grow list-image img-rounded" ng-src="{{ getSourceImage(event.e_source)}}"></a>

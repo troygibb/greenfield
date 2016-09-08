@@ -23,15 +23,14 @@ exports.asyncMap = function(asyncTasks, callback, ...args) {
   const result = [];
   let taskCount = 0; 
   for (let i = 0; i < asyncTasks.length; i++) {
-    (function(i){
-      asyncTasks[i](...args, function(value){
-        taskCount++;
-        result[i] = value;
-        if (taskCount === asyncTasks.length){
-          callback(shallowFlatten(result));
-        }
-      });
-    })(i);
+    const index = i;
+    asyncTasks[index](...args, function(value){
+      taskCount++;
+      result[index] = value;
+      if (taskCount === asyncTasks.length){
+        callback(shallowFlatten(result));
+      }
+    });
   }
 };
 

@@ -3,10 +3,8 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
 .constant('_', window._)
 
 .controller('EventListController',
-  ['$scope', 'Events', 'EventOrganizer', 'EventCache', '_',
-  function($scope,  Events, EventOrganizer, EventCache, _) {
-  //$scope.img = `assets/meetup-128.png`
-
+['$scope', 'Events', 'EventOrganizer', 'EventCache', '_',
+function($scope,  Events, EventOrganizer, EventCache, _) {
 
   $scope.allEvents = /*removeDuplicateAndExpiredEvents */(Events.savedEvents);
   $scope.categories = addCategories($scope.allEvents);
@@ -26,7 +24,7 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
   };
   $scope.sortDate = function(time) {
     let date = time.e_time;
-    console.log(new Date(date))
+    //console.log(new Date(date))
     return new Date(date);
   }
 
@@ -101,13 +99,95 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
   $scope.getSourceImage = sourceName => Events.getSourceImage(sourceName);
 
   //Handle undefined image sources. 
-  $scope.checkImage = source => source ? source : './client/assets/default.png'; 
-
+  $scope.checkImage = source => source || './client/assets/default.png'; 
   $scope.logEvents = () => console.log($scope.eventsByDate);
+  $scope.logCats = () => console.log($scope.categories);
+  $scope.logDistance = () => console.log($scope.selectedDistance);
 
   $scope.eventsByDate = EventOrganizer.generateTimeSpan($scope.allEvents, 7);
   $scope.logEvents();
 
-  $scope.logCats = () => console.log($scope.categories)
-  $scope.logDistance = () => console.log($scope.selectedDistance)
+
+  //###########################################################################
+  //###########################################################################
+  //###########################################################################
+
+
+  //START Google Calendar api code. Much of this was copied from
+  //https://developers.google.com/google-apps/calendar/quickstart/js
+  $scope.addToGoogleCalendar = function(event){
+    $scope.clickedEvent = event;
+    checkAuth();
+  };
+
+  // Your Client ID can be retrieved from your project in the Google
+  // Developer Console, https://console.developers.google.com
+  // client id is meant to be public according to:
+  //http://stackoverflow.com/questions/14563155/oauth-2-0-client-id-and-client-secret-exposed-is-it-a-security-issue
+  const CLIENT_ID = '120023726722-uagad38dtrell6968ptak9n1oqfg76bj.apps.googleusercontent.com';
+  const SCOPES = ["https://www.googleapis.com/auth/calendar"];
+
+  /**
+   * Check if current user has authorized this application.
+   */
+  function checkAuth() {
+    gapi.auth.authorize(
+      {
+        'client_id': CLIENT_ID,
+        'scope': SCOPES.join(' '),
+        'immediate': true
+      }, handleAuthResult);
+  }
+
+  /**
+   * Handle response from authorization server.
+   *
+   * @param {Object} authResult Authorization result.
+   */
+  function handleAuthResult(authResult) {
+    var authorizeDiv = document.getElementById('authorize-div');
+    if (authResult && !authResult.error) {
+      // TODO: Post the event to the user's Google Calendar
+      gapi.client.load('calendar', 'v3', postToCalendar);
+    } else {
+      //Initiate auth flow.
+      gapi.auth.authorize(
+        {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+        handleAuthResult);
+    }
+  }
+
+  //much of this function is copied from
+  //https://developers.google.com/google-apps/calendar/v3/reference/events/insert
+  function postToCalendar(){
+    //funcheapSF and Facebook work; seatgeek does not
+    const evt = $scope.clickedEvent;
+    const loc = evt.e_location || { address: '', city: ''};
+    const now = new Date(evt.e_time);
+
+    //end time will be event start time plus 1 hour
+    const hourFromNow = new Date(now);
+    hourFromNow.setHours(now.getHours() + 1);
+
+    //Start and end times are formatted poorly. A refactor would help.
+    //Google requires them to be in a specific format.
+    const calEvent = {
+      'summary': evt.e_title,
+      'location': `${ loc.address || '' }${ loc.address && loc.city ? ', ' : ' '}${ loc.city || ''}`,
+      'description': evt.description || '',
+      'start': {
+         'dateTime': now.toISOString().slice(0, -5) + '-00:00',
+      },
+      'end': {
+         'dateTime': hourFromNow.toISOString().slice(0, -5) + '-00:00',
+      },
+    };
+
+    const request = gapi.client.calendar.events.insert({
+      'calendarId': 'primary',
+      'resource': calEvent,
+    });
+
+    request.execute();
+  }
 }]);
