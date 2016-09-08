@@ -5,6 +5,12 @@
 #newZips{
   margin-top: 8px;
 }
+#appTitle{
+  font-family: marker felt;
+  font-size: 35px;
+  /*margin: inherit;*/
+}
+
 /*EVENTS.HTML*/
 #mainSearch {
 	margin-top: 10%;
@@ -85,6 +91,10 @@
   height: 200px;
   overflow: hidden;
 }
+.categories_widgetview{
+  margin-top: 5px;
+  background-color: #c0c0c0;
+}
 
 /*EVENT-LEFT*/
 .event-right{
@@ -115,12 +125,11 @@
 }
 .categories-list{
 	width: 100%;
-
+  text-align: center;
 }
 .label.e_categories{
   margin: 7px 3px 0 3px;
   font-size: 12px;
-  float: left;
 }
 .e_description{
 	margin-top: 10px;
