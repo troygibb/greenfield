@@ -8,7 +8,7 @@ module.exports = {
         password = req.body.password;
 
     var findUser = Q.nbind(User.findOne, User);
-    var findUser1 = new Promise(User.findOne, User)
+
     findUser({username: username})
       .then(function (user) {
         if (!user) {

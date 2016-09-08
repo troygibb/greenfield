@@ -18,13 +18,17 @@ function($scope,  Events, EventOrganizer, EventCache, _) {
   $scope.searchCategory = function(category) {
     $scope.searchText = category;
   };
-
+  
   $scope.addToUserEvents = function(eventObject){
-    EventCache.savedEvents.push(eventObject);
+    EventCache.saveEvents(eventObject)
+      .then(function(data) {
+        console.log('Successfully saved event ' + data.name);
+      });
+      console.log(eventObject);
   };
+
   $scope.sortDate = function(time) {
     let date = time.e_time;
-    //console.log(new Date(date))
     return new Date(date);
   }
 
