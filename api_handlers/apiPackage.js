@@ -35,9 +35,9 @@ exports.getEvents = function(req, res, cb) {
 
   //Index of all of the api calls to be handled. 
   const apiCalls = [
-    seatgeek_api.getSeatGeekEvents,
     meetup_api.getMeetUpEvents,
-    fb_api.getFbEvents
+    seatgeek_api.getSeatGeekEvents,
+    fb_api.getFbEvents,
     //eventbrite_api.getEventbriteEvents
   ];
 

@@ -20,7 +20,7 @@ function formatMeetupResponse(parsedJSON, cb) {
   const responseJSON = parsedJSON.results.map((event) => {
     return {
       e_title: event.name,
-      e_time: event.time,
+      e_time: formatDate(event.time),
       e_url: event.event_url,
       e_location: {
         geolocation: [handleUndefined(event, 'venue', 'lon'), handleUndefined(event, 'venue', 'lat')],
@@ -43,6 +43,10 @@ function formatMeetupResponse(parsedJSON, cb) {
      cb(responseJSON);
   });
 };
+
+function formatDate(time) {
+  return new Date(time)
+}
 
 function findGroupCategories(jsonArray, cb) {
   let copy = jsonArray.slice();

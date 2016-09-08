@@ -20,7 +20,7 @@ function formatFbResponse(events, cb) {
   const responseJSON = events.map((event) => {
     return {
       e_title: event.name,
-      e_time: event.startTime,
+      e_time: formatDate(event.startTime),
       e_url: `https://www.facebook.com/events/${ event.id }/`,
       e_location: {
         geolocation: [
@@ -41,6 +41,10 @@ function formatFbResponse(events, cb) {
 
   cb(responseJSON);
 };
+
+function formatDate(time) {
+  return new Date(time)
+}
 
 module.exports.getFbEvents = function(zip, cb) {
   let jsonData = '';
