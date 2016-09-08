@@ -68,26 +68,6 @@ function findGroupCategories(jsonArray, cb) {
   });
 };
 
-// e_title: event.name,
-// e_time: event.time,
-// e_url: event.event_url,
-// e_location: {
-//   geolocation: [handleUndefined(event, 'venue', 'lon'), handleUndefined(event, 'venue', 'lat')],
-//   country: handleUndefined(event, 'venue', 'country'),
-//   city: handleUndefined(event, 'venue', 'city'),
-//   address: handleUndefined(event, 'venue', 'address_1'),
-//   venue_name: handleUndefined(event, 'venue', 'name')
-// },
-// e_description: null,
-// e_categories: null,
-// e_source: 'MeetUp',
-// e_sourceImage: event.photo_url,
-// e_cost: handleUndefined(event, 'fee', 'amount'),
-// yes_rsvp_count: event.yes_rsvp_count,
-// maybe_rsvp_count: event.maybe_rsvp_count,
-// groupUrlName: handleUndefined(event, 'group', 'urlname')
-
-
 //call via route /getMeetupEvents 
 //next steps, call via user zip code
   //after that, geo location
@@ -96,8 +76,7 @@ module.exports.getMeetUpEvents = function(zip, cb) {
   //TODO: Need to factor in sig_id (i.e. user id here)
   const result = [];
   let body = '';
-  request.get(`https://api.meetup.com/2/open_events?key=${MEETUP_API_KEY}&sign=true&photo-host=public&zip=${zip}&page=200&radius=5&omit=description&only=name,time,event_url,venue.lon,venue.lat,venue.country,venue.address_1,venue.name,photo_url,fee.amount,yes_rsvp_count,maybe_rsvp_count,group.urlname
-`)
+  request.get(`https://api.meetup.com/2/open_events?key=${MEETUP_API_KEY}&sign=true&photo-host=public&zip=${zip}&page=200&radius=5&omit=description&only=name,time,event_url,venue.lon,venue.lat,venue.country,venue.address_1,venue.name,photo_url,fee.amount,yes_rsvp_count,maybe_rsvp_count,group.urlname`)
   .on('data', function(data) {
     body += data;
   })
@@ -106,24 +85,4 @@ module.exports.getMeetUpEvents = function(zip, cb) {
       cb(JSONresponse);
     });
   });
-
-  // function subRoutine(offset, cb) {
-  //   console.log("Loading Meetup call for page num ", offset)
-  //   if (offset > 10 || result.length && !checkTimeRange(result[result.length - 1].time, 7)) {
-  //     cb(result);
-  //     return; 
-  //   }
-  //   let body = '';
-  //   request.get(`https://api.meetup.com/2/open_events?key=${MEETUP_API_KEY}&sign=true&photo-host=public&zip=${zip}&page=100&omit=description`)
-  //   .on('data', function(data) {
-  //     body += data;
-  //   })
-  //   .on('end', function() {
-  //     formatMeetupResponse(JSON.parse(body), function(JSONresponse) {
-  //       result.push(...JSONresponse);
-  //       subRoutine(offset + 1, cb);
-  //     });
-  //   });
-  // };
-  // subRoutine(1, cb)
 };

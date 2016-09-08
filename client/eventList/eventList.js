@@ -24,7 +24,7 @@ function($scope,  Events, EventOrganizer, EventCache, _, $http) {
   };
   $scope.sortDate = function(time) {
     let date = time.e_time;
-    console.log(new Date(date))
+    //console.log(new Date(date))
     return new Date(date);
   }
 
