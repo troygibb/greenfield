@@ -3,8 +3,8 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
 .constant('_', window._)
 
 .controller('EventListController',
-['$scope', 'Events', 'EventOrganizer', 'EventCache', '_', '$http',
-function($scope,  Events, EventOrganizer, EventCache, _, $http) {
+['$scope', 'Events', 'EventOrganizer', 'EventCache', '_',
+function($scope,  Events, EventOrganizer, EventCache, _) {
 
   $scope.allEvents = /*removeDuplicateAndExpiredEvents */(Events.savedEvents);
   $scope.categories = addCategories($scope.allEvents);
