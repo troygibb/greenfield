@@ -35,6 +35,16 @@ exports.asyncMap = function(asyncTasks, callback, ...args) {
   }
 };
 
+exports.formatCategories = function(categoryArray) {
+  return categoryArray
+  .filter(category => category)
+  .map(category => {
+    return category
+    .replace(/^(\w)/, p1 => p1.toUpperCase())
+    .replace(/(\_)/g, ' ');
+  })
+};
+
 const options = {
   provider: 'mapquest',
   httpAdapter: 'https', // Default 

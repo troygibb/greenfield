@@ -3,6 +3,7 @@ const utils = require('./utils');
 const { SEATGEEK_CLIENT_ID } = require('../config');
 const moment = require('moment');
 const handleUndefined = utils.handleUndefined;
+const formatCategories = utils.formatCategories;
 module.exports = {};
 
 //API a score feature that could be interesting to integrate...
@@ -23,9 +24,9 @@ function formatSeatGeekResponse(parsedJSON) {
 				area: null
 			},
 			e_description: null,
-			e_categories: event.taxonomies.map(nom => nom.name),
+			e_categories: formatCategories(event.taxonomies.map(nom => nom.name)),
 			e_source: 'SeatGeek',
-			e_sourceImage: handleUndefined(event, 'performers', 'image'),
+			e_sourceImage: handleUndefined(event, 'performers')[0].image,
 			e_cost: null
 		};
 	})

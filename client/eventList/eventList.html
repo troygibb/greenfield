@@ -17,8 +17,8 @@
 
   <div ng-repeat="entry in eventsByDate" class="date row">
     <h1 ng-show="entry.events.length">{{entry.date | date: "EEEE, MMMM d"}}</h1>
-    <event-widget ng-show="widgetView" ng-repeat="event in entry.events | filter:searchText" ></event-widget>
-    <event-list ng-show="!widgetView" ng-repeat="event in entry.events | filter:searchText" ></event-list>
+    <event-widget ng-show="widgetView" ng-repeat="event in entry.events | orderBy:'e_time' | filter:searchText" ></event-widget>
+   <event-list ng-show="!widgetView" ng-repeat="event in entry.events | orderBy:'e_time' | filter:searchText" ></event-list>
   </div>
   
 </div>

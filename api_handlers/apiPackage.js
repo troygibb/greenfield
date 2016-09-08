@@ -18,7 +18,7 @@ e_sourceImage JPG/PNG?
 */
 
 const url = require('url');
-const meetup_api = require('./meetup_api');
+const meetup_api = require('./meetup_api/meetup_cache');
 const fb_api = require('./fb_api');
 const eventbrite_api = require('./eventbrite_api');
 const funcheapSF_api = require('./funcheapSf_api/funcheapSF_handler');
@@ -36,7 +36,7 @@ exports.getEvents = function(req, res, cb) {
   //Index of all of the api calls to be handled. 
   const apiCalls = [
     seatgeek_api.getSeatGeekEvents,
-    //meetup_api.getMeetUpEvents
+    meetup_api.getMeetUpEvents,
     fb_api.getFbEvents
     //eventbrite_api.getEventbriteEvents
   ];
@@ -59,7 +59,10 @@ exports.getEvents = function(req, res, cb) {
 
 //For testing newly created APIs. 
 exports.testApiCall = function(req, res, cb) {
-  seatgeek_api.getSeatGeekEvents(94549, data => 
+  // seatgeek_api.getSeatGeekEvents(94549, data => 
+  //   res.send(JSON.stringify(data))
+  // );
+  meetup_api.getMeetUpEvents(94105, data => 
     res.send(JSON.stringify(data))
   );
   //funcheapSF_api.getSfEvents(null, cb);
