@@ -20,12 +20,6 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/client/index.html');
 });
 
-app.get('/cal', function(req, res){
-  // console.log(MEMBER_ID, SIG_ID)
-  console.log('Serving /cal');
-  res.sendFile(__dirname + '/cal.html');
-});
-
 app.get('/coords/:lon/:lat', function(req, res) {
   const lat = req.params.lat;
   const lon = req.params.lon;
