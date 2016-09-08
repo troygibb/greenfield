@@ -25,8 +25,8 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
     EventCache.savedEvents.push(eventObject);
   };
   $scope.sortDate = function(time) {
-    let date =(time.e_time);
-    return date
+    let date = time.e_time;
+    return new Date(date);
   }
 
   function oneWeekMS() {
