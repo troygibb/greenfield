@@ -24,6 +24,10 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
   $scope.addToUserEvents = function(eventObject){
     EventCache.savedEvents.push(eventObject);
   };
+  $scope.sortDate = function(time) {
+    let date =(time.e_time);
+    return date
+  }
 
   function oneWeekMS() {
     const now = (new Date()).getTime();

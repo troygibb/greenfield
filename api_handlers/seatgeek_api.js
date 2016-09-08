@@ -12,7 +12,7 @@ function formatSeatGeekResponse(parsedJSON) {
 	return parsedJSON.events.map(event => {
 		return {
 			e_title: event.title,
-			e_time: event.datetime_local,
+			e_time: (event.datetime_utc),
 			e_endTime: null,
 			e_url: event.url,
 			e_location: {
