@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="greenfield">
   <head>
-  	<title>Find Events Near You</title>
+  	<title>Bally | Find Events Near You</title>
     <link rel="stylesheet" href="client/lib/animate.css/animate.min.css">
     <link rel="stylesheet" href="client/styles.css"></link>
     <script src="client/lib/underscore/underscore-min.js"></script>
@@ -30,7 +30,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#/">The Hackstr33t Boys</a>
+        <a id="appTitle" class="navbar-brand" href="#/">Bally</a>
       </div>
     
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,13 +53,13 @@
             <a class="nav-link" ng-click="signout()">Signout</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+       <!--  <ul class="nav navbar-nav navbar-right">
           <form ng-hide="location.path() === '/'" ng-controller="EventsController" id="newZips" class="pull-right form-inline" ng-submit="getEvents(zip);">
             <button ng-click="currentLocationZip && getEvents(currentLocationZip);" ng-class="currentLocationZip ? active : disabled" class="btn btn-info btn-sm" id="navLocBtn">Use current location</button>
             <input class="form-control" ng-change="checkZip()" ng-model='zip' type="text" placeholder="Search new zipcodes!">
             <button class="btn btn-outline-success" id="nav-bar-btn" type="submit">Search</button>
           </form>
-        </ul>
+        </ul> -->
       </div>
     </nav>
       <!-- <center ng-show="loading"><img id="spiffygif" src="./client/assets/spiffygif_46x46.gif"></center> -->

@@ -11,9 +11,10 @@
     <button ng-show="!inCalendar" class="label label-primary" ng-click="addToUserEvents(event)">Add to Calendar</button>
     <button ng-show="inCalendar" class="label label-primary" ng-click="deleteUserEvent(event)">Remove from Calendar</button>
     <div class="categories-list">
-      <span ng-repeat="category in event.e_categories" ng-click="searchCategory(category)" class="e_categories label label-default">{{category}}</span>
-    </div>
+      <span ng-repeat="category in event.e_categories" ng-click="searchCategory(category)" class="e_categories categories_widgetview btn btn-primary btn-xs">{{category}}</span>
+      <!-- <div style="clear:both;"></div> -->
     <p class="e_description text-info"><a href="{{event.e_url}}">See full event details HERE.</a></p>
+    </div>
   </div>
 
   <div class="col-sm-2 event-right">
