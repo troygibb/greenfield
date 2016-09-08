@@ -19,8 +19,8 @@
   background-color: white;
   border: 1px solid;
   border-color: #dcdcdc;
-  width: 50%;
-  height: 200px;
+  width: 75%;
+  height: 250px;
 }
 #mainSearch input[type=text] {
 	font-size: 30px;
@@ -37,7 +37,7 @@
   }
 }
 #spiffygif{
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 #nav-bar-btn{
