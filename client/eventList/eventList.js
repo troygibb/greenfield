@@ -26,6 +26,7 @@ angular.module('greenfield.eventList', ['ngOrderObjectBy'])
   };
   $scope.sortDate = function(time) {
     let date = time.e_time;
+    console.log(new Date(date))
     return new Date(date);
   }
 
